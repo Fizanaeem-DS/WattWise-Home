@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Stage 3C category energy shares</text>
+<rect x="75.00" y="80" width="110.69" height="70" fill="#2563eb"/>
+<text x="130.35" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="white">10.2%</text>
+<rect x="75" y="177" width="18" height="18" fill="#2563eb"/>
+<text x="101" y="191" font-family="Arial" font-size="13">base_fixed_kwh — 287.87 kWh</text>
+<rect x="185.69" y="80" width="184.01" height="70" fill="#dc2626"/>
+<text x="277.70" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="white">16.9%</text>
+<rect x="425" y="177" width="18" height="18" fill="#dc2626"/>
+<text x="451" y="191" font-family="Arial" font-size="13">routine_behavior_kwh — 478.55 kWh</text>
+<rect x="369.70" y="80" width="228.55" height="70" fill="#16a34a"/>
+<text x="483.98" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="white">21.0%</text>
+<rect x="775" y="177" width="18" height="18" fill="#16a34a"/>
+<text x="801" y="191" font-family="Arial" font-size="13">hvac_kwh — 594.39 kWh</text>
+<rect x="598.25" y="80" width="341.71" height="70" fill="#9333ea"/>
+<text x="769.11" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="white">31.3%</text>
+<rect x="75" y="212" width="18" height="18" fill="#9333ea"/>
+<text x="101" y="226" font-family="Arial" font-size="13">ev_kwh — 888.67 kWh</text>
+<rect x="939.96" y="80" width="190.32" height="70" fill="#ea580c"/>
+<text x="1035.12" y="122" text-anchor="middle" font-family="Arial" font-size="12" fill="white">17.5%</text>
+<rect x="425" y="212" width="18" height="18" fill="#ea580c"/>
+<text x="451" y="226" font-family="Arial" font-size="13">pool_kwh — 494.97 kWh</text>
+<rect x="1130.28" y="80" width="34.72" height="70" fill="#0891b2"/>
+<rect x="775" y="212" width="18" height="18" fill="#0891b2"/>
+<text x="801" y="226" font-family="Arial" font-size="13">sauna_kwh — 90.29 kWh</text>
+</svg>

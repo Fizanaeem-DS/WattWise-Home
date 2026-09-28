@@ -1,0 +1,115 @@
+{
+  "source_stage3c_sha256": "fde362de6c8d758af02efe02110741e8c1bc352b6ed3030441038804a2a8c54a",
+  "candidate_specifications": {
+    "M1_GBT_CAL_WEATHER": {
+      "model_type": "gradient_boosted_regression_trees",
+      "feature_set": "calendar_weather",
+      "hyperparameters": {
+        "n_estimators": 40,
+        "learning_rate": 0.05,
+        "max_depth": 2,
+        "min_samples_leaf": 20
+      }
+    },
+    "M2_GBT_HISTORY": {
+      "model_type": "gradient_boosted_regression_trees",
+      "feature_set": "calendar_weather_target_history",
+      "hyperparameters": {
+        "n_estimators": 40,
+        "learning_rate": 0.05,
+        "max_depth": 2,
+        "min_samples_leaf": 20
+      }
+    },
+    "R2_RIDGE_HISTORY": {
+      "model_type": "ridge_regression",
+      "feature_set": "calendar_weather_target_history",
+      "hyperparameters": {
+        "alpha": 10.0
+      }
+    }
+  },
+  "feature_specifications": {
+    "calendar_weather": [
+      "hour_sin",
+      "hour_cos",
+      "weekday_sin",
+      "weekday_cos",
+      "is_weekend",
+      "day_of_year_sin",
+      "day_of_year_cos",
+      "temperature_2m",
+      "relative_humidity_2m",
+      "cloud_cover",
+      "shortwave_radiation"
+    ],
+    "calendar_weather_target_history": [
+      "hour_sin",
+      "hour_cos",
+      "weekday_sin",
+      "weekday_cos",
+      "is_weekend",
+      "day_of_year_sin",
+      "day_of_year_cos",
+      "temperature_2m",
+      "relative_humidity_2m",
+      "cloud_cover",
+      "shortwave_radiation",
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_24h",
+      "lag_48h",
+      "lag_168h",
+      "trailing_mean_3h",
+      "trailing_mean_6h",
+      "trailing_mean_24h"
+    ],
+    "future_exogenous_features": [
+      "temperature_2m",
+      "relative_humidity_2m",
+      "cloud_cover",
+      "shortwave_radiation"
+    ],
+    "calendar_features": [
+      "hour_sin",
+      "hour_cos",
+      "weekday_sin",
+      "weekday_cos",
+      "is_weekend",
+      "day_of_year_sin",
+      "day_of_year_cos"
+    ],
+    "target_history_features": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_24h",
+      "lag_48h",
+      "lag_168h",
+      "trailing_mean_3h",
+      "trailing_mean_6h",
+      "trailing_mean_24h"
+    ],
+    "forbidden_future_predictors": [
+      "household_total_kwh",
+      "occupancy_state",
+      "away",
+      "guest_event",
+      "hvac_mode",
+      "indoor_temperature_c",
+      "ev1_charging_kwh",
+      "ev2_charging_kwh",
+      "sauna_kwh",
+      "pool_circulation_kwh",
+      "pool_heating_kwh",
+      "cooking_kwh",
+      "dishwasher_kwh",
+      "washer_kwh",
+      "dryer_kwh",
+      "electronics_kwh"
+    ]
+  },
+  "random_seed": 20251002,
+  "hyperparameter_selection": "Fixed conservative defaults chosen before September evaluation; no search performed."
+}

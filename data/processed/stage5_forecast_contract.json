@@ -1,0 +1,71 @@
+{
+  "stage": "5 - frozen forecaster contract",
+  "status": "FROZEN_STAGE5_FORECASTER",
+  "required_forecast_columns": [
+    "timestamp",
+    "forecast_origin",
+    "horizon_hours",
+    "lead_hour",
+    "predicted_household_kwh"
+  ],
+  "evaluation_only_columns": [
+    "actual_household_kwh"
+  ],
+  "selected_model_by_horizon": {
+    "24": "M2_GBT_HISTORY",
+    "72": "M1_GBT_CAL_WEATHER",
+    "168": "M1_GBT_CAL_WEATHER"
+  },
+  "selection_reasons": {
+    "24": "M2 has the lowest WAPE and MAE, lowest period-total MAPE and absolute bias, and highest peak overlap among candidates. M1 has slightly better RMSE and peak-magnitude MAE, but the broader evidence favors M2 for 24h.",
+    "72": "M1 has the lowest candidate WAPE, MAE, RMSE, and period-total MAPE with near-zero aggregate period bias. R2 has higher peak overlap, but materially worse hourly and total-energy errors.",
+    "168": "M1 has the lowest candidate WAPE, MAE, RMSE, period-total MAPE, and smaller peak-magnitude error than the other learned candidates. M2 has higher peak overlap but accumulates substantial recursive underprediction bias."
+  },
+  "model_artifacts": {
+    "M1_GBT_CAL_WEATHER": "models\\stage5\\final_M1_GBT_CAL_WEATHER.json",
+    "M2_GBT_HISTORY": "models\\stage5\\final_M2_GBT_HISTORY.json"
+  },
+  "evaluation_model_artifact_pattern": "models/stage5/evaluation/{origin}_{model}.json",
+  "forecasting_strategy": "One-step models with recursive multi-step prediction for target-history features; prior predictions replace unavailable post-origin targets.",
+  "non_negative_clipping_rule": "predicted_household_kwh = max(0, raw_prediction)",
+  "weather_input_assumption": "Evaluation uses realized Stage 2 weather as a perfect-weather proxy; operational forecasts require forecast weather for the same four fields.",
+  "future_inputs": [
+    "temperature_2m",
+    "relative_humidity_2m",
+    "cloud_cover",
+    "shortwave_radiation",
+    "forecast timestamp calendar variables"
+  ],
+  "forbidden_future_inputs": [
+    "household_total_kwh",
+    "occupancy_state",
+    "away",
+    "guest_event",
+    "hvac_mode",
+    "indoor_temperature_c",
+    "ev1_charging_kwh",
+    "ev2_charging_kwh",
+    "sauna_kwh",
+    "pool_circulation_kwh",
+    "pool_heating_kwh",
+    "cooking_kwh",
+    "dishwasher_kwh",
+    "washer_kwh",
+    "dryer_kwh",
+    "electronics_kwh"
+  ],
+  "target_history_requirement": "Observed household_total_kwh through forecast origin; recursive predictions thereafter.",
+  "perfect_weather_proxy_evaluation_only": true,
+  "production_ready": false,
+  "stage6_started": false,
+  "validation_figures": [
+    "artifacts\\stage5_forecasting\\01_actual_vs_forecast_24h.svg",
+    "artifacts\\stage5_forecasting\\02_actual_vs_forecast_72h.svg",
+    "artifacts\\stage5_forecasting\\03_actual_vs_forecast_168h.svg",
+    "artifacts\\stage5_forecasting\\04_model_wape_by_horizon.svg",
+    "artifacts\\stage5_forecasting\\05_selected_peak_overlap_by_horizon.svg",
+    "artifacts\\stage5_forecasting\\06_period_total_actual_vs_predicted.svg",
+    "artifacts\\stage5_forecasting\\07_168h_error_by_lead_hour.svg",
+    "artifacts\\stage5_forecasting\\08_selected_model_vs_baseline_wape.svg"
+  ]
+}

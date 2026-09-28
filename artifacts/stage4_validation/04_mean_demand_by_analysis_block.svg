@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Mean household demand by Stage 4 analysis block</text>
+<line x1="80" y1="55" x2="80" y2="425" stroke="#111"/>
+<line x1="80" y1="425" x2="1175" y2="425" stroke="#111"/>
+<text x="18" y="240.0" transform="rotate(-90 18 240.0)" text-anchor="middle" font-family="Arial" font-size="13">Mean kWh per hour</text>
+<line x1="80" y1="425.00" x2="1175" y2="425.00" stroke="#e5e7eb"/>
+<text x="72" y="429.00" text-anchor="end" font-family="Arial" font-size="11">0.00</text>
+<line x1="80" y1="351.00" x2="1175" y2="351.00" stroke="#e5e7eb"/>
+<text x="72" y="355.00" text-anchor="end" font-family="Arial" font-size="11">0.81</text>
+<line x1="80" y1="277.00" x2="1175" y2="277.00" stroke="#e5e7eb"/>
+<text x="72" y="281.00" text-anchor="end" font-family="Arial" font-size="11">1.63</text>
+<line x1="80" y1="203.00" x2="1175" y2="203.00" stroke="#e5e7eb"/>
+<text x="72" y="207.00" text-anchor="end" font-family="Arial" font-size="11">2.44</text>
+<line x1="80" y1="129.00" x2="1175" y2="129.00" stroke="#e5e7eb"/>
+<text x="72" y="133.00" text-anchor="end" font-family="Arial" font-size="11">3.26</text>
+<line x1="80" y1="55.00" x2="1175" y2="55.00" stroke="#e5e7eb"/>
+<text x="72" y="59.00" text-anchor="end" font-family="Arial" font-size="11">4.07</text>
+<rect x="106.28" y="335.46" width="166.44" height="89.54" fill="#2563eb"/>
+<text x="189.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 189.50 443)">NIGHT</text>
+<rect x="325.28" y="308.94" width="166.44" height="116.06" fill="#dc2626"/>
+<text x="408.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 408.50 443)">MORNING</text>
+<rect x="544.28" y="300.93" width="166.44" height="124.07" fill="#16a34a"/>
+<text x="627.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 627.50 443)">DAYTIME</text>
+<rect x="763.28" y="117.36" width="166.44" height="307.64" fill="#9333ea"/>
+<text x="846.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 846.50 443)">RETURN_RAMP</text>
+<rect x="982.28" y="55.00" width="166.44" height="370.00" fill="#ea580c"/>
+<text x="1065.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1065.50 443)">EVENING</text>
+</svg>

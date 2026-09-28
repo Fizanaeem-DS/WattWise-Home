@@ -1,0 +1,16 @@
+{
+  "defect_correction": {
+    "file": "app/app.py",
+    "file_sha256": "ce1201e28844a6c9e1b6fa40cb26a48eede8173f389933b27605ef0f810911d2",
+    "required": true,
+    "scope": "presentation labels and limitation wording only; no backend value or artifact changed"
+  },
+  "initial_stage12_fingerprint": {
+    "file_count": 1284,
+    "tree_sha256": "3a4c841375c214ad13b0b171a3c3a11a08e00aebc5d574b38660f1350b1dcaee"
+  },
+  "new_final_stage1_to_stage11_fingerprint": {
+    "file_count": 1284,
+    "tree_sha256": "1c594f4e81b5b670dde19c7c5bd777a099aed34b6726f2775d245aaae42b0e73"
+  }
+}

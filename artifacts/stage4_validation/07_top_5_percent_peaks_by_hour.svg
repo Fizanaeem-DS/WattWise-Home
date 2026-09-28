@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Top 5% demand observations by hour of day</text>
+<line x1="80" y1="55" x2="80" y2="425" stroke="#111"/>
+<line x1="80" y1="425" x2="1175" y2="425" stroke="#111"/>
+<text x="18" y="240.0" transform="rotate(-90 18 240.0)" text-anchor="middle" font-family="Arial" font-size="13">Peak observation count</text>
+<line x1="80" y1="425.00" x2="1175" y2="425.00" stroke="#e5e7eb"/>
+<text x="72" y="429.00" text-anchor="end" font-family="Arial" font-size="11">0.00</text>
+<line x1="80" y1="351.00" x2="1175" y2="351.00" stroke="#e5e7eb"/>
+<text x="72" y="355.00" text-anchor="end" font-family="Arial" font-size="11">4.20</text>
+<line x1="80" y1="277.00" x2="1175" y2="277.00" stroke="#e5e7eb"/>
+<text x="72" y="281.00" text-anchor="end" font-family="Arial" font-size="11">8.40</text>
+<line x1="80" y1="203.00" x2="1175" y2="203.00" stroke="#e5e7eb"/>
+<text x="72" y="207.00" text-anchor="end" font-family="Arial" font-size="11">12.60</text>
+<line x1="80" y1="129.00" x2="1175" y2="129.00" stroke="#e5e7eb"/>
+<text x="72" y="133.00" text-anchor="end" font-family="Arial" font-size="11">16.80</text>
+<line x1="80" y1="55.00" x2="1175" y2="55.00" stroke="#e5e7eb"/>
+<text x="72" y="59.00" text-anchor="end" font-family="Arial" font-size="11">21.00</text>
+<rect x="85.47" y="425.00" width="34.67" height="0.00" fill="#2563eb"/>
+<text x="102.81" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 102.81 443)">00:00</text>
+<rect x="131.10" y="425.00" width="34.67" height="0.00" fill="#dc2626"/>
+<text x="148.44" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 148.44 443)">01:00</text>
+<rect x="176.72" y="425.00" width="34.67" height="0.00" fill="#16a34a"/>
+<text x="194.06" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 194.06 443)">02:00</text>
+<rect x="222.35" y="425.00" width="34.67" height="0.00" fill="#9333ea"/>
+<text x="239.69" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 239.69 443)">03:00</text>
+<rect x="267.98" y="425.00" width="34.67" height="0.00" fill="#ea580c"/>
+<text x="285.31" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 285.31 443)">04:00</text>
+<rect x="313.60" y="425.00" width="34.67" height="0.00" fill="#0891b2"/>
+<text x="330.94" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 330.94 443)">05:00</text>
+<rect x="359.23" y="425.00" width="34.67" height="0.00" fill="#2563eb"/>
+<text x="376.56" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 376.56 443)">06:00</text>
+<rect x="404.85" y="425.00" width="34.67" height="0.00" fill="#dc2626"/>
+<text x="422.19" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 422.19 443)">07:00</text>
+<rect x="450.48" y="425.00" width="34.67" height="0.00" fill="#16a34a"/>
+<text x="467.81" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 467.81 443)">08:00</text>
+<rect x="496.10" y="425.00" width="34.67" height="0.00" fill="#9333ea"/>
+<text x="513.44" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 513.44 443)">09:00</text>
+<rect x="541.73" y="425.00" width="34.67" height="0.00" fill="#ea580c"/>
+<text x="559.06" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 559.06 443)">10:00</text>
+<rect x="587.35" y="425.00" width="34.67" height="0.00" fill="#0891b2"/>
+<text x="604.69" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 604.69 443)">11:00</text>
+<rect x="632.98" y="425.00" width="34.67" height="0.00" fill="#2563eb"/>
+<text x="650.31" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 650.31 443)">12:00</text>
+<rect x="678.60" y="407.38" width="34.67" height="17.62" fill="#dc2626"/>
+<text x="695.94" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 695.94 443)">13:00</text>
+<rect x="724.23" y="407.38" width="34.67" height="17.62" fill="#16a34a"/>
+<text x="741.56" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 741.56 443)">14:00</text>
+<rect x="769.85" y="407.38" width="34.67" height="17.62" fill="#9333ea"/>
+<text x="787.19" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 787.19 443)">15:00</text>
+<rect x="815.48" y="372.14" width="34.67" height="52.86" fill="#ea580c"/>
+<text x="832.81" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 832.81 443)">16:00</text>
+<rect x="861.10" y="301.67" width="34.67" height="123.33" fill="#0891b2"/>
+<text x="878.44" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 878.44 443)">17:00</text>
+<rect x="906.73" y="160.71" width="34.67" height="264.29" fill="#2563eb"/>
+<text x="924.06" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 924.06 443)">18:00</text>
+<rect x="952.35" y="55.00" width="34.67" height="370.00" fill="#dc2626"/>
+<text x="969.69" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 969.69 443)">19:00</text>
+<rect x="997.98" y="266.43" width="34.67" height="158.57" fill="#16a34a"/>
+<text x="1015.31" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1015.31 443)">20:00</text>
+<rect x="1043.60" y="248.81" width="34.67" height="176.19" fill="#9333ea"/>
+<text x="1060.94" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1060.94 443)">21:00</text>
+<rect x="1089.22" y="336.90" width="34.67" height="88.10" fill="#ea580c"/>
+<text x="1106.56" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1106.56 443)">22:00</text>
+<rect x="1134.85" y="407.38" width="34.67" height="17.62" fill="#0891b2"/>
+<text x="1152.19" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1152.19 443)">23:00</text>
+</svg>

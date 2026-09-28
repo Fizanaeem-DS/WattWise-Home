@@ -1,0 +1,82 @@
+{
+  "stage": "3A - base and routine digital-twin loads",
+  "random_seed": 20250930,
+  "input_file": "data/processed/stage2_barcelona_weather_solar_hourly.csv",
+  "hourly_output_file": "data/processed/stage3a_base_routine_hourly.csv",
+  "event_ledger_file": "data/processed/stage3a_event_ledger.json",
+  "row_count": 1464,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "timezone": "Europe/Madrid",
+  "day_type_hour_counts": {
+    "WD_HOME": 957,
+    "WE_HOME": 432,
+    "AWAY": 75
+  },
+  "base_day_type_day_counts": {
+    "WD_HOME": 43,
+    "WE_HOME": 18
+  },
+  "away": {
+    "event_starts": 4,
+    "actual_coverage_hours": 75.685309,
+    "midpoint_classified_hour_count": 75,
+    "affected_calendar_days": 6,
+    "boundary_clipped_events": 1
+  },
+  "occupancy_state_hour_counts": {
+    "FULL": 1063,
+    "EMPTY": 322,
+    "PARTIAL": 79
+  },
+  "daytime_occupancy_day_counts": {
+    "EMPTY": 33,
+    "FULL": 16,
+    "PARTIAL": 12
+  },
+  "guest_events": {
+    "event_count": 5,
+    "midpoint_classified_hour_count": 14
+  },
+  "sampled_household_parameters": {
+    "refrigerator_daily_kwh": 1.577699415,
+    "smart_home_base_kw": 0.130897257,
+    "oven_kw": 2.261633398,
+    "hob_kw": 2.009027414,
+    "tv_kw": 0.191548588,
+    "computer_kw": 0.224168266,
+    "installed_lighting_kw": 0.324982315
+  },
+  "appliance_event_counts": {
+    "daytime_computer": 11,
+    "dinner": 46,
+    "dishwasher": 33,
+    "dryer": 5,
+    "evening_electronics": 40,
+    "morning_cooking": 24,
+    "phone_tablet_charge": 159,
+    "washer": 8
+  },
+  "component_energy_totals_kwh": {
+    "refrigerator_kwh": 96.239665,
+    "smart_home_base_kwh": 191.633584,
+    "cooking_kwh": 151.024992,
+    "dishwasher_kwh": 33.87106,
+    "washer_kwh": 6.679231,
+    "dryer_kwh": 10.292143,
+    "electronics_kwh": 25.714925,
+    "phone_tablet_kwh": 1.950873,
+    "interior_lighting_kwh": 197.589248,
+    "exterior_security_lighting_kwh": 51.428452
+  },
+  "stage3a_total_energy_kwh": 766.424173,
+  "implementation_notes": [
+    "All stochastic draws use the documented fixed seed.",
+    "Uniform sampling is used within every frozen numeric range.",
+    "day_type is the effective hourly state; base_day_type preserves the calendar WD_HOME/WE_HOME context.",
+    "Events that would overlap an AWAY interval are not generated.",
+    "On the final dataset day, dishwasher start support is restricted only as needed to preserve its full sampled energy inside the frozen timeline.",
+    "The refrigerator profile is a deterministic +/-8% sinusoid normalized to the sampled daily energy.",
+    "No HVAC, EV, pool-circulation, pool-heating, or sauna electricity is generated."
+  ]
+}

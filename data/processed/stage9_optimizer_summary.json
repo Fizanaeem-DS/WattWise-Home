@@ -1,0 +1,611 @@
+{
+  "aug_sep": {
+    "cost_reduction_percent": 43.038727594029545,
+    "current_exported_pv_kwh": 717.495160811,
+    "current_grid_import_kwh": 2071.626893958,
+    "current_maximum_hourly_load_kwh": 21.699169197,
+    "current_net_electricity_cost_eur": 625.06481450384,
+    "current_pv_self_consumption_kwh": 763.113539189,
+    "current_total_load_kwh": 2834.740433147,
+    "number_of_shifted_events": 172,
+    "optimized_exported_pv_kwh": 358.66436259167455,
+    "optimized_grid_import_kwh": 1663.4128561325329,
+    "optimized_maximum_hourly_load_kwh": 9.879824960189364,
+    "optimized_net_electricity_cost_eur": 356.0448717034062,
+    "optimized_pv_self_consumption_kwh": 1121.9443374083255,
+    "optimized_total_load_kwh": 2785.3571935408586,
+    "peak_reduction_kwh": 11.819344236810636,
+    "peak_reduction_percent": 54.46910952906303,
+    "savings_eur": 269.0199428004338,
+    "total_shifted_energy_kwh": 1521.488287817431
+  },
+  "boundary_outside_window_events": [
+    "ev2_charge_026"
+  ],
+  "comfort": {
+    "current_stage3_maximum_violation_c": 2.854561148000002,
+    "current_stage3_positive_violation_hour_count": 112,
+    "current_stage3_total_violation_degree_hours": 99.64993872000012,
+    "maximum_unavoidable_violation_c": 2.079180478284929,
+    "minimum_unavoidable_violations": [
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.11231209445143975,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.61283184645144,
+        "timestamp": "2025-08-10T17:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.42684012004286487,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.927359872042864,
+        "timestamp": "2025-08-10T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.6222801413690533,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.122799893369052,
+        "timestamp": "2025-08-10T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.7184801591408778,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.218999911140877,
+        "timestamp": "2025-08-10T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.6986468406173998,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.1991665926174,
+        "timestamp": "2025-08-10T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.3821190751811656,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.882638827181164,
+        "timestamp": "2025-08-10T22:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.11155032436028023,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.61207007636028,
+        "timestamp": "2025-08-11T15:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.6262053116335657,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.126725063633565,
+        "timestamp": "2025-08-11T16:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.0384178010279719,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.53893755302797,
+        "timestamp": "2025-08-11T17:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.3652615421899768,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.865781294189976,
+        "timestamp": "2025-08-11T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.5209646598249797,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.02148441182498,
+        "timestamp": "2025-08-11T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.5340505911874835,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.034570343187482,
+        "timestamp": "2025-08-11T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.3449555339895696,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.84547528598957,
+        "timestamp": "2025-08-11T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.8873763196579745,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.387896071657973,
+        "timestamp": "2025-08-11T22:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.40606030771497714,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.906580059714976,
+        "timestamp": "2025-08-11T23:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.7719499430561747,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.272469695056174,
+        "timestamp": "2025-08-12T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.859871660546812,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.36039141254681,
+        "timestamp": "2025-08-12T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.749806425122344,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.250326177122343,
+        "timestamp": "2025-08-12T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.4580853956019517,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.95860514760195,
+        "timestamp": "2025-08-12T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.688292318502647,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.188812070502646,
+        "timestamp": "2025-08-14T17:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.0734903067522055,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.574010058752204,
+        "timestamp": "2025-08-14T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.161155296960171,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.66167504896017,
+        "timestamp": "2025-08-14T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.0842094554668087,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.584729207466808,
+        "timestamp": "2025-08-14T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.85342125422234,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.35394100622234,
+        "timestamp": "2025-08-14T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.3110977531852832,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.811617505185282,
+        "timestamp": "2025-08-14T22:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.69094956739659,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.19146931939659,
+        "timestamp": "2025-08-15T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.7590380141638242,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.259557766163823,
+        "timestamp": "2025-08-15T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.6157783864698523,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.11629813846985,
+        "timestamp": "2025-08-15T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.2630620300582116,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.76358178205821,
+        "timestamp": "2025-08-15T22:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.5653866455188243,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.065906397518823,
+        "timestamp": "2025-08-16T15:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.2044022459323536,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.704921997932352,
+        "timestamp": "2025-08-16T16:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.6702485796102948,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.170768331610294,
+        "timestamp": "2025-08-16T17:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.9751205243419143,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.475640276341913,
+        "timestamp": "2025-08-16T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 2.079180478284929,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.579700230284928,
+        "timestamp": "2025-08-16T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 2.0492304399041075,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.549750191904106,
+        "timestamp": "2025-08-16T20:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.8409387412534244,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 26.341458493253423,
+        "timestamp": "2025-08-16T21:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 1.350695659044522,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.85121541104452,
+        "timestamp": "2025-08-16T22:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.8088264238704355,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 25.309346175870434,
+        "timestamp": "2025-08-16T23:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.19060206122536272,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.69112181322536,
+        "timestamp": "2025-08-17T00:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.43156753799238246,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.93208728999238,
+        "timestamp": "2025-08-17T18:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.4095529896603196,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.91007274166032,
+        "timestamp": "2025-08-17T19:00:00+02:00"
+      },
+      {
+        "direction": "above_cooling_upper",
+        "minimum_unavoidable_violation_c": 0.2745408660502662,
+        "proof": "independent chronological reachable-temperature bound; all per-hour bounds jointly attained by the binary target-limited duty-cycle model",
+        "relaxed_reachable_temperature_c": 24.775060618050265,
+        "timestamp": "2025-08-17T20:00:00+02:00"
+      }
+    ],
+    "optimized_positive_violation_hour_count": 42,
+    "optimized_positive_violations": [
+      {
+        "timestamp": "2025-08-10T17:00:00+02:00",
+        "violation_c": 0.11231224800000206
+      },
+      {
+        "timestamp": "2025-08-10T18:00:00+02:00",
+        "violation_c": 0.4268402480000013
+      },
+      {
+        "timestamp": "2025-08-10T19:00:00+02:00",
+        "violation_c": 0.6222802480000027
+      },
+      {
+        "timestamp": "2025-08-10T20:00:00+02:00",
+        "violation_c": 0.7184802480000023
+      },
+      {
+        "timestamp": "2025-08-10T21:00:00+02:00",
+        "violation_c": 0.6986472480000003
+      },
+      {
+        "timestamp": "2025-08-10T22:00:00+02:00",
+        "violation_c": 0.3821192480000022
+      },
+      {
+        "timestamp": "2025-08-11T15:00:00+02:00",
+        "violation_c": 0.11155024800000035
+      },
+      {
+        "timestamp": "2025-08-11T16:00:00+02:00",
+        "violation_c": 0.6262052480000015
+      },
+      {
+        "timestamp": "2025-08-11T17:00:00+02:00",
+        "violation_c": 1.0384182480000028
+      },
+      {
+        "timestamp": "2025-08-11T18:00:00+02:00",
+        "violation_c": 1.3652612479999995
+      },
+      {
+        "timestamp": "2025-08-11T19:00:00+02:00",
+        "violation_c": 1.520964248000002
+      },
+      {
+        "timestamp": "2025-08-11T20:00:00+02:00",
+        "violation_c": 1.5340502479999998
+      },
+      {
+        "timestamp": "2025-08-11T21:00:00+02:00",
+        "violation_c": 1.3449552480000015
+      },
+      {
+        "timestamp": "2025-08-11T22:00:00+02:00",
+        "violation_c": 0.8873762480000025
+      },
+      {
+        "timestamp": "2025-08-11T23:00:00+02:00",
+        "violation_c": 0.40606024800000284
+      },
+      {
+        "timestamp": "2025-08-12T18:00:00+02:00",
+        "violation_c": 0.7719502479999996
+      },
+      {
+        "timestamp": "2025-08-12T19:00:00+02:00",
+        "violation_c": 0.859871248000001
+      },
+      {
+        "timestamp": "2025-08-12T20:00:00+02:00",
+        "violation_c": 0.7498062480000023
+      },
+      {
+        "timestamp": "2025-08-12T21:00:00+02:00",
+        "violation_c": 0.4580852479999997
+      },
+      {
+        "timestamp": "2025-08-14T17:00:00+02:00",
+        "violation_c": 0.6882922479999998
+      },
+      {
+        "timestamp": "2025-08-14T18:00:00+02:00",
+        "violation_c": 1.0734902480000024
+      },
+      {
+        "timestamp": "2025-08-14T19:00:00+02:00",
+        "violation_c": 1.161155248
+      },
+      {
+        "timestamp": "2025-08-14T20:00:00+02:00",
+        "violation_c": 1.0842092480000005
+      },
+      {
+        "timestamp": "2025-08-14T21:00:00+02:00",
+        "violation_c": 0.8534212480000001
+      },
+      {
+        "timestamp": "2025-08-14T22:00:00+02:00",
+        "violation_c": 0.3110982480000004
+      },
+      {
+        "timestamp": "2025-08-15T19:00:00+02:00",
+        "violation_c": 0.6909492480000026
+      },
+      {
+        "timestamp": "2025-08-15T20:00:00+02:00",
+        "violation_c": 0.7590382479999995
+      },
+      {
+        "timestamp": "2025-08-15T21:00:00+02:00",
+        "violation_c": 0.6157782480000016
+      },
+      {
+        "timestamp": "2025-08-15T22:00:00+02:00",
+        "violation_c": 0.26306224800000066
+      },
+      {
+        "timestamp": "2025-08-16T15:00:00+02:00",
+        "violation_c": 0.5653862479999994
+      },
+      {
+        "timestamp": "2025-08-16T16:00:00+02:00",
+        "violation_c": 1.204402248000001
+      },
+      {
+        "timestamp": "2025-08-16T17:00:00+02:00",
+        "violation_c": 1.670248248
+      },
+      {
+        "timestamp": "2025-08-16T18:00:00+02:00",
+        "violation_c": 1.9751202479999996
+      },
+      {
+        "timestamp": "2025-08-16T19:00:00+02:00",
+        "violation_c": 2.079180248
+      },
+      {
+        "timestamp": "2025-08-16T20:00:00+02:00",
+        "violation_c": 2.0492302480000006
+      },
+      {
+        "timestamp": "2025-08-16T21:00:00+02:00",
+        "violation_c": 1.8409382480000005
+      },
+      {
+        "timestamp": "2025-08-16T22:00:00+02:00",
+        "violation_c": 1.350695248000001
+      },
+      {
+        "timestamp": "2025-08-16T23:00:00+02:00",
+        "violation_c": 0.8088262480000026
+      },
+      {
+        "timestamp": "2025-08-17T00:00:00+02:00",
+        "violation_c": 0.19060224800000114
+      },
+      {
+        "timestamp": "2025-08-17T18:00:00+02:00",
+        "violation_c": 0.43156724800000035
+      },
+      {
+        "timestamp": "2025-08-17T19:00:00+02:00",
+        "violation_c": 0.4095532480000017
+      },
+      {
+        "timestamp": "2025-08-17T20:00:00+02:00",
+        "violation_c": 0.274541248000002
+      }
+    ],
+    "physically_infeasible_occupied_hour_count": 42,
+    "total_unavoidable_degree_hours": 36.986021822583936,
+    "zero_avoidable_comfort_violation_introduced": true
+  },
+  "determinism": {
+    "identical_schedule": true,
+    "rerun_schedule_sha256": "f0b2e946cc1267550651914e2999d8f92883933ce82aeecd1e0e8eb5fd309ff3",
+    "schedule_sha256": "f0b2e946cc1267550651914e2999d8f92883933ce82aeecd1e0e8eb5fd309ff3",
+    "verified_by_full_second_solve": true
+  },
+  "event_counts_by_component": {
+    "dishwasher": 33,
+    "dryer": 5,
+    "ev1": 30,
+    "ev2": 26,
+    "hvac": 1,
+    "pool_circulation": 61,
+    "pool_heating": 5,
+    "sauna": 9,
+    "washer": 8
+  },
+  "infeasible_events": [],
+  "mode": "retrospective_validation",
+  "objective_priority": [
+    "minimum unavoidable occupied comfort violation",
+    "minimum net electricity cost at fixed minimum comfort violation",
+    "minimum household peak at cost within 0.00001 EUR of optimum"
+  ],
+  "operational_vs_retrospective": {
+    "actual_stage3_used_only_for_validation_and_baseline": true,
+    "artifact_mode": "retrospective_validation",
+    "operational_context_reads_stage6b_and_stage8_only": true,
+    "operational_future_actual_demand_used": false
+  },
+  "reference_capacity_is_recommendation": false,
+  "reference_capacity_kwp": 5.0,
+  "representative_week": {
+    "activity_event_count": 27,
+    "cost_reduction_percent": 51.210393222641684,
+    "current_exported_pv_kwh": 54.420537482,
+    "current_grid_import_kwh": 335.352464621,
+    "current_maximum_hourly_load_kwh": 17.316185669,
+    "current_net_electricity_cost_eur": 112.39880198884,
+    "current_pv_self_consumption_kwh": 89.046412518,
+    "current_total_load_kwh": 424.398877139,
+    "end_exclusive": "2025-09-23",
+    "optimized_exported_pv_kwh": 11.597665281774882,
+    "optimized_grid_import_kwh": 252.66189020332462,
+    "optimized_maximum_hourly_load_kwh": 9.879824935,
+    "optimized_net_electricity_cost_eur": 54.83893351281664,
+    "optimized_pv_self_consumption_kwh": 131.86928471822512,
+    "optimized_total_load_kwh": 384.53117492154973,
+    "peak_reduction_kwh": 7.436360733999999,
+    "peak_reduction_percent": 42.94456571525919,
+    "savings_eur": 57.55986847602337,
+    "selection_rule": "rolling 7-day window with the most actual flexible/limited event starts; earliest start breaks ties",
+    "start": "2025-09-16"
+  },
+  "service_preservation": {
+    "hvac_energy_may_change_only_through_frozen_thermal_dynamics": true,
+    "non_hvac_energy_preserved": true,
+    "non_hvac_events_checked": 176
+  },
+  "solver": "PuLP 3.3.0 with bundled CBC for joint comfort attainment and event/cost/peak MILP, one thread, fixed seed, zero MIP gap",
+  "solver_objectives": {
+    "final_net_cost_eur": 356.04487091299944,
+    "minimum_net_cost_before_peak_tiebreak_eur": 356.0448611831196,
+    "minimum_unavoidable_occupied_violation_degree_hours": 36.986021822583936,
+    "optimized_peak_kwh": 9.879824960189364
+  },
+  "stage": "9 - household energy scheduling optimizer",
+  "validation": {
+    "checks": {
+      "all_stage7_events_reported": true,
+      "availability_and_deadlines_respected": true,
+      "away_intervals_respected": true,
+      "behavioral_class_b_unchanged": true,
+      "coherent_cycles_preserved": true,
+      "cost_priority_preserved": true,
+      "event_energy_preserved": true,
+      "exact_hour_count": true,
+      "fixed_class_a_unchanged": true,
+      "frozen_stage1_through_stage8_byte_identity": true,
+      "hourly_loads_nonnegative": true,
+      "hvac_mutual_exclusion_and_controller_targets": true,
+      "identical_pv_for_current_and_optimized": true,
+      "no_operational_future_actual_leakage": true,
+      "nonnegative_energy_flows": true,
+      "real_event_instances_not_mock_midpoints": true,
+      "reported_example_independently_reproduced": true,
+      "shared_exact_accounting": true,
+      "thermal_recurrence_exact": true,
+      "timestamps_aligned": true,
+      "washer_dryer_ordering_respected": true,
+      "zero_avoidable_occupied_comfort_violation": true
+    },
+    "frozen_upstream": {
+      "byte_identical": true,
+      "expected_file_count": 212,
+      "expected_tree_sha256": "aff13b061666da33cf12363423827271268a4ea84906cf8085d719499b8bcb44",
+      "file_count": 212,
+      "tree_sha256": "aff13b061666da33cf12363423827271268a4ea84906cf8085d719499b8bcb44"
+    },
+    "occupied_hour_count": 1142,
+    "optimized_total_occupied_violation_degree_hours": 36.986059104000475,
+    "problems": [],
+    "status": "PASS",
+    "tariff_schedule": {
+      "00:00-06:00": 0.18,
+      "06:00-17:00": 0.28,
+      "17:00-22:00": 0.4,
+      "22:00-24:00": 0.28
+    }
+  }
+}

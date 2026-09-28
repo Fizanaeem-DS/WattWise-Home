@@ -1,0 +1,103 @@
+{
+  "stage": "3B - major household systems",
+  "random_seed": 20251001,
+  "reproducibility": "Separate deterministic random.Random seed; frozen Stage 2/3A artifacts are read-only.",
+  "input_stage3a_seed": 20250930,
+  "row_count": 1464,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "timezone": "Europe/Madrid",
+  "sampled_household_parameters": {
+    "heating_power_kw": 1.727328253,
+    "cooling_power_kw": 1.40039609,
+    "heating_preference_c": 21.369849535,
+    "cooling_preference_c": 23.500519752,
+    "pool_circulation_power_kw": 0.880530278,
+    "pool_heating_power_kw": 4.379864887,
+    "sauna_power_kw": 6.590696173
+  },
+  "hvac": {
+    "mode_hour_counts": {
+      "off": 1058,
+      "cool": 327,
+      "heat": 79
+    },
+    "heating_energy_kwh": 136.458932,
+    "cooling_energy_kwh": 457.929521,
+    "total_energy_kwh": 594.388453,
+    "initial_indoor_temperature_c": 22.3188748,
+    "initial_mode": "off"
+  },
+  "ev": {
+    "trip_counts": {
+      "EV1": 37,
+      "EV2": 30
+    },
+    "charging": {
+      "EV1": {
+        "event_count": 30,
+        "required_energy_kwh": 542.291596,
+        "delivered_in_window_kwh": 542.291596,
+        "remaining_energy_kwh": 0.0,
+        "boundary_truncated_event_count": 0
+      },
+      "EV2": {
+        "event_count": 26,
+        "required_energy_kwh": 355.416096,
+        "delivered_in_window_kwh": 346.380412,
+        "remaining_energy_kwh": 9.035683,
+        "boundary_truncated_event_count": 1
+      }
+    },
+    "away_outcome_counts": {
+      "both_travel": 1,
+      "one_travels": 3
+    }
+  },
+  "pool_circulation": {
+    "power_kw": 0.880530278,
+    "ordinary_runtime_hours": {
+      "min": 6.123814,
+      "max": 9.931276,
+      "mean": 7.999414
+    },
+    "away_runtime_hours": {
+      "min": 4.971328,
+      "max": 5.733243,
+      "mean": 5.28568
+    },
+    "window_count_days": {
+      "2": 44,
+      "1": 17
+    },
+    "total_energy_kwh": 422.498737
+  },
+  "pool_heating": {
+    "power_kw": 4.379864887,
+    "activated_day_count": 5,
+    "resampled_start_count": 0,
+    "total_energy_kwh": 72.470907
+  },
+  "sauna": {
+    "power_kw": 6.590696173,
+    "event_count": 9,
+    "resampled_start_count": 1,
+    "total_energy_kwh": 90.286153
+  },
+  "component_energy_totals_kwh": {
+    "heating_kwh": 136.458932,
+    "cooling_kwh": 457.929521,
+    "hvac_kwh": 594.388453,
+    "ev1_charging_kwh": 542.291596,
+    "ev2_charging_kwh": 346.380412,
+    "ev_total_kwh": 888.672009,
+    "pool_circulation_kwh": 422.498737,
+    "pool_heating_kwh": 72.470907,
+    "sauna_kwh": 90.286153
+  },
+  "stage3b_total_energy_kwh": 2068.31626,
+  "warnings": [
+    "Stage 3B excludes all Stage 3A energy by design; the combined authoritative artifact belongs to Stage 3C.",
+    "Boundary-truncated EV events retain post-window remaining energy in the ledger without extending the hourly dataset."
+  ]
+}

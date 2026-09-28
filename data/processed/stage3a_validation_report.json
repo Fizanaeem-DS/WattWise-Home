@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "checks": {
+    "exactly_1464_rows": true,
+    "stage2_timestamps_preserved_exactly": true,
+    "no_duplicate_timestamps": true,
+    "hourly_continuity": true,
+    "timezone_preserved": true,
+    "no_negative_component_energy": true,
+    "total_equals_component_sum": true,
+    "household_parameters_within_ranges": true,
+    "away_suppresses_occupant_driven_loads": true,
+    "refrigerator_and_base_continue_during_away": true,
+    "guest_events_structurally_valid": true,
+    "occupancy_states_valid": true,
+    "dishwasher_energy_within_range": true,
+    "washer_energy_within_range": true,
+    "dryer_energy_within_range": true,
+    "dryer_follows_generated_washer": true,
+    "event_energy_preserved": true,
+    "away_events_do_not_overlap": true,
+    "no_stage3b_major_system_columns": true
+  },
+  "parameter_range_checks": {
+    "refrigerator_daily_kwh": true,
+    "smart_home_base_kw": true,
+    "oven_kw": true,
+    "hob_kw": true,
+    "tv_kw": true,
+    "computer_kw": true,
+    "installed_lighting_kw": true
+  },
+  "event_range_checks": {
+    "dishwasher": true,
+    "washer": true,
+    "dryer": true
+  },
+  "row_count": 1464,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "component_energy_totals_kwh": {
+    "refrigerator_kwh": 96.239665,
+    "smart_home_base_kwh": 191.633584,
+    "cooking_kwh": 151.024992,
+    "dishwasher_kwh": 33.87106,
+    "washer_kwh": 6.679231,
+    "dryer_kwh": 10.292143,
+    "electronics_kwh": 25.714925,
+    "phone_tablet_kwh": 1.950873,
+    "interior_lighting_kwh": 197.589248,
+    "exterior_security_lighting_kwh": 51.428452
+  },
+  "stage3a_total_energy_kwh": 766.424173
+}

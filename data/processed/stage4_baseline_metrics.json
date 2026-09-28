@@ -1,0 +1,57 @@
+{
+  "source_sha256": "fde362de6c8d758af02efe02110741e8c1bc352b6ed3030441038804a2a8c54a",
+  "split": {
+    "chronological": true,
+    "train_start": "2025-08-01T00:00:00+02:00",
+    "train_end": "2025-08-31T23:00:00+02:00",
+    "train_observations": 744,
+    "evaluation_start": "2025-09-01T00:00:00+02:00",
+    "evaluation_end": "2025-09-30T23:00:00+02:00",
+    "evaluation_observations": 720,
+    "random_split": false
+  },
+  "b3_training": {
+    "source_months": [
+      "2025-08"
+    ],
+    "hour_of_week_slot_count": 168,
+    "minimum_training_observations_per_slot": 4,
+    "maximum_training_observations_per_slot": 5,
+    "september_values_used": false
+  },
+  "baselines": {
+    "B1": {
+      "definition": "Same hour previous day: actual(t-24h)",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.642765862,
+      "rmse_kwh": 3.206053234,
+      "wape_percent": 84.815227574,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 24,
+      "peak_overlap_percent": 33.333333333
+    },
+    "B2": {
+      "definition": "Same hour previous week: actual(t-168h)",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.703049158,
+      "rmse_kwh": 3.133834424,
+      "wape_percent": 87.927625792,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 21,
+      "peak_overlap_percent": 29.166666667
+    },
+    "B3": {
+      "definition": "Mean for Monday-00 through Sunday-23 slot, built from August training data only",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.576202283,
+      "rmse_kwh": 2.571460057,
+      "wape_percent": 81.378581374,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 25,
+      "peak_overlap_percent": 34.722222222
+    }
+  }
+}

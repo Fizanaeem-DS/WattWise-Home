@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "checks": {
+    "exactly_1464_rows": true,
+    "exact_stage2_timestamps": true,
+    "exact_stage3a_timestamps": true,
+    "exact_stage3b_timestamps": true,
+    "no_duplicate_timestamps": true,
+    "no_missing_hours": true,
+    "timezone_preserved": true,
+    "expected_timestamp_range": true,
+    "stage3a_components_and_total_preserved_exactly": true,
+    "stage3b_components_and_total_preserved_exactly": true,
+    "stage2_weather_preserved_exactly": true,
+    "household_total_exact_source_combination": true,
+    "category_reconciliation_exact": true,
+    "no_negative_energy": true,
+    "metadata_totals_reconcile": true,
+    "source_hashes_match": true,
+    "ev_boundary_remainder_documented_and_excluded": true,
+    "no_new_behavioral_assumptions": true,
+    "top_10_diagnostics_present": true,
+    "required_output_columns_present": true
+  },
+  "row_count": 1464,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "energy_totals_kwh": {
+    "stage3a": 766.424173199,
+    "stage3b": 2068.316259948,
+    "household": 2834.740433147
+  },
+  "ev_post_boundary_accounting": {
+    "boundary_truncated_event_count": 1,
+    "remaining_energy_outside_profile_kwh": 9.035683461,
+    "included_in_hourly_profile": false,
+    "policy": "Ledger requirement is preserved; no row, backward redistribution, or hourly energy is added outside the frozen observation window."
+  }
+}

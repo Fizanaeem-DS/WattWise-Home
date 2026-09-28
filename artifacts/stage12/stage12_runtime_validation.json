@@ -1,0 +1,123 @@
+{
+  "demo_path": [
+    {
+      "exceptions": [],
+      "page": "Overview",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Historical Consumption",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Forecast",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Peak Hours",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Tariff",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Flexibility (Stage 7)",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "Optimizer",
+      "status": "PASS"
+    },
+    {
+      "exceptions": [],
+      "page": "PV Simulator",
+      "status": "PASS"
+    }
+  ],
+  "dependencies": {
+    "plotly": "7.1.0",
+    "python": "3.12.14",
+    "streamlit": "1.64.0"
+  },
+  "pages": {
+    "Flexibility (Stage 7)": {
+      "dataframe_count": 1,
+      "exceptions": [],
+      "metric_count": 0,
+      "status": "PASS"
+    },
+    "Forecast": {
+      "dataframe_count": 0,
+      "exceptions": [],
+      "metric_count": 3,
+      "status": "PASS"
+    },
+    "Historical Consumption": {
+      "dataframe_count": 0,
+      "exceptions": [],
+      "metric_count": 3,
+      "status": "PASS"
+    },
+    "Optimizer": {
+      "dataframe_count": 1,
+      "exceptions": [],
+      "metric_count": 12,
+      "status": "PASS"
+    },
+    "Overview": {
+      "dataframe_count": 0,
+      "exceptions": [],
+      "metric_count": 8,
+      "status": "PASS"
+    },
+    "PV Simulator": {
+      "dataframe_count": 0,
+      "exceptions": [],
+      "metric_count": 20,
+      "status": "PASS"
+    },
+    "Peak Hours": {
+      "dataframe_count": 1,
+      "exceptions": [],
+      "metric_count": 0,
+      "status": "PASS"
+    },
+    "Tariff": {
+      "dataframe_count": 0,
+      "exceptions": [],
+      "metric_count": 1,
+      "status": "PASS"
+    }
+  },
+  "stage": "12 runtime and demo-path validation",
+  "startup": {
+    "command": [
+      "C:\\Users\\fizan\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-c",
+      "from streamlit.web.cli import main; main()",
+      "run",
+      "C:\\Users\\fizan\\OneDrive - University of Pisa\\Documents\\ChatGPT\\HackoWatt_Scenario3\\app\\app.py",
+      "--global.developmentMode",
+      "false",
+      "--server.headless",
+      "true",
+      "--server.port",
+      "8513",
+      "--browser.gatherUsageStats",
+      "false"
+    ],
+    "health_body": "ok",
+    "health_status": 200,
+    "http_root_status": 200,
+    "startup_error": "",
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

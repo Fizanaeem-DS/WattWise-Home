@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "actual_event_instances_not_mock_midpoints": true,
+    "all_four_pv_capacities_exact": true,
+    "all_required_real_artifacts_load": true,
+    "annualized_estimate_label_exact": true,
+    "behavioral_and_pv_benefits_separate": true,
+    "deterministic_explanations_present": true,
+    "flexibility_abcd_classification_exact": true,
+    "forecast_expected_and_quantiles_are_distinct_fields": true,
+    "forecast_horizons_map_exactly": true,
+    "forecast_lead_semantics_exact": true,
+    "frozen_stages1_through10_byte_identical": true,
+    "history_components_reconcile_kwh": true,
+    "history_exact_hourly_timeline": true,
+    "history_timestamps_timezone_aware": true,
+    "no_mock_or_partial_provenance": true,
+    "official_tariff_exact": true,
+    "peak_probabilities_and_labels_exact": true,
+    "simple_payback_label_exact": true,
+    "stage10_economics_reproduce_frozen_values": true,
+    "stage9_metrics_reproduce_frozen_values": true,
+    "stage9_shifted_events_are_real_and_satisfied": true
+  },
+  "frozen_upstream": {
+    "byte_identical": true,
+    "expected_file_count": 1269,
+    "expected_tree_sha256": "0c559f7add82377fe2040bddd34ae4fb8798bea2aeb94f3daf876dc800b07a43",
+    "file_count": 1269,
+    "tree_sha256": "0c559f7add82377fe2040bddd34ae4fb8798bea2aeb94f3daf876dc800b07a43"
+  },
+  "loaded": {
+    "flexibility_components": 16,
+    "forecast_hours_by_horizon": {
+      "168h": 168,
+      "24h": 24,
+      "72h": 72
+    },
+    "history_hours": 1464,
+    "pv_capacities_kwp": [
+      3.0,
+      5.0,
+      8.0,
+      10.0
+    ],
+    "stage9_hours": 1464,
+    "stage9_shifted_events": 172
+  },
+  "problems": [],
+  "stage": "11 - full app integration",
+  "status": "PASS"
+}

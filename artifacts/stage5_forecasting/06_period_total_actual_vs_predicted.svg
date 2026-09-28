@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Selected forecasts: period-total actual versus predicted</text>
+<line x1="80" y1="55" x2="80" y2="450" stroke="#111"/>
+<line x1="80" y1="450" x2="1175" y2="450" stroke="#111"/>
+<text x="18" y="252.5" transform="rotate(-90 18 252.5)" text-anchor="middle" font-family="Arial" font-size="13">Period energy (kWh)</text>
+<line x1="80" y1="450.00" x2="1175" y2="450.00" stroke="#e5e7eb"/>
+<text x="72" y="454.00" text-anchor="end" font-family="Arial" font-size="11">12.51</text>
+<line x1="80" y1="371.00" x2="1175" y2="371.00" stroke="#e5e7eb"/>
+<text x="72" y="375.00" text-anchor="end" font-family="Arial" font-size="11">100.50</text>
+<line x1="80" y1="292.00" x2="1175" y2="292.00" stroke="#e5e7eb"/>
+<text x="72" y="296.00" text-anchor="end" font-family="Arial" font-size="11">188.49</text>
+<line x1="80" y1="213.00" x2="1175" y2="213.00" stroke="#e5e7eb"/>
+<text x="72" y="217.00" text-anchor="end" font-family="Arial" font-size="11">276.49</text>
+<line x1="80" y1="134.00" x2="1175" y2="134.00" stroke="#e5e7eb"/>
+<text x="72" y="138.00" text-anchor="end" font-family="Arial" font-size="11">364.48</text>
+<line x1="80" y1="55.00" x2="1175" y2="55.00" stroke="#e5e7eb"/>
+<text x="72" y="59.00" text-anchor="end" font-family="Arial" font-size="11">452.47</text>
+<polyline points="80.00,450.00 122.12,443.30 164.23,411.30 206.35,421.46 248.46,440.09 290.58,422.64 332.69,376.91 374.81,405.76 416.92,419.02 459.04,425.99 501.15,396.41 543.27,386.38 585.38,318.99 627.50,338.00 669.62,325.49 711.73,348.02 753.85,261.71 795.96,296.73 838.08,301.70 880.19,271.62 922.31,204.37 964.42,174.63 1006.54,163.67 1048.65,127.96 1090.77,93.03 1132.88,55.00 1175.00,101.96" fill="none" stroke="#2563eb" stroke-width="1.6"/>
+<polyline points="80.00,433.06 122.12,434.17 164.23,433.32 206.35,431.99 248.46,431.09 290.58,426.52 332.69,428.26 374.81,419.54 416.92,425.70 459.04,420.54 501.15,352.06 543.27,374.98 585.38,376.49 627.50,357.78 669.62,344.22 711.73,325.82 753.85,347.17 795.96,295.37 838.08,319.12 880.19,226.45 922.31,262.86 964.42,264.23 1006.54,209.95 1048.65,184.46 1090.77,153.98 1132.88,190.45 1175.00,80.25" fill="none" stroke="#dc2626" stroke-width="1.6"/>
+<text x="80.00" y="472" text-anchor="middle" font-family="Arial" font-size="10">24h 09-01</text>
+<text x="332.69" y="472" text-anchor="middle" font-family="Arial" font-size="10">24h 09-19</text>
+<text x="627.50" y="472" text-anchor="middle" font-family="Arial" font-size="10">72h 09-10</text>
+<text x="922.31" y="472" text-anchor="middle" font-family="Arial" font-size="10">168h 09-04</text>
+<text x="1175.00" y="472" text-anchor="middle" font-family="Arial" font-size="10">168h 09-22</text>
+<line x1="80" y1="500" x2="104" y2="500" stroke="#2563eb" stroke-width="3"/>
+<text x="110" y="504" font-family="Arial" font-size="12">Actual</text>
+<line x1="265" y1="500" x2="289" y2="500" stroke="#dc2626" stroke-width="3"/>
+<text x="295" y="504" font-family="Arial" font-size="12">Predicted</text>
+</svg>

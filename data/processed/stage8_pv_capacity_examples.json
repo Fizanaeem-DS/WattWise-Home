@@ -1,0 +1,342 @@
+{
+  "battery_implemented": false,
+  "capacity_examples": [
+    {
+      "annual_generation_kwh": 4677.03,
+      "capacity_kwp": 3.0,
+      "monthly_generation_kwh": [
+        {
+          "generation_kwh": 302.28,
+          "month": 1
+        },
+        {
+          "generation_kwh": 313.71,
+          "month": 2
+        },
+        {
+          "generation_kwh": 407.58,
+          "month": 3
+        },
+        {
+          "generation_kwh": 428.22,
+          "month": 4
+        },
+        {
+          "generation_kwh": 481.11,
+          "month": 5
+        },
+        {
+          "generation_kwh": 486.09,
+          "month": 6
+        },
+        {
+          "generation_kwh": 502.47,
+          "month": 7
+        },
+        {
+          "generation_kwh": 471.15,
+          "month": 8
+        },
+        {
+          "generation_kwh": 394.14,
+          "month": 9
+        },
+        {
+          "generation_kwh": 335.52,
+          "month": 10
+        },
+        {
+          "generation_kwh": 277.29,
+          "month": 11
+        },
+        {
+          "generation_kwh": 277.47,
+          "month": 12
+        }
+      ]
+    },
+    {
+      "annual_generation_kwh": 7795.05,
+      "capacity_kwp": 5.0,
+      "monthly_generation_kwh": [
+        {
+          "generation_kwh": 503.8,
+          "month": 1
+        },
+        {
+          "generation_kwh": 522.85,
+          "month": 2
+        },
+        {
+          "generation_kwh": 679.3,
+          "month": 3
+        },
+        {
+          "generation_kwh": 713.7,
+          "month": 4
+        },
+        {
+          "generation_kwh": 801.85,
+          "month": 5
+        },
+        {
+          "generation_kwh": 810.15,
+          "month": 6
+        },
+        {
+          "generation_kwh": 837.45,
+          "month": 7
+        },
+        {
+          "generation_kwh": 785.25,
+          "month": 8
+        },
+        {
+          "generation_kwh": 656.9,
+          "month": 9
+        },
+        {
+          "generation_kwh": 559.2,
+          "month": 10
+        },
+        {
+          "generation_kwh": 462.15,
+          "month": 11
+        },
+        {
+          "generation_kwh": 462.45,
+          "month": 12
+        }
+      ]
+    },
+    {
+      "annual_generation_kwh": 12472.08,
+      "capacity_kwp": 8.0,
+      "monthly_generation_kwh": [
+        {
+          "generation_kwh": 806.08,
+          "month": 1
+        },
+        {
+          "generation_kwh": 836.56,
+          "month": 2
+        },
+        {
+          "generation_kwh": 1086.88,
+          "month": 3
+        },
+        {
+          "generation_kwh": 1141.92,
+          "month": 4
+        },
+        {
+          "generation_kwh": 1282.96,
+          "month": 5
+        },
+        {
+          "generation_kwh": 1296.24,
+          "month": 6
+        },
+        {
+          "generation_kwh": 1339.92,
+          "month": 7
+        },
+        {
+          "generation_kwh": 1256.4,
+          "month": 8
+        },
+        {
+          "generation_kwh": 1051.04,
+          "month": 9
+        },
+        {
+          "generation_kwh": 894.72,
+          "month": 10
+        },
+        {
+          "generation_kwh": 739.44,
+          "month": 11
+        },
+        {
+          "generation_kwh": 739.92,
+          "month": 12
+        }
+      ]
+    },
+    {
+      "annual_generation_kwh": 15590.1,
+      "capacity_kwp": 10.0,
+      "monthly_generation_kwh": [
+        {
+          "generation_kwh": 1007.6,
+          "month": 1
+        },
+        {
+          "generation_kwh": 1045.7,
+          "month": 2
+        },
+        {
+          "generation_kwh": 1358.6,
+          "month": 3
+        },
+        {
+          "generation_kwh": 1427.4,
+          "month": 4
+        },
+        {
+          "generation_kwh": 1603.7,
+          "month": 5
+        },
+        {
+          "generation_kwh": 1620.3,
+          "month": 6
+        },
+        {
+          "generation_kwh": 1674.9,
+          "month": 7
+        },
+        {
+          "generation_kwh": 1570.5,
+          "month": 8
+        },
+        {
+          "generation_kwh": 1313.8,
+          "month": 9
+        },
+        {
+          "generation_kwh": 1118.4,
+          "month": 10
+        },
+        {
+          "generation_kwh": 924.3,
+          "month": 11
+        },
+        {
+          "generation_kwh": 924.9,
+          "month": 12
+        }
+      ]
+    }
+  ],
+  "capacity_examples_are_comparisons_not_optima": true,
+  "economics_implemented": false,
+  "optimization_implemented": false,
+  "provenance": {
+    "annual_monthly_meteorological_database": "ERA5",
+    "annual_monthly_radiation_database": "PVGIS-SARAH3",
+    "annual_monthly_source_year_range": [
+      2005,
+      2023
+    ],
+    "api_version": "5_3",
+    "azimuth_degrees_pvgis_convention": 0.0,
+    "azimuth_interpretation": "0 degrees is south; +90 west; -90 east",
+    "elevation_m_from_pvgis": 40.0,
+    "endpoints": {
+      "annual_monthly": "https://re.jrc.ec.europa.eu/api/v5_3/PVcalc",
+      "hourly": "https://re.jrc.ec.europa.eu/api/v5_3/seriescalc"
+    },
+    "hourly_source_year": 2023,
+    "latitude": 41.3874,
+    "longitude": 2.1686,
+    "mounting_type": "fixed ventilated/free-standing array",
+    "pv_technology": "crystSi",
+    "pvgis_mountingplace": "free",
+    "reference_capacity_kwp": 1.0,
+    "request_parameters": {
+      "PVcalc": {
+        "angle": 30.0,
+        "aspect": 0.0,
+        "lat": 41.3874,
+        "lon": 2.1686,
+        "loss": 14.0,
+        "mountingplace": "free",
+        "outputformat": "json",
+        "peakpower": 1.0,
+        "pvtechchoice": "crystSi",
+        "usehorizon": 1
+      },
+      "seriescalc": {
+        "angle": 30.0,
+        "aspect": 0.0,
+        "components": 0,
+        "endyear": 2023,
+        "lat": 41.3874,
+        "lon": 2.1686,
+        "loss": 14.0,
+        "mountingplace": "free",
+        "outputformat": "json",
+        "peakpower": 1.0,
+        "pvcalculation": 1,
+        "pvtechchoice": "crystSi",
+        "startyear": 2023,
+        "trackingtype": 0,
+        "usehorizon": 1
+      }
+    },
+    "retrieved_at_utc": "2026-09-28T19:45:18.524908+00:00",
+    "source": "European Commission Joint Research Centre PVGIS 5.3",
+    "system_losses_percent": 14.0,
+    "tilt_degrees": 30.0,
+    "timezone_treatment": "PVGIS seriescalc times are UTC. Each HH:10 record is converted with the Europe/Madrid IANA zone, assigned to its containing local clock hour, and matched by month/day/hour to the frozen 2025 timeline.",
+    "tracking_type": 0
+  },
+  "reference_system": {
+    "annual_generation_kwh_per_kwp": 1559.01,
+    "capacity_kwp": 1.0,
+    "monthly_generation_kwh_per_kwp": [
+      {
+        "generation_kwh_per_kwp": 100.76,
+        "month": 1
+      },
+      {
+        "generation_kwh_per_kwp": 104.57,
+        "month": 2
+      },
+      {
+        "generation_kwh_per_kwp": 135.86,
+        "month": 3
+      },
+      {
+        "generation_kwh_per_kwp": 142.74,
+        "month": 4
+      },
+      {
+        "generation_kwh_per_kwp": 160.37,
+        "month": 5
+      },
+      {
+        "generation_kwh_per_kwp": 162.03,
+        "month": 6
+      },
+      {
+        "generation_kwh_per_kwp": 167.49,
+        "month": 7
+      },
+      {
+        "generation_kwh_per_kwp": 157.05,
+        "month": 8
+      },
+      {
+        "generation_kwh_per_kwp": 131.38,
+        "month": 9
+      },
+      {
+        "generation_kwh_per_kwp": 111.84,
+        "month": 10
+      },
+      {
+        "generation_kwh_per_kwp": 92.43,
+        "month": 11
+      },
+      {
+        "generation_kwh_per_kwp": 92.49,
+        "month": 12
+      }
+    ]
+  },
+  "scope": "pv_generation_only",
+  "stage": "8",
+  "stage10_started": false,
+  "stage9_started": false
+}

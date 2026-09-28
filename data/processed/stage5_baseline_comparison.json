@@ -1,0 +1,489 @@
+{
+  "comparison_scope": "All model and baseline metrics use identical rolling-origin timestamps within each horizon.",
+  "by_horizon": {
+    "24": {
+      "strongest_compatible_baseline_by_wape": "B3_HOUR_OF_WEEK_MEAN",
+      "strongest_baseline_metrics": {
+        "evaluated_forecast_origins": [
+          "2025-09-01T23:00:00+02:00",
+          "2025-09-04T23:00:00+02:00",
+          "2025-09-07T23:00:00+02:00",
+          "2025-09-10T23:00:00+02:00",
+          "2025-09-13T23:00:00+02:00",
+          "2025-09-16T23:00:00+02:00",
+          "2025-09-19T23:00:00+02:00",
+          "2025-09-22T23:00:00+02:00",
+          "2025-09-25T23:00:00+02:00",
+          "2025-09-28T23:00:00+02:00"
+        ],
+        "forecast_origin_count": 10,
+        "evaluated_hourly_observations": 240,
+        "mae_kwh": 1.637173655,
+        "rmse_kwh": 2.738560741,
+        "wape_percent": 89.119527869,
+        "period_total_mape_percent": 76.810572644,
+        "period_total_mean_signed_bias_percent": 54.442436529,
+        "peak_overlap_percent": 23.333333333,
+        "peak_magnitude_mae_kwh": 4.480803386,
+        "origin_wape_stability": {
+          "minimum_percent": 59.746104963,
+          "mean_percent": 120.339176456,
+          "maximum_percent": 467.768560853,
+          "population_standard_deviation_percent": 117.249617467
+        },
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "mae_kwh": 2.438039444,
+            "rmse_kwh": 3.482549628,
+            "wape_percent": 467.768560853,
+            "actual_period_energy_kwh": 12.508952408,
+            "predicted_period_energy_kwh": 70.369621259,
+            "period_total_absolute_percentage_error": 462.554072987,
+            "period_total_signed_percentage_error": 462.554072987,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 8.256609706
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "mae_kwh": 0.990939988,
+            "rmse_kwh": 1.536671501,
+            "wape_percent": 119.096091115,
+            "actual_period_energy_kwh": 19.969219391,
+            "predicted_period_energy_kwh": 38.579629387,
+            "period_total_absolute_percentage_error": 93.195480663,
+            "period_total_signed_percentage_error": 93.195480663,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 2.759937463
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "mae_kwh": 1.384417999,
+            "rmse_kwh": 2.13043548,
+            "wape_percent": 59.746104963,
+            "actual_period_energy_kwh": 55.612047017,
+            "predicted_period_energy_kwh": 41.026450331,
+            "period_total_absolute_percentage_error": 26.227404795,
+            "period_total_signed_percentage_error": -26.227404795,
+            "peak_overlap_percent": 66.666666667,
+            "peak_magnitude_absolute_error_kwh": 4.865192254
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "mae_kwh": 1.132065443,
+            "rmse_kwh": 1.94146081,
+            "wape_percent": 61.341557507,
+            "actual_period_energy_kwh": 44.292273844,
+            "predicted_period_energy_kwh": 42.336037501,
+            "period_total_absolute_percentage_error": 4.41665368,
+            "period_total_signed_percentage_error": -4.41665368,
+            "peak_overlap_percent": 100.0,
+            "peak_magnitude_absolute_error_kwh": 7.709008212
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "mae_kwh": 0.743825016,
+            "rmse_kwh": 1.204804619,
+            "wape_percent": 75.815869651,
+            "actual_period_energy_kwh": 23.546258146,
+            "predicted_period_energy_kwh": 38.276043043,
+            "period_total_absolute_percentage_error": 62.556796946,
+            "period_total_signed_percentage_error": 62.556796946,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 1.582873802
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "mae_kwh": 1.628333972,
+            "rmse_kwh": 2.336398372,
+            "wape_percent": 90.911797531,
+            "actual_period_energy_kwh": 42.986737018,
+            "predicted_period_energy_kwh": 46.291676733,
+            "period_total_absolute_percentage_error": 7.688277696,
+            "period_total_signed_percentage_error": 7.688277696,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 2.59476527
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "mae_kwh": 2.873895794,
+            "rmse_kwh": 5.488495758,
+            "wape_percent": 73.439737647,
+            "actual_period_energy_kwh": 93.918498724,
+            "predicted_period_energy_kwh": 40.156303931,
+            "period_total_absolute_percentage_error": 57.243456319,
+            "period_total_signed_percentage_error": -57.243456319,
+            "peak_overlap_percent": 33.333333333,
+            "peak_magnitude_absolute_error_kwh": 13.87431779
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "mae_kwh": 2.180914524,
+            "rmse_kwh": 2.722436813,
+            "wape_percent": 84.71195751,
+            "actual_period_energy_kwh": 61.788146692,
+            "predicted_period_energy_kwh": 59.046433627,
+            "period_total_absolute_percentage_error": 4.437279982,
+            "period_total_signed_percentage_error": -4.437279982,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 1.115596933
+          },
+          "2025-09-25T23:00:00+02:00": {
+            "mae_kwh": 1.269524005,
+            "rmse_kwh": 1.566490954,
+            "wape_percent": 64.806535619,
+            "actual_period_energy_kwh": 47.014665757,
+            "predicted_period_energy_kwh": 37.83933728,
+            "period_total_absolute_percentage_error": 19.515885798,
+            "period_total_signed_percentage_error": -19.515885798,
+            "peak_overlap_percent": 33.333333333,
+            "peak_magnitude_absolute_error_kwh": 1.372794876
+          },
+          "2025-09-28T23:00:00+02:00": {
+            "mae_kwh": 1.729780367,
+            "rmse_kwh": 2.302207497,
+            "wape_percent": 105.753552169,
+            "actual_period_energy_kwh": 39.256108157,
+            "predicted_period_energy_kwh": 51.139096019,
+            "period_total_absolute_percentage_error": 30.270417573,
+            "period_total_signed_percentage_error": 30.270417573,
+            "peak_overlap_percent": 0.0,
+            "peak_magnitude_absolute_error_kwh": 0.676937555
+          }
+        }
+      },
+      "candidate_comparisons": {
+        "M1_GBT_CAL_WEATHER": {
+          "wape_relative_improvement_percent": 12.09718372,
+          "wape_percentage_point_difference": 10.780953017,
+          "mae_relative_improvement_percent": 12.097183729,
+          "rmse_relative_improvement_percent": 9.28335228,
+          "peak_overlap_percentage_point_difference": 13.333333334,
+          "period_total_mape_relative_improvement_percent": 30.383547153
+        },
+        "M2_GBT_HISTORY": {
+          "wape_relative_improvement_percent": 18.274712774,
+          "wape_percentage_point_difference": 16.286337744,
+          "mae_relative_improvement_percent": 18.27471277,
+          "rmse_relative_improvement_percent": 7.209980339,
+          "peak_overlap_percentage_point_difference": 16.666666667,
+          "period_total_mape_relative_improvement_percent": 42.460281132
+        },
+        "R2_RIDGE_HISTORY": {
+          "wape_relative_improvement_percent": -1.714256211,
+          "wape_percentage_point_difference": -1.527737042,
+          "mae_relative_improvement_percent": -1.714256207,
+          "rmse_relative_improvement_percent": 0.826504983,
+          "peak_overlap_percentage_point_difference": 13.333333334,
+          "period_total_mape_relative_improvement_percent": 18.389435156
+        }
+      }
+    },
+    "72": {
+      "strongest_compatible_baseline_by_wape": "B3_HOUR_OF_WEEK_MEAN",
+      "strongest_baseline_metrics": {
+        "evaluated_forecast_origins": [
+          "2025-09-01T23:00:00+02:00",
+          "2025-09-04T23:00:00+02:00",
+          "2025-09-07T23:00:00+02:00",
+          "2025-09-10T23:00:00+02:00",
+          "2025-09-13T23:00:00+02:00",
+          "2025-09-16T23:00:00+02:00",
+          "2025-09-19T23:00:00+02:00",
+          "2025-09-22T23:00:00+02:00",
+          "2025-09-25T23:00:00+02:00"
+        ],
+        "forecast_origin_count": 9,
+        "evaluated_hourly_observations": 648,
+        "mae_kwh": 1.494391394,
+        "rmse_kwh": 2.524579007,
+        "wape_percent": 73.82613696,
+        "period_total_mape_percent": 33.371993177,
+        "period_total_mean_signed_bias_percent": 4.851472081,
+        "peak_overlap_percent": 45.833333333,
+        "peak_magnitude_mae_kwh": 5.746552279,
+        "origin_wape_stability": {
+          "minimum_percent": 62.201400188,
+          "mean_percent": 79.204396924,
+          "maximum_percent": 153.816987674,
+          "population_standard_deviation_percent": 26.779591363
+        },
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "mae_kwh": 1.542481937,
+            "rmse_kwh": 2.449707705,
+            "wape_percent": 153.816987674,
+            "actual_period_energy_kwh": 72.201842706,
+            "predicted_period_energy_kwh": 162.917174529,
+            "period_total_absolute_percentage_error": 125.641297263,
+            "period_total_signed_percentage_error": 125.641297263,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 0.567099685
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "mae_kwh": 0.930445833,
+            "rmse_kwh": 1.46873091,
+            "wape_percent": 80.34947823,
+            "actual_period_energy_kwh": 83.375899175,
+            "predicted_period_energy_kwh": 121.020330141,
+            "period_total_absolute_percentage_error": 45.150254856,
+            "period_total_signed_percentage_error": 45.150254856,
+            "peak_overlap_percent": 12.5,
+            "peak_magnitude_absolute_error_kwh": 1.682237515
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "mae_kwh": 1.368653298,
+            "rmse_kwh": 2.134176128,
+            "wape_percent": 62.201400188,
+            "actual_period_energy_kwh": 158.425754393,
+            "predicted_period_energy_kwh": 143.464520994,
+            "period_total_absolute_percentage_error": 9.443687648,
+            "period_total_signed_percentage_error": -9.443687648,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 3.285036451
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "mae_kwh": 1.375509419,
+            "rmse_kwh": 2.451239774,
+            "wape_percent": 72.156398425,
+            "actual_period_energy_kwh": 137.252801283,
+            "predicted_period_energy_kwh": 118.806252772,
+            "period_total_absolute_percentage_error": 13.439833897,
+            "period_total_signed_percentage_error": -13.439833897,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 7.991683291
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "mae_kwh": 1.453115208,
+            "rmse_kwh": 2.597747191,
+            "wape_percent": 69.198938435,
+            "actual_period_energy_kwh": 151.193497125,
+            "predicted_period_energy_kwh": 137.942426204,
+            "period_total_absolute_percentage_error": 8.764312734,
+            "period_total_signed_percentage_error": -8.764312734,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 10.126398061
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "mae_kwh": 1.224996599,
+            "rmse_kwh": 2.110462829,
+            "wape_percent": 69.948395147,
+            "actual_period_energy_kwh": 126.092607211,
+            "predicted_period_energy_kwh": 127.623423845,
+            "period_total_absolute_percentage_error": 1.214041543,
+            "period_total_signed_percentage_error": 1.214041543,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 4.858644263
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "mae_kwh": 2.190262383,
+            "rmse_kwh": 3.845122124,
+            "wape_percent": 70.960346017,
+            "actual_period_energy_kwh": 222.235234833,
+            "predicted_period_energy_kwh": 120.945306639,
+            "period_total_absolute_percentage_error": 45.577798799,
+            "period_total_signed_percentage_error": -45.577798799,
+            "peak_overlap_percent": 62.5,
+            "peak_magnitude_absolute_error_kwh": 11.314961477
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "mae_kwh": 1.721507834,
+            "rmse_kwh": 2.354656834,
+            "wape_percent": 67.650247341,
+            "actual_period_energy_kwh": 183.219676084,
+            "predicted_period_energy_kwh": 148.730451093,
+            "period_total_absolute_percentage_error": 18.823974438,
+            "period_total_signed_percentage_error": -18.823974438,
+            "peak_overlap_percent": 37.5,
+            "peak_magnitude_absolute_error_kwh": 3.189954671
+          },
+          "2025-09-25T23:00:00+02:00": {
+            "mae_kwh": 1.642550031,
+            "rmse_kwh": 2.666130754,
+            "wape_percent": 66.557380858,
+            "actual_period_energy_kwh": 177.686682832,
+            "predicted_period_energy_kwh": 120.306788924,
+            "period_total_absolute_percentage_error": 32.292737415,
+            "period_total_signed_percentage_error": -32.292737415,
+            "peak_overlap_percent": 50.0,
+            "peak_magnitude_absolute_error_kwh": 8.702955097
+          }
+        }
+      },
+      "candidate_comparisons": {
+        "M1_GBT_CAL_WEATHER": {
+          "wape_relative_improvement_percent": 3.464851301,
+          "wape_percentage_point_difference": 2.557965867,
+          "mae_relative_improvement_percent": 3.464851324,
+          "rmse_relative_improvement_percent": 3.079709598,
+          "peak_overlap_percentage_point_difference": -4.166666666,
+          "period_total_mape_relative_improvement_percent": 24.054922936
+        },
+        "M2_GBT_HISTORY": {
+          "wape_relative_improvement_percent": 2.000371865,
+          "wape_percentage_point_difference": 1.476797273,
+          "mae_relative_improvement_percent": 2.000371865,
+          "rmse_relative_improvement_percent": -6.605217525,
+          "peak_overlap_percentage_point_difference": -2.777777777,
+          "period_total_mape_relative_improvement_percent": 13.076505763
+        },
+        "R2_RIDGE_HISTORY": {
+          "wape_relative_improvement_percent": -10.172463122,
+          "wape_percentage_point_difference": -7.509936557,
+          "mae_relative_improvement_percent": -10.172463092,
+          "rmse_relative_improvement_percent": -3.091905414,
+          "peak_overlap_percentage_point_difference": 4.166666667,
+          "period_total_mape_relative_improvement_percent": 10.296994908
+        }
+      }
+    },
+    "168": {
+      "strongest_compatible_baseline_by_wape": "B3_HOUR_OF_WEEK_MEAN",
+      "strongest_baseline_metrics": {
+        "evaluated_forecast_origins": [
+          "2025-09-01T23:00:00+02:00",
+          "2025-09-04T23:00:00+02:00",
+          "2025-09-07T23:00:00+02:00",
+          "2025-09-10T23:00:00+02:00",
+          "2025-09-13T23:00:00+02:00",
+          "2025-09-16T23:00:00+02:00",
+          "2025-09-19T23:00:00+02:00",
+          "2025-09-22T23:00:00+02:00"
+        ],
+        "forecast_origin_count": 8,
+        "evaluated_hourly_observations": 1344,
+        "mae_kwh": 1.501514223,
+        "rmse_kwh": 2.554228391,
+        "wape_percent": 72.541763615,
+        "period_total_mape_percent": 21.274226652,
+        "period_total_mean_signed_bias_percent": -5.994787061,
+        "peak_overlap_percent": 39.705882353,
+        "peak_magnitude_mae_kwh": 7.046579917,
+        "origin_wape_stability": {
+          "minimum_percent": 67.357147291,
+          "mean_percent": 73.906877745,
+          "maximum_percent": 100.041215315,
+          "population_standard_deviation_percent": 10.085280358
+        },
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "mae_kwh": 1.257600187,
+            "rmse_kwh": 2.035873639,
+            "wape_percent": 100.041215315,
+            "actual_period_energy_kwh": 211.189788898,
+            "predicted_period_energy_kwh": 324.963955001,
+            "period_total_absolute_percentage_error": 53.872948449,
+            "period_total_signed_percentage_error": 53.872948449,
+            "peak_overlap_percent": 23.529411765,
+            "peak_magnitude_absolute_error_kwh": 0.828796788
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "mae_kwh": 1.147051834,
+            "rmse_kwh": 1.84796818,
+            "wape_percent": 67.357147291,
+            "actual_period_energy_kwh": 286.093927412,
+            "predicted_period_energy_kwh": 306.820888636,
+            "period_total_absolute_percentage_error": 7.244809917,
+            "period_total_signed_percentage_error": 7.244809917,
+            "peak_overlap_percent": 47.058823529,
+            "peak_magnitude_absolute_error_kwh": 7.197044174
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "mae_kwh": 1.282330452,
+            "rmse_kwh": 2.175887559,
+            "wape_percent": 67.485830264,
+            "actual_period_energy_kwh": 319.224813822,
+            "predicted_period_energy_kwh": 300.546816808,
+            "period_total_absolute_percentage_error": 5.851047978,
+            "period_total_signed_percentage_error": -5.851047978,
+            "peak_overlap_percent": 47.058823529,
+            "peak_magnitude_absolute_error_kwh": 7.479719253
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "mae_kwh": 1.444886836,
+            "rmse_kwh": 2.49941016,
+            "wape_percent": 73.23982902,
+            "actual_period_energy_kwh": 331.433035426,
+            "predicted_period_energy_kwh": 303.040355708,
+            "period_total_absolute_percentage_error": 8.566641428,
+            "period_total_signed_percentage_error": -8.566641428,
+            "peak_overlap_percent": 41.176470588,
+            "peak_magnitude_absolute_error_kwh": 8.572560623
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "mae_kwh": 1.558318745,
+            "rmse_kwh": 3.017345502,
+            "wape_percent": 70.526482442,
+            "actual_period_energy_kwh": 371.20460306,
+            "predicted_period_energy_kwh": 305.72215398,
+            "period_total_absolute_percentage_error": 17.64052723,
+            "period_total_signed_percentage_error": -17.64052723,
+            "peak_overlap_percent": 41.176470588,
+            "peak_magnitude_absolute_error_kwh": 9.003590096
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "mae_kwh": 1.775241639,
+            "rmse_kwh": 3.050262628,
+            "wape_percent": 72.721035881,
+            "actual_period_energy_kwh": 410.115988736,
+            "predicted_period_energy_kwh": 307.615164111,
+            "period_total_absolute_percentage_error": 24.993130587,
+            "period_total_signed_percentage_error": -24.993130587,
+            "peak_overlap_percent": 41.176470588,
+            "peak_magnitude_absolute_error_kwh": 9.003590096
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "mae_kwh": 1.857833522,
+            "rmse_kwh": 3.010505719,
+            "wape_percent": 68.980556452,
+            "actual_period_energy_kwh": 452.469576674,
+            "predicted_period_energy_kwh": 307.515095012,
+            "period_total_absolute_percentage_error": 32.036293518,
+            "period_total_signed_percentage_error": -32.036293518,
+            "peak_overlap_percent": 41.176470588,
+            "peak_magnitude_absolute_error_kwh": 8.899912985
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "mae_kwh": 1.688850566,
+            "rmse_kwh": 2.48590729,
+            "wape_percent": 70.902925297,
+            "actual_period_energy_kwh": 400.162467073,
+            "predicted_period_energy_kwh": 320.176336037,
+            "period_total_absolute_percentage_error": 19.988414111,
+            "period_total_signed_percentage_error": -19.988414111,
+            "peak_overlap_percent": 35.294117647,
+            "peak_magnitude_absolute_error_kwh": 5.387425321
+          }
+        }
+      },
+      "candidate_comparisons": {
+        "M1_GBT_CAL_WEATHER": {
+          "wape_relative_improvement_percent": 1.962261626,
+          "wape_percentage_point_difference": 1.42345919,
+          "mae_relative_improvement_percent": 1.962261666,
+          "rmse_relative_improvement_percent": 1.048384674,
+          "peak_overlap_percentage_point_difference": 1.470588235,
+          "period_total_mape_relative_improvement_percent": 2.285269965
+        },
+        "M2_GBT_HISTORY": {
+          "wape_relative_improvement_percent": 0.257211473,
+          "wape_percentage_point_difference": 0.186585739,
+          "mae_relative_improvement_percent": 0.257211483,
+          "rmse_relative_improvement_percent": -8.768800581,
+          "peak_overlap_percentage_point_difference": 5.147058823,
+          "period_total_mape_relative_improvement_percent": -30.703446602
+        },
+        "R2_RIDGE_HISTORY": {
+          "wape_relative_improvement_percent": -12.796014263,
+          "wape_percentage_point_difference": -9.282454419,
+          "mae_relative_improvement_percent": -12.796014254,
+          "rmse_relative_improvement_percent": -5.728207294,
+          "peak_overlap_percentage_point_difference": -2.941176471,
+          "period_total_mape_relative_improvement_percent": -15.149131579
+        }
+      }
+    }
+  },
+  "selected_model_by_horizon": {
+    "24": "M2_GBT_HISTORY",
+    "72": "M1_GBT_CAL_WEATHER",
+    "168": "M1_GBT_CAL_WEATHER"
+  },
+  "selection_reasons": {
+    "24": "M2 has the lowest WAPE and MAE, lowest period-total MAPE and absolute bias, and highest peak overlap among candidates. M1 has slightly better RMSE and peak-magnitude MAE, but the broader evidence favors M2 for 24h.",
+    "72": "M1 has the lowest candidate WAPE, MAE, RMSE, and period-total MAPE with near-zero aggregate period bias. R2 has higher peak overlap, but materially worse hourly and total-energy errors.",
+    "168": "M1 has the lowest candidate WAPE, MAE, RMSE, period-total MAPE, and smaller peak-magnitude error than the other learned candidates. M2 has higher peak overlap but accumulates substantial recursive underprediction bias."
+  }
+}

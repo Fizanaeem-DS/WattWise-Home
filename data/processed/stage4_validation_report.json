@@ -1,0 +1,56 @@
+{
+  "stage": "4 - digital twin validation gate",
+  "source_stage3c_sha256": "fde362de6c8d758af02efe02110741e8c1bc352b6ed3030441038804a2a8c54a",
+  "classification": "PASS",
+  "classification_reasons": [
+    "All 61 exact 24-hour profiles are unique; no pair of days is identical.",
+    "Daily coefficient of variation is 0.428, with component-driven variation documented across all major categories.",
+    "Simple chronological baselines are not near-perfect: B1 WAPE 84.8% and peak overlap 33.3%, B2 WAPE 87.9% and peak overlap 29.2%, B3 WAPE 81.4% and peak overlap 34.7%.",
+    "Peak observations are explainable by frozen high-power systems and are distributed by block as {'EVENING': 45, 'RETURN_RAMP': 25, 'DAYTIME': 3, 'NIGHT': 1}."
+  ],
+  "concerns": [],
+  "input_integrity_pass": true,
+  "physical_rule_checks_pass": true,
+  "baseline_summary": {
+    "B1": {
+      "definition": "Same hour previous day: actual(t-24h)",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.642765862,
+      "rmse_kwh": 3.206053234,
+      "wape_percent": 84.815227574,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 24,
+      "peak_overlap_percent": 33.333333333
+    },
+    "B2": {
+      "definition": "Same hour previous week: actual(t-168h)",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.703049158,
+      "rmse_kwh": 3.133834424,
+      "wape_percent": 87.927625792,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 21,
+      "peak_overlap_percent": 29.166666667
+    },
+    "B3": {
+      "definition": "Mean for Monday-00 through Sunday-23 slot, built from August training data only",
+      "evaluated_observations": 720,
+      "mae_kwh": 1.576202283,
+      "rmse_kwh": 2.571460057,
+      "wape_percent": 81.378581374,
+      "actual_peak_count": 72,
+      "actual_peak_threshold_kwh": 5.250176087,
+      "peak_overlap_count": 25,
+      "peak_overlap_percent": 34.722222222
+    }
+  },
+  "stage3_modified": false,
+  "stage5_started": false,
+  "warnings": [
+    "No external universal residential-consumption benchmark or invented numeric pass threshold was used.",
+    "The gate evaluates 61 synthetic days; results may not generalize beyond the frozen observation window.",
+    "PASS means suitable to proceed to forecasting analysis, not proof of real-world accuracy."
+  ]
+}

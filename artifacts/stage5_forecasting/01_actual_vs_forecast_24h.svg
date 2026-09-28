@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Representative 24h forecast: M2_GBT_HISTORY</text>
+<line x1="80" y1="55" x2="80" y2="450" stroke="#111"/>
+<line x1="80" y1="450" x2="1175" y2="450" stroke="#111"/>
+<text x="18" y="252.5" transform="rotate(-90 18 252.5)" text-anchor="middle" font-family="Arial" font-size="13">kWh per hour</text>
+<line x1="80" y1="450.00" x2="1175" y2="450.00" stroke="#e5e7eb"/>
+<text x="72" y="454.00" text-anchor="end" font-family="Arial" font-size="11">0.20</text>
+<line x1="80" y1="371.00" x2="1175" y2="371.00" stroke="#e5e7eb"/>
+<text x="72" y="375.00" text-anchor="end" font-family="Arial" font-size="11">1.25</text>
+<line x1="80" y1="292.00" x2="1175" y2="292.00" stroke="#e5e7eb"/>
+<text x="72" y="296.00" text-anchor="end" font-family="Arial" font-size="11">2.30</text>
+<line x1="80" y1="213.00" x2="1175" y2="213.00" stroke="#e5e7eb"/>
+<text x="72" y="217.00" text-anchor="end" font-family="Arial" font-size="11">3.35</text>
+<line x1="80" y1="134.00" x2="1175" y2="134.00" stroke="#e5e7eb"/>
+<text x="72" y="138.00" text-anchor="end" font-family="Arial" font-size="11">4.41</text>
+<line x1="80" y1="55.00" x2="1175" y2="55.00" stroke="#e5e7eb"/>
+<text x="72" y="59.00" text-anchor="end" font-family="Arial" font-size="11">5.46</text>
+<polyline points="80.00,419.42 127.61,419.32 175.22,419.23 222.83,419.14 270.43,419.08 318.04,419.04 365.65,419.03 413.26,405.43 460.87,106.92 508.48,55.00 556.09,55.08 603.70,137.39 651.30,423.36 698.91,450.00 746.52,345.04 794.13,323.81 841.74,279.13 889.35,384.22 936.96,277.26 984.57,280.70 1032.17,354.38 1079.78,329.66 1127.39,365.64 1175.00,419.53" fill="none" stroke="#2563eb" stroke-width="1.6"/>
+<polyline points="80.00,370.27 127.61,370.27 175.22,370.27 222.83,370.27 270.43,370.27 318.04,370.27 365.65,370.27 413.26,370.27 460.87,370.27 508.48,370.27 556.09,370.27 603.70,360.66 651.30,360.66 698.91,360.66 746.52,360.66 794.13,360.66 841.74,351.33 889.35,302.51 936.96,266.22 984.57,173.13 1032.17,236.67 1079.78,314.27 1127.39,370.27 1175.00,360.66" fill="none" stroke="#dc2626" stroke-width="1.6"/>
+<text x="80.00" y="472" text-anchor="middle" font-family="Arial" font-size="10">Sep 17 00:00</text>
+<text x="365.65" y="472" text-anchor="middle" font-family="Arial" font-size="10">Sep 17 06:00</text>
+<text x="651.30" y="472" text-anchor="middle" font-family="Arial" font-size="10">Sep 17 12:00</text>
+<text x="936.96" y="472" text-anchor="middle" font-family="Arial" font-size="10">Sep 17 18:00</text>
+<text x="1175.00" y="472" text-anchor="middle" font-family="Arial" font-size="10">Sep 17 23:00</text>
+<line x1="80" y1="500" x2="104" y2="500" stroke="#2563eb" stroke-width="3"/>
+<text x="110" y="504" font-family="Arial" font-size="12">Actual</text>
+<line x1="265" y1="500" x2="289" y2="500" stroke="#dc2626" stroke-width="3"/>
+<text x="295" y="504" font-family="Arial" font-size="12">Forecast</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="55" y="38" font-family="sans-serif" font-size="22" font-weight="bold">Representative week net energy cost</text>
+<rect x="150" y="90.00" width="150" height="330.00" fill="#d95f02"/>
+<text x="225" y="450" text-anchor="middle" font-family="sans-serif" font-size="16">Current</text>
+<text x="225" y="80.00" text-anchor="middle" font-family="sans-serif" font-size="16">EUR 112.40</text>
+<rect x="430" y="258.99" width="150" height="161.01" fill="#1b9e77"/>
+<text x="505" y="450" text-anchor="middle" font-family="sans-serif" font-size="16">Optimized</text>
+<text x="505" y="248.99" text-anchor="middle" font-family="sans-serif" font-size="16">EUR 54.84</text>
+</svg>

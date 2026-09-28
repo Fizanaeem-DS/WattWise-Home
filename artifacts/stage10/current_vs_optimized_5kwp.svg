@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="60" y="38" font-family="sans-serif" font-size="22" font-weight="bold">Current versus optimized at 5 kWp</text>
+<text x="65" y="75" font-family="sans-serif" font-size="17" font-weight="bold">PV self-consumed (kWh/year)</text>
+<text x="65" y="114" font-family="sans-serif" font-size="14">Current</text>
+<rect x="155" y="95" width="489.72" height="28" fill="#d95f02"/>
+<text x="654.72" y="115" font-family="sans-serif" font-size="13">4,017.61</text>
+<text x="65" y="159" font-family="sans-serif" font-size="14">Optimized</text>
+<rect x="155" y="140" width="720.00" height="28" fill="#1b9e77"/>
+<text x="885.00" y="160" font-family="sans-serif" font-size="13">5,906.77</text>
+<text x="65" y="225" font-family="sans-serif" font-size="17" font-weight="bold">Grid imported (kWh/year)</text>
+<text x="65" y="264" font-family="sans-serif" font-size="14">Current</text>
+<rect x="155" y="245" width="720.00" height="28" fill="#d95f02"/>
+<text x="885.00" y="265" font-family="sans-serif" font-size="13">12,944.36</text>
+<text x="65" y="309" font-family="sans-serif" font-size="14">Optimized</text>
+<rect x="155" y="290" width="598.48" height="28" fill="#1b9e77"/>
+<text x="763.48" y="310" font-family="sans-serif" font-size="13">10,759.71</text>
+<text x="65" y="375" font-family="sans-serif" font-size="17" font-weight="bold">Net electricity cost (EUR/year)</text>
+<text x="65" y="414" font-family="sans-serif" font-size="14">Current</text>
+<rect x="155" y="395" width="720.00" height="28" fill="#d95f02"/>
+<text x="885.00" y="415" font-family="sans-serif" font-size="13">3,951.25</text>
+<text x="65" y="459" font-family="sans-serif" font-size="14">Optimized</text>
+<rect x="155" y="440" width="436.47" height="28" fill="#1b9e77"/>
+<text x="601.47" y="460" font-family="sans-serif" font-size="13">2,395.26</text>
+<text x="65" y="525" font-family="sans-serif" font-size="17" font-weight="bold">Simple payback (years)</text>
+<text x="65" y="564" font-family="sans-serif" font-size="14">Current</text>
+<rect x="155" y="545" width="720.00" height="28" fill="#d95f02"/>
+<text x="885.00" y="565" font-family="sans-serif" font-size="13">4.39</text>
+<text x="65" y="609" font-family="sans-serif" font-size="14">Optimized</text>
+<rect x="155" y="590" width="568.88" height="28" fill="#1b9e77"/>
+<text x="733.88" y="610" font-family="sans-serif" font-size="13">3.47</text>
+<text x="1040" y="700" text-anchor="end" font-family="sans-serif" font-size="11">ANNUALIZED ESTIMATE; ALL MINI-AXES START AT ZERO</text>
+</svg>

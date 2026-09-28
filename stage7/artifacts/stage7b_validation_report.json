@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "problems": [],
+  "event_count": 177,
+  "event_counts_by_component": {
+    "dishwasher": 33,
+    "dryer": 5,
+    "ev1": 30,
+    "ev2": 26,
+    "pool_circulation": 61,
+    "pool_heating": 5,
+    "sauna": 9,
+    "washer": 8
+  },
+  "hvac_hour_state_count": 1464,
+  "mock_generator_used": false,
+  "frozen_upstream": {
+    "file_count": 172,
+    "tree_sha256": "7223ec6131a68ff5f8b9f686aa22021aa3720d7013e079ecb46c164e7daeb8a3",
+    "expected_file_count": 172,
+    "expected_tree_sha256": "7223ec6131a68ff5f8b9f686aa22021aa3720d7013e079ecb46c164e7daeb8a3",
+    "byte_identical": true
+  }
+}

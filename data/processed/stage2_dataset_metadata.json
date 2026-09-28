@@ -1,0 +1,45 @@
+{
+  "dataset": "HackoWatt Scenario 3 Stage 2 Barcelona hourly weather and solar",
+  "processed_file": "data/processed/stage2_barcelona_weather_solar_hourly.csv",
+  "source_raw_file": "data/raw/open_meteo_era5_barcelona_2025-08-01_2025-09-30.json",
+  "source_raw_sha256": "3f58239d2bd2a82ba9ee843892eddb2f41cf049c455737c807066910d6c5fc66",
+  "row_count": 1464,
+  "columns": [
+    "timestamp",
+    "temperature_2m",
+    "relative_humidity_2m",
+    "precipitation",
+    "cloud_cover",
+    "wind_speed_10m",
+    "shortwave_radiation",
+    "direct_radiation",
+    "diffuse_radiation"
+  ],
+  "timezone": "Europe/Madrid",
+  "timestamp_processing": "Open-Meteo local wall-clock ISO 8601 values were assigned the requested Europe/Madrid IANA timezone and serialized with an explicit UTC offset.",
+  "value_conversions": "None. Source values and returned units are preserved.",
+  "units": {
+    "timestamp": "ISO 8601 with Europe/Madrid UTC offset",
+    "temperature_2m": "°C",
+    "relative_humidity_2m": "%",
+    "precipitation": "mm",
+    "cloud_cover": "%",
+    "wind_speed_10m": "km/h",
+    "shortwave_radiation": "W/m²",
+    "direct_radiation": "W/m²",
+    "diffuse_radiation": "W/m²"
+  },
+  "requested_coordinates": {
+    "latitude": 41.3874,
+    "longitude": 2.1686
+  },
+  "returned_grid_cell": {
+    "latitude": 41.5,
+    "longitude": 2.25,
+    "elevation_m": 25.0
+  },
+  "source": "Open-Meteo Historical Weather API",
+  "api_endpoint": "https://archive-api.open-meteo.com/v1/archive",
+  "model": "era5",
+  "retrieved_at_utc": "2026-09-28T14:04:23.875431+00:00"
+}

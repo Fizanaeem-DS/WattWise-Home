@@ -1,0 +1,111 @@
+{
+  "status": "pass",
+  "checks": {
+    "row_count_matches_nominal": true,
+    "expected_start": true,
+    "expected_end": true,
+    "strictly_chronological": true,
+    "no_duplicate_timestamps": true,
+    "no_missing_hours": true,
+    "hourly_continuity": true,
+    "all_timestamps_timezone_aware": true,
+    "no_missing_values": true,
+    "humidity_within_0_100_percent": true,
+    "precipitation_nonnegative": true,
+    "cloud_cover_within_0_100_percent": true,
+    "wind_speed_nonnegative": true,
+    "solar_variables_nonnegative": true,
+    "temperature_within_broad_integrity_bounds": true,
+    "solar_ghi_equals_direct_plus_diffuse_within_0_2_w_m2": true,
+    "core_night_solar_is_zero": true,
+    "positive_shortwave_radiation_present_each_day": true
+  },
+  "temporal": {
+    "raw_row_count": 1464,
+    "processed_row_count": 1464,
+    "expected_nominal_row_count": 1464,
+    "first_timestamp": "2025-08-01T00:00:00+02:00",
+    "last_timestamp": "2025-09-30T23:00:00+02:00",
+    "strictly_chronological": true,
+    "duplicate_timestamp_count": 0,
+    "missing_hour_count": 0,
+    "missing_hours": [],
+    "hourly_continuity": true,
+    "timezone": "Europe/Madrid",
+    "observed_utc_offsets": [
+      "+0200"
+    ]
+  },
+  "missingness": {
+    "temperature_2m": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "relative_humidity_2m": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "precipitation": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "cloud_cover": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "wind_speed_10m": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "shortwave_radiation": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "direct_radiation": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    },
+    "diffuse_radiation": {
+      "missing_count": 0,
+      "coverage_percent": 100.0
+    }
+  },
+  "physical_sanity": {
+    "humidity_within_0_100_percent": true,
+    "precipitation_nonnegative": true,
+    "cloud_cover_within_0_100_percent": true,
+    "wind_speed_nonnegative": true,
+    "temperature_min_c": 14.2,
+    "temperature_max_c": 34.9,
+    "temperature_integrity_bounds_c": [
+      -100.0,
+      60.0
+    ],
+    "temperature_within_integrity_bounds": true,
+    "solar_variables_nonnegative": true
+  },
+  "solar_sanity": {
+    "definition_used": "Open-Meteo preceding-hour means on the horizontal plane: shortwave radiation (GHI) = direct radiation + diffuse radiation.",
+    "max_abs_ghi_minus_direct_plus_diffuse_w_m2": 0.0,
+    "coherence_tolerance_w_m2": 0.2,
+    "coherent_within_tolerance": true,
+    "core_night_local_hours_inclusive": [
+      0,
+      4
+    ],
+    "core_night_observation_count": 305,
+    "core_night_all_three_solar_variables_zero": true,
+    "positive_shortwave_radiation_present_each_day": true
+  },
+  "units": {
+    "time": "iso8601",
+    "temperature_2m": "°C",
+    "relative_humidity_2m": "%",
+    "precipitation": "mm",
+    "cloud_cover": "%",
+    "wind_speed_10m": "km/h",
+    "shortwave_radiation": "W/m²",
+    "direct_radiation": "W/m²",
+    "diffuse_radiation": "W/m²"
+  }
+}

@@ -1,0 +1,13 @@
+month,reference_capacity_kwp,monthly_generation_kwh_per_kwp,monthly_share_of_annual_generation,annual_generation_kwh_per_kwp,source
+1,1.0,100.76,0.06463075926389183,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+2,1.0,104.57,0.06707461786646654,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+3,1.0,135.86,0.0871450471773754,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+4,1.0,142.74,0.0915581041814998,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+5,1.0,160.37,0.10286656275456861,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+6,1.0,162.03,0.10393134104335444,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+7,1.0,167.49,0.1074335636076741,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+8,1.0,157.05,0.10073700617699695,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+9,1.0,131.38,0.08427142866306181,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+10,1.0,111.84,0.07173783362518521,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+11,1.0,92.43,0.059287624838840036,1559.01,PVGIS 5.3 PVcalc long-term monthly average
+12,1.0,92.49,0.059326110801085304,1559.01,PVGIS 5.3 PVcalc long-term monthly average

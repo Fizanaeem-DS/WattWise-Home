@@ -1,0 +1,467 @@
+{
+  "stage": "3C - final combined digital twin",
+  "integration_method": "Deterministic exact-timestamp join; no RNG, resampling, interpolation, scaling, smoothing, or added load.",
+  "behavioral_assumptions_added": [],
+  "row_count": 1464,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "timezone": "Europe/Madrid",
+  "source_sha256": {
+    "stage2_hourly": "4cb7be9890e7b070cd2689ce0a9a658caa0c84a08a252a45ac2dff7c543d6fdb",
+    "stage3a_hourly": "c3c01c2d21e66ecee97ae2387149748b191baae307d2fd4b86454b3555556eff",
+    "stage3a_event_ledger": "a2ab22d6266dac0ee67f23cd0750f34c611d46b10f9dce15bc9224f87005726a",
+    "stage3a_metadata": "4b1abf75459d9e9d392e4398297568daabc369d876e36d7945b3689db508aba1",
+    "stage3b_hourly": "0b2d3edf43a6d582d68b5fd477a0ae727c4b8ccedb3b9ee5b41a4ca4c8eee1c1",
+    "stage3b_event_ledger": "57d6dfd0d0b769f6934d7d797baedc49aeca227d8c1a5afcc4d9cdebd4b28b5e",
+    "stage3b_metadata": "2ef030d2c05d154e2a6232b216de9993fc58e94fd1c26e08390eb2093b1a45e6"
+  },
+  "energy_totals_kwh": {
+    "stage3a": 766.424173199,
+    "stage3b": 2068.316259948,
+    "household": 2834.740433147
+  },
+  "hourly_diagnostics_kwh": {
+    "mean": 1.93629811,
+    "median": 1.077165011,
+    "population_standard_deviation": 2.575101182,
+    "minimum": 0.191375735,
+    "maximum": 21.699169197,
+    "maximum_timestamp": "2025-08-22T22:00:00+02:00"
+  },
+  "daily_diagnostics_kwh": {
+    "day_count": 61,
+    "minimum": 12.34347122,
+    "mean": 46.471154642,
+    "median": 44.790992742,
+    "maximum": 96.792265598,
+    "weekday_average": 47.5425303,
+    "weekend_average": 43.911757235
+  },
+  "away_hour_diagnostics": {
+    "away": {
+      "hour_count": 75,
+      "total_energy_kwh": 37.477058418,
+      "mean_hourly_energy_kwh": 0.499694112,
+      "median_hourly_energy_kwh": 0.282434738
+    },
+    "non_away": {
+      "hour_count": 1389,
+      "total_energy_kwh": 2797.263374729,
+      "mean_hourly_energy_kwh": 2.01386852,
+      "median_hourly_energy_kwh": 1.078526139
+    }
+  },
+  "category_energy_totals_kwh": {
+    "base_fixed_kwh": 287.873248868,
+    "routine_behavior_kwh": 478.550924331,
+    "hvac_kwh": 594.388453417,
+    "ev_kwh": 888.67200852,
+    "pool_kwh": 494.969644389,
+    "sauna_kwh": 90.286153477
+  },
+  "category_percentage_shares": {
+    "base_fixed_kwh": 10.155189008,
+    "routine_behavior_kwh": 16.881648801,
+    "hvac_kwh": 20.968002801,
+    "ev_kwh": 31.349325608,
+    "pool_kwh": 17.460845395,
+    "sauna_kwh": 3.184988383
+  },
+  "top_10_highest_demand_hours": [
+    {
+      "rank": 1,
+      "timestamp": "2025-08-22T22:00:00+02:00",
+      "household_total_kwh": 21.699169197,
+      "stage3a_total_kwh": 0.600233128,
+      "stage3b_total_kwh": 21.098936069,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.194005234,
+        "routine_behavior_kwh": 0.406227894,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 14.714352215,
+        "pool_kwh": 0.0,
+        "sauna_kwh": 6.384583854
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.314352215
+        },
+        {
+          "component": "sauna_kwh",
+          "energy_kwh": 6.384583854
+        },
+        {
+          "component": "interior_lighting_kwh",
+          "energy_kwh": 0.324982315
+        },
+        {
+          "component": "smart_home_base_kwh",
+          "energy_kwh": 0.130897257
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "timestamp": "2025-08-04T20:00:00+02:00",
+      "household_total_kwh": 18.458846665,
+      "stage3a_total_kwh": 2.258450575,
+      "stage3b_total_kwh": 16.20039609,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.192080307,
+        "routine_behavior_kwh": 2.066370268,
+        "hvac_kwh": 1.40039609,
+        "ev_kwh": 14.8,
+        "pool_kwh": 0.0,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "cooling_kwh",
+          "energy_kwh": 1.40039609
+        },
+        {
+          "component": "cooking_kwh",
+          "energy_kwh": 1.139925495
+        },
+        {
+          "component": "dishwasher_kwh",
+          "energy_kwh": 0.926444773
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "timestamp": "2025-09-20T20:00:00+02:00",
+      "household_total_kwh": 17.316185669,
+      "stage3a_total_kwh": 2.545301545,
+      "stage3b_total_kwh": 14.770884124,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.192080307,
+        "routine_behavior_kwh": 2.353221238,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 9.258488285,
+        "pool_kwh": 0.0,
+        "sauna_kwh": 5.512395839
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "sauna_kwh",
+          "energy_kwh": 5.512395839
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 1.858488285
+        },
+        {
+          "component": "cooking_kwh",
+          "energy_kwh": 1.692314168
+        },
+        {
+          "component": "dishwasher_kwh",
+          "energy_kwh": 0.449630998
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "timestamp": "2025-09-16T19:00:00+02:00",
+      "household_total_kwh": 16.628074464,
+      "stage3a_total_kwh": 1.828074464,
+      "stage3b_total_kwh": 14.8,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 1.636519533,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 14.8,
+        "pool_kwh": 0.0,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "cooking_kwh",
+          "energy_kwh": 1.489490005
+        },
+        {
+          "component": "electronics_kwh",
+          "energy_kwh": 0.147029528
+        },
+        {
+          "component": "smart_home_base_kwh",
+          "energy_kwh": 0.130897257
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "timestamp": "2025-09-20T19:00:00+02:00",
+      "household_total_kwh": 16.391951021,
+      "stage3a_total_kwh": 0.191554931,
+      "stage3b_total_kwh": 16.20039609,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 0.0,
+        "hvac_kwh": 1.40039609,
+        "ev_kwh": 14.8,
+        "pool_kwh": 0.0,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "cooling_kwh",
+          "energy_kwh": 1.40039609
+        },
+        {
+          "component": "smart_home_base_kwh",
+          "energy_kwh": 0.130897257
+        },
+        {
+          "component": "refrigerator_kwh",
+          "energy_kwh": 0.060657674
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "timestamp": "2025-08-12T19:00:00+02:00",
+      "household_total_kwh": 16.110013842,
+      "stage3a_total_kwh": 0.421570988,
+      "stage3b_total_kwh": 15.688442854,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 0.230016057,
+        "hvac_kwh": 1.40039609,
+        "ev_kwh": 13.729516863,
+        "pool_kwh": 0.5585299,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 6.329516863
+        },
+        {
+          "component": "cooling_kwh",
+          "energy_kwh": 1.40039609
+        },
+        {
+          "component": "pool_circulation_kwh",
+          "energy_kwh": 0.5585299
+        },
+        {
+          "component": "electronics_kwh",
+          "energy_kwh": 0.212373179
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "timestamp": "2025-09-20T18:00:00+02:00",
+      "household_total_kwh": 15.731906587,
+      "stage3a_total_kwh": 0.191375735,
+      "stage3b_total_kwh": 15.540530852,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191375735,
+        "routine_behavior_kwh": 0.0,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 14.8,
+        "pool_kwh": 0.740530852,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "pool_circulation_kwh",
+          "energy_kwh": 0.740530852
+        },
+        {
+          "component": "smart_home_base_kwh",
+          "energy_kwh": 0.130897257
+        },
+        {
+          "component": "refrigerator_kwh",
+          "energy_kwh": 0.060478478
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "timestamp": "2025-09-15T19:00:00+02:00",
+      "household_total_kwh": 15.211512589,
+      "stage3a_total_kwh": 3.023380403,
+      "stage3b_total_kwh": 12.188132186,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 2.831825472,
+        "hvac_kwh": 1.40039609,
+        "ev_kwh": 9.907205817,
+        "pool_kwh": 0.880530278,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "cooking_kwh",
+          "energy_kwh": 2.81408967
+        },
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 2.507205817
+        },
+        {
+          "component": "cooling_kwh",
+          "energy_kwh": 1.40039609
+        },
+        {
+          "component": "pool_circulation_kwh",
+          "energy_kwh": 0.880530278
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "timestamp": "2025-09-12T19:00:00+02:00",
+      "household_total_kwh": 15.019444162,
+      "stage3a_total_kwh": 1.238821175,
+      "stage3b_total_kwh": 13.780622987,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 1.047266244,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 12.900092708,
+        "pool_kwh": 0.880530278,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.001569854
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 5.898522855
+        },
+        {
+          "component": "pool_circulation_kwh",
+          "energy_kwh": 0.880530278
+        },
+        {
+          "component": "cooking_kwh",
+          "energy_kwh": 0.866838491
+        },
+        {
+          "component": "electronics_kwh",
+          "energy_kwh": 0.180427753
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "timestamp": "2025-09-20T17:00:00+02:00",
+      "household_total_kwh": 14.80883985,
+      "stage3a_total_kwh": 0.191554931,
+      "stage3b_total_kwh": 14.617284919,
+      "category_breakdown_kwh": {
+        "base_fixed_kwh": 0.191554931,
+        "routine_behavior_kwh": 0.0,
+        "hvac_kwh": 0.0,
+        "ev_kwh": 13.736754641,
+        "pool_kwh": 0.880530278,
+        "sauna_kwh": 0.0
+      },
+      "main_contributing_components": [
+        {
+          "component": "ev1_charging_kwh",
+          "energy_kwh": 7.4
+        },
+        {
+          "component": "ev2_charging_kwh",
+          "energy_kwh": 6.336754641
+        },
+        {
+          "component": "pool_circulation_kwh",
+          "energy_kwh": 0.880530278
+        },
+        {
+          "component": "smart_home_base_kwh",
+          "energy_kwh": 0.130897257
+        },
+        {
+          "component": "refrigerator_kwh",
+          "energy_kwh": 0.060657674
+        }
+      ]
+    }
+  ],
+  "variability_inventory": [
+    "weekday/weekend structure",
+    "EMPTY/PARTIAL/FULL daytime occupancy",
+    "exact AWAY episodes",
+    "guest events",
+    "cooking occurrence and timing",
+    "dishwasher occurrence and timing",
+    "laundry occurrence and timing",
+    "electronics occurrence and timing",
+    "weather-driven HVAC",
+    "EV trip and charging variability",
+    "pool-circulation runtime and window variability",
+    "temperature/occupancy/guest-driven pool-heating activation",
+    "sauna selected-day variability"
+  ],
+  "ev_post_boundary_accounting": {
+    "boundary_truncated_event_count": 1,
+    "remaining_energy_outside_profile_kwh": 9.035683461,
+    "included_in_hourly_profile": false,
+    "policy": "Ledger requirement is preserved; no row, backward redistribution, or hourly energy is added outside the frozen observation window."
+  },
+  "warnings": [
+    "Stage 3C is an integration artifact; physical, behavioral, and statistical credibility remains for Stage 4 validation.",
+    "Known post-window EV energy remains outside the 1,464-hour historical profile."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "all_nonnegative": true,
+  "annual_generation_kwh_per_kwp": 1559.01,
+  "first_timestamp": "2025-08-01T00:00:00+02:00",
+  "frozen_upstream": {
+    "file_count": 180,
+    "manifest_sha256": "39cb77622eaf1216c194f78fc440a53c2bdc820b08330710d41e016e0c168065"
+  },
+  "hourly_row_count": 1464,
+  "last_timestamp": "2025-09-30T23:00:00+02:00",
+  "monthly_count": 12,
+  "monthly_generation_sum_kwh_per_kwp": 1559.01,
+  "pvgis_source_night_hour_count": 686,
+  "pvgis_source_night_nonzero_count": 0,
+  "raw_source_sha256": "8e8b5c593b8c33e433fe9c6d0f82c0151a6f806dd4ed7fad7548f6a6029c9b48",
+  "stage": "8",
+  "stage2_shortwave_vs_pv_correlation_all_hours": 0.8534476235466153,
+  "stage2_shortwave_vs_pv_correlation_daylight_hours": 0.7350613633294255,
+  "stage2_solar_use": "descriptive sanity check only; no Stage 2 radiation value tunes or produces PV output",
+  "stage2_zero_shortwave_hour_count": 633,
+  "stage2_zero_shortwave_with_positive_pv_count": 6,
+  "timezone": "Europe/Madrid",
+  "unique_timestamp_count": 1464
+}

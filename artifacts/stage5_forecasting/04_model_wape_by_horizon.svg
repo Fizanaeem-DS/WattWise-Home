@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Learned-model WAPE by forecast horizon</text>
+<line x1="80" y1="55" x2="80" y2="425" stroke="#111"/>
+<line x1="80" y1="425" x2="1175" y2="425" stroke="#111"/>
+<text x="18" y="240.0" transform="rotate(-90 18 240.0)" text-anchor="middle" font-family="Arial" font-size="13">WAPE (%)</text>
+<line x1="80" y1="425.00" x2="1175" y2="425.00" stroke="#e5e7eb"/>
+<text x="72" y="429.00" text-anchor="end" font-family="Arial" font-size="11">0.00</text>
+<line x1="80" y1="351.00" x2="1175" y2="351.00" stroke="#e5e7eb"/>
+<text x="72" y="355.00" text-anchor="end" font-family="Arial" font-size="11">18.13</text>
+<line x1="80" y1="277.00" x2="1175" y2="277.00" stroke="#e5e7eb"/>
+<text x="72" y="281.00" text-anchor="end" font-family="Arial" font-size="11">36.26</text>
+<line x1="80" y1="203.00" x2="1175" y2="203.00" stroke="#e5e7eb"/>
+<text x="72" y="207.00" text-anchor="end" font-family="Arial" font-size="11">54.39</text>
+<line x1="80" y1="129.00" x2="1175" y2="129.00" stroke="#e5e7eb"/>
+<text x="72" y="133.00" text-anchor="end" font-family="Arial" font-size="11">72.52</text>
+<line x1="80" y1="55.00" x2="1175" y2="55.00" stroke="#e5e7eb"/>
+<text x="72" y="59.00" text-anchor="end" font-family="Arial" font-size="11">90.65</text>
+<rect x="94.60" y="105.24" width="92.47" height="319.76" fill="#2563eb"/>
+<text x="140.83" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 140.83 443)">24h M1 CAL_WEATHER</text>
+<rect x="216.27" y="127.71" width="92.47" height="297.29" fill="#dc2626"/>
+<text x="262.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 262.50 443)">24h M2 HISTORY</text>
+<rect x="337.93" y="55.00" width="92.47" height="370.00" fill="#16a34a"/>
+<text x="384.17" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 384.17 443)">24h R2_RIDGE</text>
+<rect x="459.60" y="134.10" width="92.47" height="290.90" fill="#9333ea"/>
+<text x="505.83" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 505.83 443)">72h M1 CAL_WEATHER</text>
+<rect x="581.27" y="129.69" width="92.47" height="295.31" fill="#ea580c"/>
+<text x="627.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 627.50 443)">72h M2 HISTORY</text>
+<rect x="702.93" y="93.01" width="92.47" height="331.99" fill="#0891b2"/>
+<text x="749.17" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 749.17 443)">72h R2_RIDGE</text>
+<rect x="824.60" y="134.71" width="92.47" height="290.29" fill="#2563eb"/>
+<text x="870.83" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 870.83 443)">168h M1 CAL_WEATHER</text>
+<rect x="946.27" y="129.66" width="92.47" height="295.34" fill="#dc2626"/>
+<text x="992.50" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 992.50 443)">168h M2 HISTORY</text>
+<rect x="1067.93" y="91.01" width="92.47" height="333.99" fill="#16a34a"/>
+<text x="1114.17" y="443" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(25 1114.17 443)">168h R2_RIDGE</text>
+</svg>

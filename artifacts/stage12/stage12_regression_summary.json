@@ -1,0 +1,99 @@
+{
+  "status": "PASS_WITH_LEGACY_INVENTORY_EXCEPTIONS",
+  "stage12_tests": {
+    "command": "python -m unittest -v tests.test_stage12_end_to_end",
+    "errors": 0,
+    "failures": 0,
+    "passed": 22,
+    "status": "PASS",
+    "tests_run": 22
+  },
+  "stage7_integration_tests": {
+    "command": "python -m unittest -v stage7.tests.test_stage7b_integration",
+    "errors": 0,
+    "failures": 1,
+    "functional_tests_passed": 21,
+    "legacy_inventory_exceptions": 1,
+    "status": "PASS_WITH_LEGACY_INVENTORY_EXCEPTION",
+    "tests_run": 22
+  },
+  "full_repository_regression": {
+    "command": "python -m unittest discover -s tests -v",
+    "environment": "isolated copy of the final repository; frozen production checkout was not mutated",
+    "errors": 4,
+    "failures": 8,
+    "genuine_current_failures": 0,
+    "legacy_inventory_or_later_stage_exceptions": 12,
+    "passed": 214,
+    "status": "PASS_WITH_LEGACY_INVENTORY_EXCEPTIONS",
+    "tests_run": 226
+  },
+  "legacy_exceptions": [
+    {
+      "kind": "error",
+      "test": "test_stage10_economics.Stage10EconomicsTests.test_19_artifact_rerun_is_byte_identical",
+      "reason": "The frozen Stage 10 pipeline intentionally stops because Stage 11 functionality and later-stage files now exist."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage10_economics.Stage10EconomicsTests.test_21_frozen_stage1_through_stage9_are_unchanged",
+      "reason": "Hard-coded pre-Stage-10 file count and tree hash are not future-stage-aware."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage10_economics.Stage10EconomicsTests.test_22_no_mock_data_or_stage11_functionality",
+      "reason": "The test explicitly requires Stage 11 not to exist, which is incompatible with the completed Stage 11 product."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage11_app_integration.Stage11IntegrationTests.test_18_frozen_stages1_through10_are_byte_identical",
+      "reason": "The Stage 11 inventory includes later Stage 12 paths because its frozen-tree helper predates Stage 12 exclusions."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage11_app_integration.Stage11IntegrationTests.test_19_all_independent_validation_gates_pass",
+      "reason": "This aggregate gate inherits the same non-future-aware Stage 11 inventory mismatch; the other 17 Stage 11 integration tests pass."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage6a_peak_risk.Stage6APeakRiskTests.test_17_no_stage1_through_stage5b_file_is_modified",
+      "reason": "Hard-coded pre-later-stage manifest sees subsequently added files."
+    },
+    {
+      "kind": "error",
+      "test": "test_stage6a_peak_risk.Stage6APeakRiskTests.test_18_stage6a_artifact_rebuild_is_byte_deterministic",
+      "reason": "The Stage 6A rerun guard intentionally stops on the same stale upstream inventory manifest."
+    },
+    {
+      "kind": "error",
+      "test": "test_stage6b_outputs.Stage6BOutputTests.test_13_deterministic_rerun_is_byte_identical",
+      "reason": "The Stage 6B rerun guard intentionally stops on a stale Stage 1-6A inventory manifest."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage6b_outputs.Stage6BOutputTests.test_14_all_stage1_through_stage6a_artifacts_remain_unchanged",
+      "reason": "Hard-coded pre-later-stage manifest sees subsequently added files."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage8_pv.Stage8PVTests.test_01_all_frozen_stage1_through_stage6b_files_are_unchanged",
+      "reason": "Hard-coded Stage 8 inventory count predates later stages."
+    },
+    {
+      "kind": "error",
+      "test": "test_stage8_pv.Stage8PVTests.test_15_deterministic_rerun_is_byte_identical",
+      "reason": "The Stage 8 rerun guard intentionally stops on the same stale inventory count."
+    },
+    {
+      "kind": "failure",
+      "test": "test_stage9_optimizer.Stage9OptimizerTests.test_15_frozen_stage1_through_stage8_are_byte_identical",
+      "reason": "Hard-coded Stage 9 upstream file count predates later stages."
+    },
+    {
+      "kind": "failure",
+      "test": "stage7.tests.test_stage7b_integration.Stage7BIntegrationTests.test_22_frozen_upstream_is_byte_identical",
+      "reason": "The separately discovered Stage 7 test uses a pre-later-stage inventory count; its other 21 production integration tests pass."
+    }
+  ],
+  "classification": "No frozen upstream code was changed to make obsolete inventory assertions green. All current Stage 12 audit gates and functional integration checks pass."
+}

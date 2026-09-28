@@ -1,0 +1,3376 @@
+{
+  "stage": "6A - peak-risk / uncertainty validation",
+  "status": "VALIDATION_ONLY_NOT_PROMOTED",
+  "stage6b_started": false,
+  "stage7_or_later_started": false,
+  "frozen_upstream_unchanged": true,
+  "frozen_upstream_fingerprints_before_and_after": {
+    "stage3c": "fde362de6c8d758af02efe02110741e8c1bc352b6ed3030441038804a2a8c54a",
+    "stage4": {
+      "validation_metrics": "ab42b583a8de26731ba2bc80be04582f27d29a79cccb8600c5f1023422a02417",
+      "baseline_metrics": "b7d377b4b176f4b7d0ebefa09d7ab4d5dfb3f4e2fd8683ff4e9777d8d4e3fc12",
+      "validation_report": "cbeb57f269439960fb3b91f4ddb095f35e63e1e64ad7372635eadb08b4651878"
+    },
+    "stage5_core": {
+      "predictions": "3892770ff779efe4b9ea64b23604076b8b0341086361dbf2d1a27c0857e4d76d",
+      "metrics": "4f2b4e16b2c568bfe7b605b944ec6496c3b8c4b63e70c0e40d22cca2f820c6b6",
+      "comparison": "fa733505f2c60a7b6234f2e02b916e0c5540685d20206b4350bd61289600a5e8",
+      "contract": "74cbed58c6695464c1930df2b2d6b4fec3c87263936052b29356c1c12350b96d"
+    },
+    "stage5_manifest_sha256": "7ab4a40c8d5a837e4083fe474a6988603cb4f0fb4d14872db750d26c12357577",
+    "stage5_manifest_file_count": 45,
+    "stage5b_core": {
+      "predictions": "29041fde17317701265ee2fd86f4a104670838e0f40f3a7e6ef4583d6ff70a8e",
+      "metrics": "3ceae32121ae805c0a4c90eee625da8fa1c9209686fd937bf1d350317d5a9fa7",
+      "comparison": "75584b82948d56ecc065ae8181cd2071ccbcd3d5cd0501f86734971f3a57fe8c",
+      "diagnostics": "64ee678b25e06bcc0d424b58206a819afed81e0a5593d99007336ef31d67c5f9",
+      "figure": "83920eae440b69354b95cb66b22c439dc7a6fdbc75bf5855cbe1d6a9a41f9858"
+    },
+    "stage5b_manifest_sha256": "ceb7fcb8ee9f0d823be518f0807577c7bf9f2470bc595fa53b875f36379592b8",
+    "stage5b_manifest_file_count": 15,
+    "all_stage1_through_stage5b_manifest_sha256": "365b1d4e3f4e3ed8b37317408202472969d24bd0c73ebbfb50deadee781f5c3a",
+    "all_stage1_through_stage5b_file_count": 148
+  },
+  "scientific_scope": "Tests whether uncertainty from the frozen generative model characterizes another realization produced under the same household assumptions; it is not independent real-world validation.",
+  "weather_scope": "perfect-weather-proxy retrospective evaluation; operational weather uncertainty is not represented",
+  "ensemble": {
+    "size": 200,
+    "seed_generation": "member i uses Stage 3A seed 6100000 + 2*i and Stage 3B seed 6100001 + 2*i",
+    "seed_base": 6100000,
+    "seed_pairs": [
+      {
+        "member_index": 0,
+        "stage3a_seed": 6100000,
+        "stage3b_seed": 6100001
+      },
+      {
+        "member_index": 1,
+        "stage3a_seed": 6100002,
+        "stage3b_seed": 6100003
+      },
+      {
+        "member_index": 2,
+        "stage3a_seed": 6100004,
+        "stage3b_seed": 6100005
+      },
+      {
+        "member_index": 3,
+        "stage3a_seed": 6100006,
+        "stage3b_seed": 6100007
+      },
+      {
+        "member_index": 4,
+        "stage3a_seed": 6100008,
+        "stage3b_seed": 6100009
+      },
+      {
+        "member_index": 5,
+        "stage3a_seed": 6100010,
+        "stage3b_seed": 6100011
+      },
+      {
+        "member_index": 6,
+        "stage3a_seed": 6100012,
+        "stage3b_seed": 6100013
+      },
+      {
+        "member_index": 7,
+        "stage3a_seed": 6100014,
+        "stage3b_seed": 6100015
+      },
+      {
+        "member_index": 8,
+        "stage3a_seed": 6100016,
+        "stage3b_seed": 6100017
+      },
+      {
+        "member_index": 9,
+        "stage3a_seed": 6100018,
+        "stage3b_seed": 6100019
+      },
+      {
+        "member_index": 10,
+        "stage3a_seed": 6100020,
+        "stage3b_seed": 6100021
+      },
+      {
+        "member_index": 11,
+        "stage3a_seed": 6100022,
+        "stage3b_seed": 6100023
+      },
+      {
+        "member_index": 12,
+        "stage3a_seed": 6100024,
+        "stage3b_seed": 6100025
+      },
+      {
+        "member_index": 13,
+        "stage3a_seed": 6100026,
+        "stage3b_seed": 6100027
+      },
+      {
+        "member_index": 14,
+        "stage3a_seed": 6100028,
+        "stage3b_seed": 6100029
+      },
+      {
+        "member_index": 15,
+        "stage3a_seed": 6100030,
+        "stage3b_seed": 6100031
+      },
+      {
+        "member_index": 16,
+        "stage3a_seed": 6100032,
+        "stage3b_seed": 6100033
+      },
+      {
+        "member_index": 17,
+        "stage3a_seed": 6100034,
+        "stage3b_seed": 6100035
+      },
+      {
+        "member_index": 18,
+        "stage3a_seed": 6100036,
+        "stage3b_seed": 6100037
+      },
+      {
+        "member_index": 19,
+        "stage3a_seed": 6100038,
+        "stage3b_seed": 6100039
+      },
+      {
+        "member_index": 20,
+        "stage3a_seed": 6100040,
+        "stage3b_seed": 6100041
+      },
+      {
+        "member_index": 21,
+        "stage3a_seed": 6100042,
+        "stage3b_seed": 6100043
+      },
+      {
+        "member_index": 22,
+        "stage3a_seed": 6100044,
+        "stage3b_seed": 6100045
+      },
+      {
+        "member_index": 23,
+        "stage3a_seed": 6100046,
+        "stage3b_seed": 6100047
+      },
+      {
+        "member_index": 24,
+        "stage3a_seed": 6100048,
+        "stage3b_seed": 6100049
+      },
+      {
+        "member_index": 25,
+        "stage3a_seed": 6100050,
+        "stage3b_seed": 6100051
+      },
+      {
+        "member_index": 26,
+        "stage3a_seed": 6100052,
+        "stage3b_seed": 6100053
+      },
+      {
+        "member_index": 27,
+        "stage3a_seed": 6100054,
+        "stage3b_seed": 6100055
+      },
+      {
+        "member_index": 28,
+        "stage3a_seed": 6100056,
+        "stage3b_seed": 6100057
+      },
+      {
+        "member_index": 29,
+        "stage3a_seed": 6100058,
+        "stage3b_seed": 6100059
+      },
+      {
+        "member_index": 30,
+        "stage3a_seed": 6100060,
+        "stage3b_seed": 6100061
+      },
+      {
+        "member_index": 31,
+        "stage3a_seed": 6100062,
+        "stage3b_seed": 6100063
+      },
+      {
+        "member_index": 32,
+        "stage3a_seed": 6100064,
+        "stage3b_seed": 6100065
+      },
+      {
+        "member_index": 33,
+        "stage3a_seed": 6100066,
+        "stage3b_seed": 6100067
+      },
+      {
+        "member_index": 34,
+        "stage3a_seed": 6100068,
+        "stage3b_seed": 6100069
+      },
+      {
+        "member_index": 35,
+        "stage3a_seed": 6100070,
+        "stage3b_seed": 6100071
+      },
+      {
+        "member_index": 36,
+        "stage3a_seed": 6100072,
+        "stage3b_seed": 6100073
+      },
+      {
+        "member_index": 37,
+        "stage3a_seed": 6100074,
+        "stage3b_seed": 6100075
+      },
+      {
+        "member_index": 38,
+        "stage3a_seed": 6100076,
+        "stage3b_seed": 6100077
+      },
+      {
+        "member_index": 39,
+        "stage3a_seed": 6100078,
+        "stage3b_seed": 6100079
+      },
+      {
+        "member_index": 40,
+        "stage3a_seed": 6100080,
+        "stage3b_seed": 6100081
+      },
+      {
+        "member_index": 41,
+        "stage3a_seed": 6100082,
+        "stage3b_seed": 6100083
+      },
+      {
+        "member_index": 42,
+        "stage3a_seed": 6100084,
+        "stage3b_seed": 6100085
+      },
+      {
+        "member_index": 43,
+        "stage3a_seed": 6100086,
+        "stage3b_seed": 6100087
+      },
+      {
+        "member_index": 44,
+        "stage3a_seed": 6100088,
+        "stage3b_seed": 6100089
+      },
+      {
+        "member_index": 45,
+        "stage3a_seed": 6100090,
+        "stage3b_seed": 6100091
+      },
+      {
+        "member_index": 46,
+        "stage3a_seed": 6100092,
+        "stage3b_seed": 6100093
+      },
+      {
+        "member_index": 47,
+        "stage3a_seed": 6100094,
+        "stage3b_seed": 6100095
+      },
+      {
+        "member_index": 48,
+        "stage3a_seed": 6100096,
+        "stage3b_seed": 6100097
+      },
+      {
+        "member_index": 49,
+        "stage3a_seed": 6100098,
+        "stage3b_seed": 6100099
+      },
+      {
+        "member_index": 50,
+        "stage3a_seed": 6100100,
+        "stage3b_seed": 6100101
+      },
+      {
+        "member_index": 51,
+        "stage3a_seed": 6100102,
+        "stage3b_seed": 6100103
+      },
+      {
+        "member_index": 52,
+        "stage3a_seed": 6100104,
+        "stage3b_seed": 6100105
+      },
+      {
+        "member_index": 53,
+        "stage3a_seed": 6100106,
+        "stage3b_seed": 6100107
+      },
+      {
+        "member_index": 54,
+        "stage3a_seed": 6100108,
+        "stage3b_seed": 6100109
+      },
+      {
+        "member_index": 55,
+        "stage3a_seed": 6100110,
+        "stage3b_seed": 6100111
+      },
+      {
+        "member_index": 56,
+        "stage3a_seed": 6100112,
+        "stage3b_seed": 6100113
+      },
+      {
+        "member_index": 57,
+        "stage3a_seed": 6100114,
+        "stage3b_seed": 6100115
+      },
+      {
+        "member_index": 58,
+        "stage3a_seed": 6100116,
+        "stage3b_seed": 6100117
+      },
+      {
+        "member_index": 59,
+        "stage3a_seed": 6100118,
+        "stage3b_seed": 6100119
+      },
+      {
+        "member_index": 60,
+        "stage3a_seed": 6100120,
+        "stage3b_seed": 6100121
+      },
+      {
+        "member_index": 61,
+        "stage3a_seed": 6100122,
+        "stage3b_seed": 6100123
+      },
+      {
+        "member_index": 62,
+        "stage3a_seed": 6100124,
+        "stage3b_seed": 6100125
+      },
+      {
+        "member_index": 63,
+        "stage3a_seed": 6100126,
+        "stage3b_seed": 6100127
+      },
+      {
+        "member_index": 64,
+        "stage3a_seed": 6100128,
+        "stage3b_seed": 6100129
+      },
+      {
+        "member_index": 65,
+        "stage3a_seed": 6100130,
+        "stage3b_seed": 6100131
+      },
+      {
+        "member_index": 66,
+        "stage3a_seed": 6100132,
+        "stage3b_seed": 6100133
+      },
+      {
+        "member_index": 67,
+        "stage3a_seed": 6100134,
+        "stage3b_seed": 6100135
+      },
+      {
+        "member_index": 68,
+        "stage3a_seed": 6100136,
+        "stage3b_seed": 6100137
+      },
+      {
+        "member_index": 69,
+        "stage3a_seed": 6100138,
+        "stage3b_seed": 6100139
+      },
+      {
+        "member_index": 70,
+        "stage3a_seed": 6100140,
+        "stage3b_seed": 6100141
+      },
+      {
+        "member_index": 71,
+        "stage3a_seed": 6100142,
+        "stage3b_seed": 6100143
+      },
+      {
+        "member_index": 72,
+        "stage3a_seed": 6100144,
+        "stage3b_seed": 6100145
+      },
+      {
+        "member_index": 73,
+        "stage3a_seed": 6100146,
+        "stage3b_seed": 6100147
+      },
+      {
+        "member_index": 74,
+        "stage3a_seed": 6100148,
+        "stage3b_seed": 6100149
+      },
+      {
+        "member_index": 75,
+        "stage3a_seed": 6100150,
+        "stage3b_seed": 6100151
+      },
+      {
+        "member_index": 76,
+        "stage3a_seed": 6100152,
+        "stage3b_seed": 6100153
+      },
+      {
+        "member_index": 77,
+        "stage3a_seed": 6100154,
+        "stage3b_seed": 6100155
+      },
+      {
+        "member_index": 78,
+        "stage3a_seed": 6100156,
+        "stage3b_seed": 6100157
+      },
+      {
+        "member_index": 79,
+        "stage3a_seed": 6100158,
+        "stage3b_seed": 6100159
+      },
+      {
+        "member_index": 80,
+        "stage3a_seed": 6100160,
+        "stage3b_seed": 6100161
+      },
+      {
+        "member_index": 81,
+        "stage3a_seed": 6100162,
+        "stage3b_seed": 6100163
+      },
+      {
+        "member_index": 82,
+        "stage3a_seed": 6100164,
+        "stage3b_seed": 6100165
+      },
+      {
+        "member_index": 83,
+        "stage3a_seed": 6100166,
+        "stage3b_seed": 6100167
+      },
+      {
+        "member_index": 84,
+        "stage3a_seed": 6100168,
+        "stage3b_seed": 6100169
+      },
+      {
+        "member_index": 85,
+        "stage3a_seed": 6100170,
+        "stage3b_seed": 6100171
+      },
+      {
+        "member_index": 86,
+        "stage3a_seed": 6100172,
+        "stage3b_seed": 6100173
+      },
+      {
+        "member_index": 87,
+        "stage3a_seed": 6100174,
+        "stage3b_seed": 6100175
+      },
+      {
+        "member_index": 88,
+        "stage3a_seed": 6100176,
+        "stage3b_seed": 6100177
+      },
+      {
+        "member_index": 89,
+        "stage3a_seed": 6100178,
+        "stage3b_seed": 6100179
+      },
+      {
+        "member_index": 90,
+        "stage3a_seed": 6100180,
+        "stage3b_seed": 6100181
+      },
+      {
+        "member_index": 91,
+        "stage3a_seed": 6100182,
+        "stage3b_seed": 6100183
+      },
+      {
+        "member_index": 92,
+        "stage3a_seed": 6100184,
+        "stage3b_seed": 6100185
+      },
+      {
+        "member_index": 93,
+        "stage3a_seed": 6100186,
+        "stage3b_seed": 6100187
+      },
+      {
+        "member_index": 94,
+        "stage3a_seed": 6100188,
+        "stage3b_seed": 6100189
+      },
+      {
+        "member_index": 95,
+        "stage3a_seed": 6100190,
+        "stage3b_seed": 6100191
+      },
+      {
+        "member_index": 96,
+        "stage3a_seed": 6100192,
+        "stage3b_seed": 6100193
+      },
+      {
+        "member_index": 97,
+        "stage3a_seed": 6100194,
+        "stage3b_seed": 6100195
+      },
+      {
+        "member_index": 98,
+        "stage3a_seed": 6100196,
+        "stage3b_seed": 6100197
+      },
+      {
+        "member_index": 99,
+        "stage3a_seed": 6100198,
+        "stage3b_seed": 6100199
+      },
+      {
+        "member_index": 100,
+        "stage3a_seed": 6100200,
+        "stage3b_seed": 6100201
+      },
+      {
+        "member_index": 101,
+        "stage3a_seed": 6100202,
+        "stage3b_seed": 6100203
+      },
+      {
+        "member_index": 102,
+        "stage3a_seed": 6100204,
+        "stage3b_seed": 6100205
+      },
+      {
+        "member_index": 103,
+        "stage3a_seed": 6100206,
+        "stage3b_seed": 6100207
+      },
+      {
+        "member_index": 104,
+        "stage3a_seed": 6100208,
+        "stage3b_seed": 6100209
+      },
+      {
+        "member_index": 105,
+        "stage3a_seed": 6100210,
+        "stage3b_seed": 6100211
+      },
+      {
+        "member_index": 106,
+        "stage3a_seed": 6100212,
+        "stage3b_seed": 6100213
+      },
+      {
+        "member_index": 107,
+        "stage3a_seed": 6100214,
+        "stage3b_seed": 6100215
+      },
+      {
+        "member_index": 108,
+        "stage3a_seed": 6100216,
+        "stage3b_seed": 6100217
+      },
+      {
+        "member_index": 109,
+        "stage3a_seed": 6100218,
+        "stage3b_seed": 6100219
+      },
+      {
+        "member_index": 110,
+        "stage3a_seed": 6100220,
+        "stage3b_seed": 6100221
+      },
+      {
+        "member_index": 111,
+        "stage3a_seed": 6100222,
+        "stage3b_seed": 6100223
+      },
+      {
+        "member_index": 112,
+        "stage3a_seed": 6100224,
+        "stage3b_seed": 6100225
+      },
+      {
+        "member_index": 113,
+        "stage3a_seed": 6100226,
+        "stage3b_seed": 6100227
+      },
+      {
+        "member_index": 114,
+        "stage3a_seed": 6100228,
+        "stage3b_seed": 6100229
+      },
+      {
+        "member_index": 115,
+        "stage3a_seed": 6100230,
+        "stage3b_seed": 6100231
+      },
+      {
+        "member_index": 116,
+        "stage3a_seed": 6100232,
+        "stage3b_seed": 6100233
+      },
+      {
+        "member_index": 117,
+        "stage3a_seed": 6100234,
+        "stage3b_seed": 6100235
+      },
+      {
+        "member_index": 118,
+        "stage3a_seed": 6100236,
+        "stage3b_seed": 6100237
+      },
+      {
+        "member_index": 119,
+        "stage3a_seed": 6100238,
+        "stage3b_seed": 6100239
+      },
+      {
+        "member_index": 120,
+        "stage3a_seed": 6100240,
+        "stage3b_seed": 6100241
+      },
+      {
+        "member_index": 121,
+        "stage3a_seed": 6100242,
+        "stage3b_seed": 6100243
+      },
+      {
+        "member_index": 122,
+        "stage3a_seed": 6100244,
+        "stage3b_seed": 6100245
+      },
+      {
+        "member_index": 123,
+        "stage3a_seed": 6100246,
+        "stage3b_seed": 6100247
+      },
+      {
+        "member_index": 124,
+        "stage3a_seed": 6100248,
+        "stage3b_seed": 6100249
+      },
+      {
+        "member_index": 125,
+        "stage3a_seed": 6100250,
+        "stage3b_seed": 6100251
+      },
+      {
+        "member_index": 126,
+        "stage3a_seed": 6100252,
+        "stage3b_seed": 6100253
+      },
+      {
+        "member_index": 127,
+        "stage3a_seed": 6100254,
+        "stage3b_seed": 6100255
+      },
+      {
+        "member_index": 128,
+        "stage3a_seed": 6100256,
+        "stage3b_seed": 6100257
+      },
+      {
+        "member_index": 129,
+        "stage3a_seed": 6100258,
+        "stage3b_seed": 6100259
+      },
+      {
+        "member_index": 130,
+        "stage3a_seed": 6100260,
+        "stage3b_seed": 6100261
+      },
+      {
+        "member_index": 131,
+        "stage3a_seed": 6100262,
+        "stage3b_seed": 6100263
+      },
+      {
+        "member_index": 132,
+        "stage3a_seed": 6100264,
+        "stage3b_seed": 6100265
+      },
+      {
+        "member_index": 133,
+        "stage3a_seed": 6100266,
+        "stage3b_seed": 6100267
+      },
+      {
+        "member_index": 134,
+        "stage3a_seed": 6100268,
+        "stage3b_seed": 6100269
+      },
+      {
+        "member_index": 135,
+        "stage3a_seed": 6100270,
+        "stage3b_seed": 6100271
+      },
+      {
+        "member_index": 136,
+        "stage3a_seed": 6100272,
+        "stage3b_seed": 6100273
+      },
+      {
+        "member_index": 137,
+        "stage3a_seed": 6100274,
+        "stage3b_seed": 6100275
+      },
+      {
+        "member_index": 138,
+        "stage3a_seed": 6100276,
+        "stage3b_seed": 6100277
+      },
+      {
+        "member_index": 139,
+        "stage3a_seed": 6100278,
+        "stage3b_seed": 6100279
+      },
+      {
+        "member_index": 140,
+        "stage3a_seed": 6100280,
+        "stage3b_seed": 6100281
+      },
+      {
+        "member_index": 141,
+        "stage3a_seed": 6100282,
+        "stage3b_seed": 6100283
+      },
+      {
+        "member_index": 142,
+        "stage3a_seed": 6100284,
+        "stage3b_seed": 6100285
+      },
+      {
+        "member_index": 143,
+        "stage3a_seed": 6100286,
+        "stage3b_seed": 6100287
+      },
+      {
+        "member_index": 144,
+        "stage3a_seed": 6100288,
+        "stage3b_seed": 6100289
+      },
+      {
+        "member_index": 145,
+        "stage3a_seed": 6100290,
+        "stage3b_seed": 6100291
+      },
+      {
+        "member_index": 146,
+        "stage3a_seed": 6100292,
+        "stage3b_seed": 6100293
+      },
+      {
+        "member_index": 147,
+        "stage3a_seed": 6100294,
+        "stage3b_seed": 6100295
+      },
+      {
+        "member_index": 148,
+        "stage3a_seed": 6100296,
+        "stage3b_seed": 6100297
+      },
+      {
+        "member_index": 149,
+        "stage3a_seed": 6100298,
+        "stage3b_seed": 6100299
+      },
+      {
+        "member_index": 150,
+        "stage3a_seed": 6100300,
+        "stage3b_seed": 6100301
+      },
+      {
+        "member_index": 151,
+        "stage3a_seed": 6100302,
+        "stage3b_seed": 6100303
+      },
+      {
+        "member_index": 152,
+        "stage3a_seed": 6100304,
+        "stage3b_seed": 6100305
+      },
+      {
+        "member_index": 153,
+        "stage3a_seed": 6100306,
+        "stage3b_seed": 6100307
+      },
+      {
+        "member_index": 154,
+        "stage3a_seed": 6100308,
+        "stage3b_seed": 6100309
+      },
+      {
+        "member_index": 155,
+        "stage3a_seed": 6100310,
+        "stage3b_seed": 6100311
+      },
+      {
+        "member_index": 156,
+        "stage3a_seed": 6100312,
+        "stage3b_seed": 6100313
+      },
+      {
+        "member_index": 157,
+        "stage3a_seed": 6100314,
+        "stage3b_seed": 6100315
+      },
+      {
+        "member_index": 158,
+        "stage3a_seed": 6100316,
+        "stage3b_seed": 6100317
+      },
+      {
+        "member_index": 159,
+        "stage3a_seed": 6100318,
+        "stage3b_seed": 6100319
+      },
+      {
+        "member_index": 160,
+        "stage3a_seed": 6100320,
+        "stage3b_seed": 6100321
+      },
+      {
+        "member_index": 161,
+        "stage3a_seed": 6100322,
+        "stage3b_seed": 6100323
+      },
+      {
+        "member_index": 162,
+        "stage3a_seed": 6100324,
+        "stage3b_seed": 6100325
+      },
+      {
+        "member_index": 163,
+        "stage3a_seed": 6100326,
+        "stage3b_seed": 6100327
+      },
+      {
+        "member_index": 164,
+        "stage3a_seed": 6100328,
+        "stage3b_seed": 6100329
+      },
+      {
+        "member_index": 165,
+        "stage3a_seed": 6100330,
+        "stage3b_seed": 6100331
+      },
+      {
+        "member_index": 166,
+        "stage3a_seed": 6100332,
+        "stage3b_seed": 6100333
+      },
+      {
+        "member_index": 167,
+        "stage3a_seed": 6100334,
+        "stage3b_seed": 6100335
+      },
+      {
+        "member_index": 168,
+        "stage3a_seed": 6100336,
+        "stage3b_seed": 6100337
+      },
+      {
+        "member_index": 169,
+        "stage3a_seed": 6100338,
+        "stage3b_seed": 6100339
+      },
+      {
+        "member_index": 170,
+        "stage3a_seed": 6100340,
+        "stage3b_seed": 6100341
+      },
+      {
+        "member_index": 171,
+        "stage3a_seed": 6100342,
+        "stage3b_seed": 6100343
+      },
+      {
+        "member_index": 172,
+        "stage3a_seed": 6100344,
+        "stage3b_seed": 6100345
+      },
+      {
+        "member_index": 173,
+        "stage3a_seed": 6100346,
+        "stage3b_seed": 6100347
+      },
+      {
+        "member_index": 174,
+        "stage3a_seed": 6100348,
+        "stage3b_seed": 6100349
+      },
+      {
+        "member_index": 175,
+        "stage3a_seed": 6100350,
+        "stage3b_seed": 6100351
+      },
+      {
+        "member_index": 176,
+        "stage3a_seed": 6100352,
+        "stage3b_seed": 6100353
+      },
+      {
+        "member_index": 177,
+        "stage3a_seed": 6100354,
+        "stage3b_seed": 6100355
+      },
+      {
+        "member_index": 178,
+        "stage3a_seed": 6100356,
+        "stage3b_seed": 6100357
+      },
+      {
+        "member_index": 179,
+        "stage3a_seed": 6100358,
+        "stage3b_seed": 6100359
+      },
+      {
+        "member_index": 180,
+        "stage3a_seed": 6100360,
+        "stage3b_seed": 6100361
+      },
+      {
+        "member_index": 181,
+        "stage3a_seed": 6100362,
+        "stage3b_seed": 6100363
+      },
+      {
+        "member_index": 182,
+        "stage3a_seed": 6100364,
+        "stage3b_seed": 6100365
+      },
+      {
+        "member_index": 183,
+        "stage3a_seed": 6100366,
+        "stage3b_seed": 6100367
+      },
+      {
+        "member_index": 184,
+        "stage3a_seed": 6100368,
+        "stage3b_seed": 6100369
+      },
+      {
+        "member_index": 185,
+        "stage3a_seed": 6100370,
+        "stage3b_seed": 6100371
+      },
+      {
+        "member_index": 186,
+        "stage3a_seed": 6100372,
+        "stage3b_seed": 6100373
+      },
+      {
+        "member_index": 187,
+        "stage3a_seed": 6100374,
+        "stage3b_seed": 6100375
+      },
+      {
+        "member_index": 188,
+        "stage3a_seed": 6100376,
+        "stage3b_seed": 6100377
+      },
+      {
+        "member_index": 189,
+        "stage3a_seed": 6100378,
+        "stage3b_seed": 6100379
+      },
+      {
+        "member_index": 190,
+        "stage3a_seed": 6100380,
+        "stage3b_seed": 6100381
+      },
+      {
+        "member_index": 191,
+        "stage3a_seed": 6100382,
+        "stage3b_seed": 6100383
+      },
+      {
+        "member_index": 192,
+        "stage3a_seed": 6100384,
+        "stage3b_seed": 6100385
+      },
+      {
+        "member_index": 193,
+        "stage3a_seed": 6100386,
+        "stage3b_seed": 6100387
+      },
+      {
+        "member_index": 194,
+        "stage3a_seed": 6100388,
+        "stage3b_seed": 6100389
+      },
+      {
+        "member_index": 195,
+        "stage3a_seed": 6100390,
+        "stage3b_seed": 6100391
+      },
+      {
+        "member_index": 196,
+        "stage3a_seed": 6100392,
+        "stage3b_seed": 6100393
+      },
+      {
+        "member_index": 197,
+        "stage3a_seed": 6100394,
+        "stage3b_seed": 6100395
+      },
+      {
+        "member_index": 198,
+        "stage3a_seed": 6100396,
+        "stage3b_seed": 6100397
+      },
+      {
+        "member_index": 199,
+        "stage3a_seed": 6100398,
+        "stage3b_seed": 6100399
+      }
+    ],
+    "raw_trajectory_artifact": "data/processed/stage6a_ensemble_demand.npy",
+    "raw_trajectory_shape": [
+      200,
+      1464
+    ],
+    "raw_trajectory_sha256": "d8d8487974a6f5417c33eed0a66bae0b2c2c73ee2a5b122e23818d87f8f432b2",
+    "timeline_source": "data/processed/stage2_barcelona_weather_solar_hourly.csv",
+    "timeline_source_sha256": "4cb7be9890e7b070cd2689ce0a9a658caa0c84a08a252a45ac2dff7c543d6fdb",
+    "generation_logic": "Frozen Stage 3A and Stage 3B generators with only the explicitly authorized Stage 6A optional-event/AWAY infeasibility adapter; each member combines serialized hourly totals exactly.",
+    "generation_audit": {
+      "metadata_summary_exception_members": [
+        6,
+        11,
+        14,
+        91,
+        187,
+        195
+      ],
+      "suppressions": [
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.983590251338902,
+          "sampled_power_kw": 2.013129338490356,
+          "required_energy_kwh": 8.019482407494515,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-26T18:10:14.856261+02:00",
+              "end": "2025-08-27T15:45:39.561104+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 32,
+          "stage3a_seed": 6100064,
+          "stage3b_seed": 6100065
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-10",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.3711665082270943,
+          "sampled_power_kw": 2.679359997029364,
+          "required_energy_kwh": 9.032568685468839,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-09T09:00:38.634758+02:00",
+              "end": "2025-08-10T16:43:05.192866+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 41,
+          "stage3a_seed": 6100082,
+          "stage3b_seed": 6100083
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-26",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.0314550548553165,
+          "sampled_power_kw": 4.692409528599924,
+          "required_energy_kwh": 14.224828584925493,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-25T19:54:45.967965+02:00",
+              "end": "2025-09-26T18:13:02.528541+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 44,
+          "stage3a_seed": 6100088,
+          "stage3b_seed": 6100089
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.87454066242945,
+          "sampled_power_kw": 2.83139083859755,
+          "required_energy_kwh": 13.801729773973976,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-25T11:29:58.177151+02:00",
+              "end": "2025-09-27T17:20:39.200001+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 49,
+          "stage3a_seed": 6100098,
+          "stage3b_seed": 6100099
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-03",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.0205323320497186,
+          "sampled_power_kw": 4.445666738797655,
+          "required_energy_kwh": 13.428280122056348,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-02T18:49:48.280907+02:00",
+              "end": "2025-09-03T18:38:27.915554+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 52,
+          "stage3a_seed": 6100104,
+          "stage3b_seed": 6100105
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.3276665631216225,
+          "sampled_power_kw": 3.803638051626488,
+          "required_energy_kwh": 8.853601110988052,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-19T18:33:38.462346+02:00",
+              "end": "2025-08-20T14:18:26.372544+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 62,
+          "stage3a_seed": 6100124,
+          "stage3b_seed": 6100125
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-08",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.523098131612043,
+          "sampled_power_kw": 3.6778369070808603,
+          "required_energy_kwh": 9.279543428629534,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-07T12:38:06.032549+02:00",
+              "end": "2025-08-08T18:44:56.980807+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_002",
+          "member_index": 63,
+          "stage3a_seed": 6100126,
+          "stage3b_seed": 6100127
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-28",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.698374723290912,
+          "sampled_power_kw": 3.163040752941837,
+          "required_energy_kwh": 8.535069216477307,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-27T08:17:17.392916+02:00",
+              "end": "2025-09-28T17:50:43.378653+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 68,
+          "stage3a_seed": 6100136,
+          "stage3b_seed": 6100137
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.025919698938853,
+          "sampled_power_kw": 3.0169081092726278,
+          "required_energy_kwh": 12.14582978700904,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-26T12:49:31.442140+02:00",
+              "end": "2025-09-27T17:03:12.647311+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 82,
+          "stage3a_seed": 6100164,
+          "stage3b_seed": 6100165
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.6030691139117352,
+          "sampled_power_kw": 2.3970804241194728,
+          "required_energy_kwh": 8.636846439707314,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-13T06:45:04.994606+02:00",
+              "end": "2025-09-13T21:34:02.828406+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 98,
+          "stage3a_seed": 6100196,
+          "stage3b_seed": 6100197
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-25",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.9744313017574022,
+          "sampled_power_kw": 2.280115021326612,
+          "required_energy_kwh": 9.062160512367733,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-23T16:33:48.758718+02:00",
+              "end": "2025-09-25T19:25:20.968918+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 99,
+          "stage3a_seed": 6100198,
+          "stage3b_seed": 6100199
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.772550127574349,
+          "sampled_power_kw": 2.568314106602709,
+          "required_energy_kwh": 9.68909371051505,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-12T18:38:20.730044+02:00",
+              "end": "2025-09-13T16:53:08.996244+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 116,
+          "stage3a_seed": 6100232,
+          "stage3b_seed": 6100233
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-25",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.883588811564277,
+          "sampled_power_kw": 2.075134641287793,
+          "required_energy_kwh": 10.134104316682514,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-09-24T07:45:40.151601+02:00",
+              "end": "2025-09-25T15:38:01.207083+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 121,
+          "stage3a_seed": 6100242,
+          "stage3b_seed": 6100243
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.6549739436355666,
+          "sampled_power_kw": 3.466049418154105,
+          "required_energy_kwh": 9.202270892552365,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-09-20T08:07:57.869522+02:00",
+              "end": "2025-09-20T20:19:34.027036+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_002",
+          "member_index": 123,
+          "stage3a_seed": 6100246,
+          "stage3b_seed": 6100247
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-26",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.550145715908214,
+          "sampled_power_kw": 3.466049418154105,
+          "required_energy_kwh": 12.304980492985955,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-24T09:46:43.598593+02:00",
+              "end": "2025-09-26T14:02:46.247051+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 123,
+          "stage3a_seed": 6100246,
+          "stage3b_seed": 6100247
+        },
+        {
+          "event_type": "sauna",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 1.8936214084104472,
+          "sampled_power_kw": 7.288255208389254,
+          "required_energy_kwh": 13.801196092564837,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "19:00-22:00",
+          "permitted_start_lower_hour": 19.0,
+          "permitted_start_upper_hour": 22.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-13T09:44:03.732646+02:00",
+              "end": "2025-09-13T22:18:35.480403+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "sauna_007",
+          "member_index": 135,
+          "stage3a_seed": 6100270,
+          "stage3b_seed": 6100271
+        },
+        {
+          "event_type": "sauna",
+          "date": "2025-08-23",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 1.5684878965949545,
+          "sampled_power_kw": 7.741301820862225,
+          "required_energy_kwh": 12.142138209910883,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "19:00-22:00",
+          "permitted_start_lower_hour": 19.0,
+          "permitted_start_upper_hour": 22.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-23T07:13:05.085535+02:00",
+              "end": "2025-08-23T22:07:12.566269+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "sauna_003",
+          "member_index": 149,
+          "stage3a_seed": 6100298,
+          "stage3b_seed": 6100299
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-24",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.225122721665966,
+          "sampled_power_kw": 2.4612304350275283,
+          "required_energy_kwh": 7.937770199263091,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-22T08:49:20.801677+02:00",
+              "end": "2025-09-24T14:16:08.804625+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 162,
+          "stage3a_seed": 6100324,
+          "stage3b_seed": 6100325
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-14",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.633552045548653,
+          "sampled_power_kw": 4.008952151336816,
+          "required_energy_kwh": 18.575688441333376,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-13T14:24:37.283702+02:00",
+              "end": "2025-08-14T21:07:26.889437+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 177,
+          "stage3a_seed": 6100354,
+          "stage3b_seed": 6100355
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.452647138249186,
+          "sampled_power_kw": 3.178390918632385,
+          "required_energy_kwh": 7.795471390820921,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_006",
+              "start": "2025-09-18T07:51:56.787147+02:00",
+              "end": "2025-09-20T19:56:15.568032+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 178,
+          "stage3a_seed": 6100356,
+          "stage3b_seed": 6100357
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-15",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.2281855796103205,
+          "sampled_power_kw": 3.2219143511868116,
+          "required_energy_kwh": 13.622851798427618,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-14T13:48:23.103339+02:00",
+              "end": "2025-09-15T15:19:21.199503+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 190,
+          "stage3a_seed": 6100380,
+          "stage3b_seed": 6100381
+        }
+      ],
+      "activated_pool_heating_events": 1017,
+      "activated_sauna_events": 1703
+    },
+    "stage3b_reporting_only_empty_away_summary_exception_members": [
+      6,
+      11,
+      14,
+      91,
+      187,
+      195
+    ],
+    "stage3b_reporting_only_adapter": "When a valid member has zero AWAY_DAY dates, frozen Stage 3B writes its full hourly output and ledger before a metadata-only min(empty) error. Stage 6A accepts only that exact post-generation exception after verifying 1,464 hourly rows; no behavior or load is altered.",
+    "evaluation_realization_event_ledger_used": false,
+    "evaluation_future_component_states_used": [],
+    "ensemble_input_scope": [
+      "frozen Stage 2 weather/calendar",
+      "frozen Stage 3 generative rules",
+      "deterministic member seeds"
+    ],
+    "optional_event_away_infeasibility_policy": {
+      "policy_scope": "Stage 6A ensemble replay only; frozen Stage 3 artifacts are not modified or regenerated.",
+      "rule": "Suppress only an activated pool-heating or sauna event when frozen complete-event start support is empty after applying every exact AWAY interval; allocate exactly zero energy without redraw, truncation, shortening, range extension, day movement, AWAY change, or seed substitution.",
+      "suppressed_pool_heating_events": 19,
+      "suppressed_sauna_events": 2,
+      "activated_pool_heating_events": 1017,
+      "activated_sauna_events": 1703,
+      "pool_heating_activated_events_affected_percent": 1.868239921,
+      "sauna_activated_events_affected_percent": 0.117439812,
+      "all_optional_activated_events_affected_percent": 0.772058824,
+      "affected_member_indices": [
+        32,
+        41,
+        44,
+        49,
+        52,
+        62,
+        63,
+        68,
+        82,
+        98,
+        99,
+        116,
+        121,
+        123,
+        135,
+        149,
+        162,
+        177,
+        178,
+        190
+      ],
+      "affected_member_dates": [
+        "116:2025-09-13",
+        "121:2025-09-25",
+        "123:2025-09-20",
+        "123:2025-09-26",
+        "135:2025-09-13",
+        "149:2025-08-23",
+        "162:2025-09-24",
+        "177:2025-08-14",
+        "178:2025-09-20",
+        "190:2025-09-15",
+        "32:2025-08-27",
+        "41:2025-08-10",
+        "44:2025-09-26",
+        "49:2025-09-27",
+        "52:2025-09-03",
+        "62:2025-08-20",
+        "63:2025-08-08",
+        "68:2025-09-28",
+        "82:2025-09-27",
+        "98:2025-09-13",
+        "99:2025-09-25"
+      ],
+      "suppression_records": [
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.983590251338902,
+          "sampled_power_kw": 2.013129338490356,
+          "required_energy_kwh": 8.019482407494515,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-26T18:10:14.856261+02:00",
+              "end": "2025-08-27T15:45:39.561104+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 32,
+          "stage3a_seed": 6100064,
+          "stage3b_seed": 6100065
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-10",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.3711665082270943,
+          "sampled_power_kw": 2.679359997029364,
+          "required_energy_kwh": 9.032568685468839,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-09T09:00:38.634758+02:00",
+              "end": "2025-08-10T16:43:05.192866+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 41,
+          "stage3a_seed": 6100082,
+          "stage3b_seed": 6100083
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-26",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.0314550548553165,
+          "sampled_power_kw": 4.692409528599924,
+          "required_energy_kwh": 14.224828584925493,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-25T19:54:45.967965+02:00",
+              "end": "2025-09-26T18:13:02.528541+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 44,
+          "stage3a_seed": 6100088,
+          "stage3b_seed": 6100089
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.87454066242945,
+          "sampled_power_kw": 2.83139083859755,
+          "required_energy_kwh": 13.801729773973976,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-25T11:29:58.177151+02:00",
+              "end": "2025-09-27T17:20:39.200001+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 49,
+          "stage3a_seed": 6100098,
+          "stage3b_seed": 6100099
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-03",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.0205323320497186,
+          "sampled_power_kw": 4.445666738797655,
+          "required_energy_kwh": 13.428280122056348,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-02T18:49:48.280907+02:00",
+              "end": "2025-09-03T18:38:27.915554+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 52,
+          "stage3a_seed": 6100104,
+          "stage3b_seed": 6100105
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.3276665631216225,
+          "sampled_power_kw": 3.803638051626488,
+          "required_energy_kwh": 8.853601110988052,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-19T18:33:38.462346+02:00",
+              "end": "2025-08-20T14:18:26.372544+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 62,
+          "stage3a_seed": 6100124,
+          "stage3b_seed": 6100125
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-08",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.523098131612043,
+          "sampled_power_kw": 3.6778369070808603,
+          "required_energy_kwh": 9.279543428629534,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-07T12:38:06.032549+02:00",
+              "end": "2025-08-08T18:44:56.980807+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_002",
+          "member_index": 63,
+          "stage3a_seed": 6100126,
+          "stage3b_seed": 6100127
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-28",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.698374723290912,
+          "sampled_power_kw": 3.163040752941837,
+          "required_energy_kwh": 8.535069216477307,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-27T08:17:17.392916+02:00",
+              "end": "2025-09-28T17:50:43.378653+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 68,
+          "stage3a_seed": 6100136,
+          "stage3b_seed": 6100137
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-27",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.025919698938853,
+          "sampled_power_kw": 3.0169081092726278,
+          "required_energy_kwh": 12.14582978700904,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_005",
+              "start": "2025-09-26T12:49:31.442140+02:00",
+              "end": "2025-09-27T17:03:12.647311+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 82,
+          "stage3a_seed": 6100164,
+          "stage3b_seed": 6100165
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.6030691139117352,
+          "sampled_power_kw": 2.3970804241194728,
+          "required_energy_kwh": 8.636846439707314,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-13T06:45:04.994606+02:00",
+              "end": "2025-09-13T21:34:02.828406+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 98,
+          "stage3a_seed": 6100196,
+          "stage3b_seed": 6100197
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-25",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.9744313017574022,
+          "sampled_power_kw": 2.280115021326612,
+          "required_energy_kwh": 9.062160512367733,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-23T16:33:48.758718+02:00",
+              "end": "2025-09-25T19:25:20.968918+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 99,
+          "stage3a_seed": 6100198,
+          "stage3b_seed": 6100199
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.772550127574349,
+          "sampled_power_kw": 2.568314106602709,
+          "required_energy_kwh": 9.68909371051505,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_004",
+              "start": "2025-09-12T18:38:20.730044+02:00",
+              "end": "2025-09-13T16:53:08.996244+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 116,
+          "stage3a_seed": 6100232,
+          "stage3b_seed": 6100233
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-25",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.883588811564277,
+          "sampled_power_kw": 2.075134641287793,
+          "required_energy_kwh": 10.134104316682514,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-09-24T07:45:40.151601+02:00",
+              "end": "2025-09-25T15:38:01.207083+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 121,
+          "stage3a_seed": 6100242,
+          "stage3b_seed": 6100243
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.6549739436355666,
+          "sampled_power_kw": 3.466049418154105,
+          "required_energy_kwh": 9.202270892552365,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-09-20T08:07:57.869522+02:00",
+              "end": "2025-09-20T20:19:34.027036+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_002",
+          "member_index": 123,
+          "stage3a_seed": 6100246,
+          "stage3b_seed": 6100247
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-26",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.550145715908214,
+          "sampled_power_kw": 3.466049418154105,
+          "required_energy_kwh": 12.304980492985955,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-24T09:46:43.598593+02:00",
+              "end": "2025-09-26T14:02:46.247051+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 123,
+          "stage3a_seed": 6100246,
+          "stage3b_seed": 6100247
+        },
+        {
+          "event_type": "sauna",
+          "date": "2025-09-13",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 1.8936214084104472,
+          "sampled_power_kw": 7.288255208389254,
+          "required_energy_kwh": 13.801196092564837,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "19:00-22:00",
+          "permitted_start_lower_hour": 19.0,
+          "permitted_start_upper_hour": 22.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-13T09:44:03.732646+02:00",
+              "end": "2025-09-13T22:18:35.480403+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "sauna_007",
+          "member_index": 135,
+          "stage3a_seed": 6100270,
+          "stage3b_seed": 6100271
+        },
+        {
+          "event_type": "sauna",
+          "date": "2025-08-23",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 1.5684878965949545,
+          "sampled_power_kw": 7.741301820862225,
+          "required_energy_kwh": 12.142138209910883,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "19:00-22:00",
+          "permitted_start_lower_hour": 19.0,
+          "permitted_start_upper_hour": 22.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_002",
+              "start": "2025-08-23T07:13:05.085535+02:00",
+              "end": "2025-08-23T22:07:12.566269+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "sauna_003",
+          "member_index": 149,
+          "stage3a_seed": 6100298,
+          "stage3b_seed": 6100299
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-24",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 3.225122721665966,
+          "sampled_power_kw": 2.4612304350275283,
+          "required_energy_kwh": 7.937770199263091,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-22T08:49:20.801677+02:00",
+              "end": "2025-09-24T14:16:08.804625+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_005",
+          "member_index": 162,
+          "stage3a_seed": 6100324,
+          "stage3b_seed": 6100325
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-08-14",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.633552045548653,
+          "sampled_power_kw": 4.008952151336816,
+          "required_energy_kwh": 18.575688441333376,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_001",
+              "start": "2025-08-13T14:24:37.283702+02:00",
+              "end": "2025-08-14T21:07:26.889437+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_001",
+          "member_index": 177,
+          "stage3a_seed": 6100354,
+          "stage3b_seed": 6100355
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-20",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 2.452647138249186,
+          "sampled_power_kw": 3.178390918632385,
+          "required_energy_kwh": 7.795471390820921,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_006",
+              "start": "2025-09-18T07:51:56.787147+02:00",
+              "end": "2025-09-20T19:56:15.568032+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_003",
+          "member_index": 178,
+          "stage3a_seed": 6100356,
+          "stage3b_seed": 6100357
+        },
+        {
+          "event_type": "pool_heating",
+          "date": "2025-09-15",
+          "suppressed_due_to_away_conflict": true,
+          "suppression_reason": "no_feasible_start_outside_away",
+          "sampled_duration_hours": 4.2281855796103205,
+          "sampled_power_kw": 3.2219143511868116,
+          "required_energy_kwh": 13.622851798427618,
+          "allocated_energy_kwh": 0.0,
+          "permitted_start_range": "08:00-14:00",
+          "permitted_start_lower_hour": 8.0,
+          "permitted_start_upper_hour": 14.0,
+          "conflicting_away_intervals": [
+            {
+              "event_id": "away_003",
+              "start": "2025-09-14T13:48:23.103339+02:00",
+              "end": "2025-09-15T15:19:21.199503+02:00"
+            }
+          ],
+          "feasible_start_support_exhaustively_empty": true,
+          "activation_redrawn": false,
+          "duration_redrawn_or_shortened": false,
+          "power_redrawn": false,
+          "start_range_extended": false,
+          "moved_to_another_day": false,
+          "away_event_altered": false,
+          "seed_substituted": false,
+          "event_id": "pool_heating_004",
+          "member_index": 190,
+          "stage3a_seed": 6100380,
+          "stage3b_seed": 6100381
+        }
+      ],
+      "material_distribution_limitation": false,
+      "material_distribution_limitation_reason": "Only 21 of 2,720 activated optional events (0.772058824%) were suppressed; this is disclosed but is not frequent enough to be judged materially distribution-changing."
+    }
+  },
+  "peak_threshold": {
+    "rule": "Per-origin 90th percentile of actual household_total_kwh observed at or before origin only.",
+    "by_origin": {
+      "2025-09-01T23:00:00+02:00": {
+        "threshold_kwh": 3.7097626867000058,
+        "observations_at_or_before_origin": 768,
+        "maximum_observed_timestamp": "2025-09-01T23:00:00+02:00"
+      },
+      "2025-09-04T23:00:00+02:00": {
+        "threshold_kwh": 3.3187679449000007,
+        "observations_at_or_before_origin": 840,
+        "maximum_observed_timestamp": "2025-09-04T23:00:00+02:00"
+      },
+      "2025-09-07T23:00:00+02:00": {
+        "threshold_kwh": 3.112946172899999,
+        "observations_at_or_before_origin": 912,
+        "maximum_observed_timestamp": "2025-09-07T23:00:00+02:00"
+      },
+      "2025-09-10T23:00:00+02:00": {
+        "threshold_kwh": 3.343047598300002,
+        "observations_at_or_before_origin": 984,
+        "maximum_observed_timestamp": "2025-09-10T23:00:00+02:00"
+      },
+      "2025-09-13T23:00:00+02:00": {
+        "threshold_kwh": 3.481469789,
+        "observations_at_or_before_origin": 1056,
+        "maximum_observed_timestamp": "2025-09-13T23:00:00+02:00"
+      },
+      "2025-09-16T23:00:00+02:00": {
+        "threshold_kwh": 3.7708782645000003,
+        "observations_at_or_before_origin": 1128,
+        "maximum_observed_timestamp": "2025-09-16T23:00:00+02:00"
+      },
+      "2025-09-19T23:00:00+02:00": {
+        "threshold_kwh": 3.7975427456000026,
+        "observations_at_or_before_origin": 1200,
+        "maximum_observed_timestamp": "2025-09-19T23:00:00+02:00"
+      },
+      "2025-09-22T23:00:00+02:00": {
+        "threshold_kwh": 4.509140465700005,
+        "observations_at_or_before_origin": 1272,
+        "maximum_observed_timestamp": "2025-09-22T23:00:00+02:00"
+      },
+      "2025-09-25T23:00:00+02:00": {
+        "threshold_kwh": 4.728316851300005,
+        "observations_at_or_before_origin": 1344,
+        "maximum_observed_timestamp": "2025-09-25T23:00:00+02:00"
+      },
+      "2025-09-28T23:00:00+02:00": {
+        "threshold_kwh": 4.7648620059999995,
+        "observations_at_or_before_origin": 1416,
+        "maximum_observed_timestamp": "2025-09-28T23:00:00+02:00"
+      }
+    },
+    "range_kwh": {
+      "minimum": 3.112946172899999,
+      "maximum": 4.7648620059999995
+    }
+  },
+  "origin_schedule": {
+    "24": [
+      "2025-09-01T23:00:00+02:00",
+      "2025-09-04T23:00:00+02:00",
+      "2025-09-07T23:00:00+02:00",
+      "2025-09-10T23:00:00+02:00",
+      "2025-09-13T23:00:00+02:00",
+      "2025-09-16T23:00:00+02:00",
+      "2025-09-19T23:00:00+02:00",
+      "2025-09-22T23:00:00+02:00",
+      "2025-09-25T23:00:00+02:00",
+      "2025-09-28T23:00:00+02:00"
+    ],
+    "72": [
+      "2025-09-01T23:00:00+02:00",
+      "2025-09-04T23:00:00+02:00",
+      "2025-09-07T23:00:00+02:00",
+      "2025-09-10T23:00:00+02:00",
+      "2025-09-13T23:00:00+02:00",
+      "2025-09-16T23:00:00+02:00",
+      "2025-09-19T23:00:00+02:00",
+      "2025-09-22T23:00:00+02:00",
+      "2025-09-25T23:00:00+02:00"
+    ],
+    "168": [
+      "2025-09-01T23:00:00+02:00",
+      "2025-09-04T23:00:00+02:00",
+      "2025-09-07T23:00:00+02:00",
+      "2025-09-10T23:00:00+02:00",
+      "2025-09-13T23:00:00+02:00",
+      "2025-09-16T23:00:00+02:00",
+      "2025-09-19T23:00:00+02:00",
+      "2025-09-22T23:00:00+02:00"
+    ]
+  },
+  "metrics_by_horizon": {
+    "24": {
+      "discrimination": {
+        "observation_count": 240,
+        "actual_high_demand_count": 24,
+        "actual_high_demand_prevalence": 0.1,
+        "roc_auc": 0.758487654,
+        "pr_auc_average_precision": 0.25882333,
+        "mean_peak_probability_actual_peak": 0.261875,
+        "mean_peak_probability_actual_non_peak": 0.092314815
+      },
+      "top_risk": {
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 0,
+            "ensemble_actual_high_capture_percent": null,
+            "hour_baseline_actual_high_capture_percent": null,
+            "ensemble_actual_top10_overlap_percent": 0.0,
+            "hour_baseline_actual_top10_overlap_percent": 0.0
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 0,
+            "ensemble_actual_high_capture_percent": null,
+            "hour_baseline_actual_high_capture_percent": null,
+            "ensemble_actual_top10_overlap_percent": 33.333333333,
+            "hour_baseline_actual_top10_overlap_percent": 33.333333333
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 6,
+            "ensemble_actual_high_capture_percent": 50.0,
+            "hour_baseline_actual_high_capture_percent": 50.0,
+            "ensemble_actual_top10_overlap_percent": 66.666666667,
+            "hour_baseline_actual_top10_overlap_percent": 66.666666667
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 3,
+            "ensemble_actual_high_capture_percent": 100.0,
+            "hour_baseline_actual_high_capture_percent": 100.0,
+            "ensemble_actual_top10_overlap_percent": 100.0,
+            "hour_baseline_actual_top10_overlap_percent": 100.0
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 0,
+            "ensemble_actual_high_capture_percent": null,
+            "hour_baseline_actual_high_capture_percent": null,
+            "ensemble_actual_top10_overlap_percent": 0.0,
+            "hour_baseline_actual_top10_overlap_percent": 0.0
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 4,
+            "ensemble_actual_high_capture_percent": 0.0,
+            "hour_baseline_actual_high_capture_percent": 0.0,
+            "ensemble_actual_top10_overlap_percent": 0.0,
+            "hour_baseline_actual_top10_overlap_percent": 0.0
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 5,
+            "ensemble_actual_high_capture_percent": 60.0,
+            "hour_baseline_actual_high_capture_percent": 60.0,
+            "ensemble_actual_top10_overlap_percent": 66.666666667,
+            "hour_baseline_actual_top10_overlap_percent": 100.0
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 3,
+            "ensemble_actual_high_capture_percent": 0.0,
+            "hour_baseline_actual_high_capture_percent": 0.0,
+            "ensemble_actual_top10_overlap_percent": 0.0,
+            "hour_baseline_actual_top10_overlap_percent": 0.0
+          },
+          "2025-09-25T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 1,
+            "ensemble_actual_high_capture_percent": 100.0,
+            "hour_baseline_actual_high_capture_percent": 100.0,
+            "ensemble_actual_top10_overlap_percent": 33.333333333,
+            "hour_baseline_actual_top10_overlap_percent": 33.333333333
+          },
+          "2025-09-28T23:00:00+02:00": {
+            "top_risk_timestamp_count": 3,
+            "actual_high_demand_count": 2,
+            "ensemble_actual_high_capture_percent": 0.0,
+            "hour_baseline_actual_high_capture_percent": 0.0,
+            "ensemble_actual_top10_overlap_percent": 0.0,
+            "hour_baseline_actual_top10_overlap_percent": 0.0
+          }
+        },
+        "mean_across_origins": {
+          "ensemble_actual_high_capture_percent": 44.285714286,
+          "hour_baseline_actual_high_capture_percent": 44.285714286,
+          "ensemble_actual_top10_overlap_percent": 30.0,
+          "hour_baseline_actual_top10_overlap_percent": 33.333333333
+        },
+        "chance_reference_percent": 10.0
+      },
+      "intervals": {
+        "p10_p90_coverage_percent": 85.833333333,
+        "p10_p90_average_width_kwh": 3.483230541,
+        "p05_p95_coverage_percent": 94.166666667,
+        "p05_p95_average_width_kwh": 4.480004725
+      },
+      "risk_by_hour": {
+        "0": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0065,
+          "actual_high_demand_frequency": 0.1
+        },
+        "1": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.003,
+          "actual_high_demand_frequency": 0
+        },
+        "10": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0415,
+          "actual_high_demand_frequency": 0.1
+        },
+        "11": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0495,
+          "actual_high_demand_frequency": 0.1
+        },
+        "12": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0355,
+          "actual_high_demand_frequency": 0
+        },
+        "13": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0275,
+          "actual_high_demand_frequency": 0
+        },
+        "14": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.022,
+          "actual_high_demand_frequency": 0
+        },
+        "15": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0165,
+          "actual_high_demand_frequency": 0
+        },
+        "16": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.082,
+          "actual_high_demand_frequency": 0.1
+        },
+        "17": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.292,
+          "actual_high_demand_frequency": 0.3
+        },
+        "18": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.46,
+          "actual_high_demand_frequency": 0.4
+        },
+        "19": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.4875,
+          "actual_high_demand_frequency": 0.3
+        },
+        "2": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.004,
+          "actual_high_demand_frequency": 0
+        },
+        "20": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.4025,
+          "actual_high_demand_frequency": 0.3
+        },
+        "21": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.276,
+          "actual_high_demand_frequency": 0.3
+        },
+        "22": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.1245,
+          "actual_high_demand_frequency": 0.2
+        },
+        "23": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.046,
+          "actual_high_demand_frequency": 0
+        },
+        "3": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0055,
+          "actual_high_demand_frequency": 0
+        },
+        "4": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0075,
+          "actual_high_demand_frequency": 0
+        },
+        "5": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.009,
+          "actual_high_demand_frequency": 0
+        },
+        "6": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.039,
+          "actual_high_demand_frequency": 0
+        },
+        "7": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0765,
+          "actual_high_demand_frequency": 0
+        },
+        "8": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.072,
+          "actual_high_demand_frequency": 0.1
+        },
+        "9": {
+          "observation_count": 10,
+          "mean_peak_probability": 0.0365,
+          "actual_high_demand_frequency": 0.1
+        }
+      },
+      "risk_by_behavioral_block": {
+        "DAYTIME": {
+          "observation_count": 70,
+          "mean_peak_probability": 0.032714286,
+          "actual_high_demand_frequency": 0.042857143
+        },
+        "EVENING": {
+          "observation_count": 40,
+          "mean_peak_probability": 0.322625,
+          "actual_high_demand_frequency": 0.275
+        },
+        "MORNING": {
+          "observation_count": 20,
+          "mean_peak_probability": 0.07425,
+          "actual_high_demand_frequency": 0.05
+        },
+        "NIGHT": {
+          "observation_count": 80,
+          "mean_peak_probability": 0.0150625,
+          "actual_high_demand_frequency": 0.0125
+        },
+        "RETURN_RAMP": {
+          "observation_count": 30,
+          "mean_peak_probability": 0.278,
+          "actual_high_demand_frequency": 0.266666667
+        }
+      }
+    },
+    "72": {
+      "discrimination": {
+        "observation_count": 648,
+        "actual_high_demand_count": 86,
+        "actual_high_demand_prevalence": 0.132716049,
+        "roc_auc": 0.845340561,
+        "pr_auc_average_precision": 0.478751403,
+        "mean_peak_probability_actual_peak": 0.310581395,
+        "mean_peak_probability_actual_non_peak": 0.081690391
+      },
+      "top_risk": {
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 2,
+            "ensemble_actual_high_capture_percent": 100.0,
+            "hour_baseline_actual_high_capture_percent": 100.0,
+            "ensemble_actual_top10_overlap_percent": 62.5,
+            "hour_baseline_actual_top10_overlap_percent": 62.5
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 2,
+            "ensemble_actual_high_capture_percent": 50.0,
+            "hour_baseline_actual_high_capture_percent": 0.0,
+            "ensemble_actual_top10_overlap_percent": 25.0,
+            "hour_baseline_actual_top10_overlap_percent": 12.5
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 15,
+            "ensemble_actual_high_capture_percent": 46.666666667,
+            "hour_baseline_actual_high_capture_percent": 46.666666667,
+            "ensemble_actual_top10_overlap_percent": 62.5,
+            "hour_baseline_actual_top10_overlap_percent": 62.5
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 10,
+            "ensemble_actual_high_capture_percent": 80.0,
+            "hour_baseline_actual_high_capture_percent": 70.0,
+            "ensemble_actual_top10_overlap_percent": 87.5,
+            "hour_baseline_actual_top10_overlap_percent": 75.0
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 12,
+            "ensemble_actual_high_capture_percent": 58.333333333,
+            "hour_baseline_actual_high_capture_percent": 41.666666667,
+            "ensemble_actual_top10_overlap_percent": 62.5,
+            "hour_baseline_actual_top10_overlap_percent": 50.0
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 9,
+            "ensemble_actual_high_capture_percent": 33.333333333,
+            "hour_baseline_actual_high_capture_percent": 44.444444444,
+            "ensemble_actual_top10_overlap_percent": 37.5,
+            "hour_baseline_actual_top10_overlap_percent": 50.0
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 18,
+            "ensemble_actual_high_capture_percent": 27.777777778,
+            "hour_baseline_actual_high_capture_percent": 27.777777778,
+            "ensemble_actual_top10_overlap_percent": 37.5,
+            "hour_baseline_actual_top10_overlap_percent": 50.0
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 10,
+            "ensemble_actual_high_capture_percent": 40.0,
+            "hour_baseline_actual_high_capture_percent": 30.0,
+            "ensemble_actual_top10_overlap_percent": 37.5,
+            "hour_baseline_actual_top10_overlap_percent": 25.0
+          },
+          "2025-09-25T23:00:00+02:00": {
+            "top_risk_timestamp_count": 8,
+            "actual_high_demand_count": 8,
+            "ensemble_actual_high_capture_percent": 50.0,
+            "hour_baseline_actual_high_capture_percent": 37.5,
+            "ensemble_actual_top10_overlap_percent": 50.0,
+            "hour_baseline_actual_top10_overlap_percent": 37.5
+          }
+        },
+        "mean_across_origins": {
+          "ensemble_actual_high_capture_percent": 54.012345679,
+          "hour_baseline_actual_high_capture_percent": 44.228395062,
+          "ensemble_actual_top10_overlap_percent": 51.388888889,
+          "hour_baseline_actual_top10_overlap_percent": 47.222222222
+        },
+        "chance_reference_percent": 10.0
+      },
+      "intervals": {
+        "p10_p90_coverage_percent": 86.882716049,
+        "p10_p90_average_width_kwh": 3.405258438,
+        "p05_p95_coverage_percent": 93.827160494,
+        "p05_p95_average_width_kwh": 4.428955584
+      },
+      "risk_by_hour": {
+        "0": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.011481481,
+          "actual_high_demand_frequency": 0.037037037
+        },
+        "1": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.004259259,
+          "actual_high_demand_frequency": 0
+        },
+        "10": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.047592593,
+          "actual_high_demand_frequency": 0.074074074
+        },
+        "11": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.054259259,
+          "actual_high_demand_frequency": 0.148148148
+        },
+        "12": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.04462963,
+          "actual_high_demand_frequency": 0.111111111
+        },
+        "13": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.032407407,
+          "actual_high_demand_frequency": 0.074074074
+        },
+        "14": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.030925926,
+          "actual_high_demand_frequency": 0.037037037
+        },
+        "15": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.027592593,
+          "actual_high_demand_frequency": 0.037037037
+        },
+        "16": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.093888889,
+          "actual_high_demand_frequency": 0
+        },
+        "17": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.281296296,
+          "actual_high_demand_frequency": 0.333333333
+        },
+        "18": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.435185185,
+          "actual_high_demand_frequency": 0.481481481
+        },
+        "19": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.483333333,
+          "actual_high_demand_frequency": 0.518518519
+        },
+        "2": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.00462963,
+          "actual_high_demand_frequency": 0
+        },
+        "20": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.397777778,
+          "actual_high_demand_frequency": 0.481481481
+        },
+        "21": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.285555556,
+          "actual_high_demand_frequency": 0.407407407
+        },
+        "22": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.135925926,
+          "actual_high_demand_frequency": 0.259259259
+        },
+        "23": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.048703704,
+          "actual_high_demand_frequency": 0.037037037
+        },
+        "3": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.007222222,
+          "actual_high_demand_frequency": 0
+        },
+        "4": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.009444444,
+          "actual_high_demand_frequency": 0
+        },
+        "5": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.012962963,
+          "actual_high_demand_frequency": 0
+        },
+        "6": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.030925926,
+          "actual_high_demand_frequency": 0
+        },
+        "7": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.081296296,
+          "actual_high_demand_frequency": 0.074074074
+        },
+        "8": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.08,
+          "actual_high_demand_frequency": 0.037037037
+        },
+        "9": {
+          "observation_count": 27,
+          "mean_peak_probability": 0.048333333,
+          "actual_high_demand_frequency": 0.037037037
+        }
+      },
+      "risk_by_behavioral_block": {
+        "DAYTIME": {
+          "observation_count": 189,
+          "mean_peak_probability": 0.040820106,
+          "actual_high_demand_frequency": 0.074074074
+        },
+        "EVENING": {
+          "observation_count": 108,
+          "mean_peak_probability": 0.325648148,
+          "actual_high_demand_frequency": 0.416666667
+        },
+        "MORNING": {
+          "observation_count": 54,
+          "mean_peak_probability": 0.080648148,
+          "actual_high_demand_frequency": 0.055555556
+        },
+        "NIGHT": {
+          "observation_count": 216,
+          "mean_peak_probability": 0.016203704,
+          "actual_high_demand_frequency": 0.009259259
+        },
+        "RETURN_RAMP": {
+          "observation_count": 81,
+          "mean_peak_probability": 0.270123457,
+          "actual_high_demand_frequency": 0.271604938
+        }
+      }
+    },
+    "168": {
+      "discrimination": {
+        "observation_count": 1344,
+        "actual_high_demand_count": 187,
+        "actual_high_demand_prevalence": 0.139136905,
+        "roc_auc": 0.832292625,
+        "pr_auc_average_precision": 0.463100222,
+        "mean_peak_probability_actual_peak": 0.319946524,
+        "mean_peak_probability_actual_non_peak": 0.092502161
+      },
+      "top_risk": {
+        "per_origin": {
+          "2025-09-01T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 8,
+            "ensemble_actual_high_capture_percent": 62.5,
+            "hour_baseline_actual_high_capture_percent": 50.0,
+            "ensemble_actual_top10_overlap_percent": 41.176470588,
+            "hour_baseline_actual_top10_overlap_percent": 41.176470588
+          },
+          "2025-09-04T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 18,
+            "ensemble_actual_high_capture_percent": 61.111111111,
+            "hour_baseline_actual_high_capture_percent": 38.888888889,
+            "ensemble_actual_top10_overlap_percent": 64.705882353,
+            "hour_baseline_actual_top10_overlap_percent": 41.176470588
+          },
+          "2025-09-07T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 25,
+            "ensemble_actual_high_capture_percent": 64.0,
+            "hour_baseline_actual_high_capture_percent": 56.0,
+            "ensemble_actual_top10_overlap_percent": 82.352941176,
+            "hour_baseline_actual_top10_overlap_percent": 76.470588235
+          },
+          "2025-09-10T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 26,
+            "ensemble_actual_high_capture_percent": 46.153846154,
+            "hour_baseline_actual_high_capture_percent": 46.153846154,
+            "ensemble_actual_top10_overlap_percent": 58.823529412,
+            "hour_baseline_actual_top10_overlap_percent": 64.705882353
+          },
+          "2025-09-13T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 26,
+            "ensemble_actual_high_capture_percent": 34.615384615,
+            "hour_baseline_actual_high_capture_percent": 38.461538462,
+            "ensemble_actual_top10_overlap_percent": 47.058823529,
+            "hour_baseline_actual_top10_overlap_percent": 52.941176471
+          },
+          "2025-09-16T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 31,
+            "ensemble_actual_high_capture_percent": 25.806451613,
+            "hour_baseline_actual_high_capture_percent": 25.806451613,
+            "ensemble_actual_top10_overlap_percent": 35.294117647,
+            "hour_baseline_actual_top10_overlap_percent": 41.176470588
+          },
+          "2025-09-19T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 32,
+            "ensemble_actual_high_capture_percent": 25.0,
+            "hour_baseline_actual_high_capture_percent": 31.25,
+            "ensemble_actual_top10_overlap_percent": 23.529411765,
+            "hour_baseline_actual_top10_overlap_percent": 47.058823529
+          },
+          "2025-09-22T23:00:00+02:00": {
+            "top_risk_timestamp_count": 17,
+            "actual_high_demand_count": 21,
+            "ensemble_actual_high_capture_percent": 28.571428571,
+            "hour_baseline_actual_high_capture_percent": 28.571428571,
+            "ensemble_actual_top10_overlap_percent": 35.294117647,
+            "hour_baseline_actual_top10_overlap_percent": 35.294117647
+          }
+        },
+        "mean_across_origins": {
+          "ensemble_actual_high_capture_percent": 43.469777758,
+          "hour_baseline_actual_high_capture_percent": 39.391519211,
+          "ensemble_actual_top10_overlap_percent": 48.529411765,
+          "hour_baseline_actual_top10_overlap_percent": 50.0
+        },
+        "chance_reference_percent": 10.0
+      },
+      "intervals": {
+        "p10_p90_coverage_percent": 87.202380952,
+        "p10_p90_average_width_kwh": 3.403131009,
+        "p05_p95_coverage_percent": 93.824404762,
+        "p05_p95_average_width_kwh": 4.420327521
+      },
+      "risk_by_hour": {
+        "0": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.0225,
+          "actual_high_demand_frequency": 0.053571429
+        },
+        "1": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.016517857,
+          "actual_high_demand_frequency": 0
+        },
+        "10": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.056696429,
+          "actual_high_demand_frequency": 0.089285714
+        },
+        "11": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.066607143,
+          "actual_high_demand_frequency": 0.160714286
+        },
+        "12": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.054107143,
+          "actual_high_demand_frequency": 0.089285714
+        },
+        "13": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.036071429,
+          "actual_high_demand_frequency": 0.089285714
+        },
+        "14": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.034196429,
+          "actual_high_demand_frequency": 0.035714286
+        },
+        "15": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.030178571,
+          "actual_high_demand_frequency": 0.035714286
+        },
+        "16": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.100892857,
+          "actual_high_demand_frequency": 0.017857143
+        },
+        "17": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.289821429,
+          "actual_high_demand_frequency": 0.375
+        },
+        "18": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.44875,
+          "actual_high_demand_frequency": 0.517857143
+        },
+        "19": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.493482143,
+          "actual_high_demand_frequency": 0.517857143
+        },
+        "2": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.018125,
+          "actual_high_demand_frequency": 0
+        },
+        "20": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.408482143,
+          "actual_high_demand_frequency": 0.517857143
+        },
+        "21": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.296696429,
+          "actual_high_demand_frequency": 0.410714286
+        },
+        "22": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.148303571,
+          "actual_high_demand_frequency": 0.196428571
+        },
+        "23": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.0625,
+          "actual_high_demand_frequency": 0.035714286
+        },
+        "3": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.022142857,
+          "actual_high_demand_frequency": 0
+        },
+        "4": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.02625,
+          "actual_high_demand_frequency": 0
+        },
+        "5": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.029910714,
+          "actual_high_demand_frequency": 0
+        },
+        "6": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.055446429,
+          "actual_high_demand_frequency": 0
+        },
+        "7": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.109464286,
+          "actual_high_demand_frequency": 0.089285714
+        },
+        "8": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.09875,
+          "actual_high_demand_frequency": 0.053571429
+        },
+        "9": {
+          "observation_count": 56,
+          "mean_peak_probability": 0.053660714,
+          "actual_high_demand_frequency": 0.053571429
+        }
+      },
+      "risk_by_behavioral_block": {
+        "DAYTIME": {
+          "observation_count": 392,
+          "mean_peak_probability": 0.047359694,
+          "actual_high_demand_frequency": 0.079081633
+        },
+        "EVENING": {
+          "observation_count": 224,
+          "mean_peak_probability": 0.336741071,
+          "actual_high_demand_frequency": 0.410714286
+        },
+        "MORNING": {
+          "observation_count": 112,
+          "mean_peak_probability": 0.104107143,
+          "actual_high_demand_frequency": 0.071428571
+        },
+        "NIGHT": {
+          "observation_count": 448,
+          "mean_peak_probability": 0.031674107,
+          "actual_high_demand_frequency": 0.011160714
+        },
+        "RETURN_RAMP": {
+          "observation_count": 168,
+          "mean_peak_probability": 0.279821429,
+          "actual_high_demand_frequency": 0.303571429
+        }
+      }
+    }
+  },
+  "calibration": {
+    "bins": "0.0-0.1 through 0.9-1.0; lower-inclusive and upper-exclusive except final bin",
+    "formal_calibration_claimed": false,
+    "reason": "This is same-model synthetic validation; bin counts are reported and small bins are explicitly flagged."
+  },
+  "problem_window": {
+    "forecast_origin": "2025-09-13T23:00:00+02:00",
+    "actual_maximum_kwh": 17.316185669,
+    "frozen_stage5_maximum_kwh": 5.562286241300066,
+    "ensemble_p50_maximum_kwh": 5.761302086500001,
+    "ensemble_p90_maximum_kwh": 14.2036722715,
+    "ensemble_p95_maximum_kwh": 16.158438552249997,
+    "ensemble_maximum_over_members_and_hours_kwh": 26.522968666,
+    "actual_maximum_timestamp": "2025-09-20T20:00:00+02:00",
+    "actual_maximum_peak_probability": 0.36,
+    "actual_maximum_ensemble_p95_kwh": 10.574838524799995,
+    "actual_maximum_inside_p05_p95": false,
+    "actual_maximum_ranked_top_10_percent_risk": false,
+    "top_risk_timestamps": [
+      "2025-09-15T19:00:00+02:00",
+      "2025-09-19T19:00:00+02:00",
+      "2025-09-15T18:00:00+02:00",
+      "2025-09-17T18:00:00+02:00",
+      "2025-09-17T19:00:00+02:00",
+      "2025-09-18T19:00:00+02:00",
+      "2025-09-19T18:00:00+02:00",
+      "2025-09-18T18:00:00+02:00",
+      "2025-09-16T18:00:00+02:00",
+      "2025-09-16T19:00:00+02:00",
+      "2025-09-15T20:00:00+02:00",
+      "2025-09-17T20:00:00+02:00",
+      "2025-09-16T20:00:00+02:00",
+      "2025-09-18T20:00:00+02:00",
+      "2025-09-19T20:00:00+02:00",
+      "2025-09-17T17:00:00+02:00",
+      "2025-09-19T17:00:00+02:00"
+    ]
+  },
+  "figures": {
+    "problem_window": "artifacts/stage6a/168h_sep13_peak_risk.svg",
+    "probability_by_hour": "artifacts/stage6a/peak_probability_by_hour.svg",
+    "interval_coverage": "artifacts/stage6a/interval_coverage.svg"
+  },
+  "diagnostic_rows": 45,
+  "acceptance_classification": "USEFUL PEAK-RISK SIGNAL",
+  "acceptance_evidence": "ROC AUC is 0.758-0.845 and average precision is 0.259-0.479 versus 0.100-0.139 peak prevalence. Top-risk hours capture 43.5-54.0% of actual high-demand hours, far above the 10% chance reference and equal to or better than the leakage-safe hour-of-day ranking. P10-P90 coverage is 85.8-87.2% and P05-P95 coverage is 93.8-94.2%. Evening and return-ramp risk emerges naturally. The exact Sep-13 maximum is still missed by the P95 and top-risk set, so the signal is useful but not an exact-event predictor.",
+  "stage6b_recommendation": "Evidence supports considering Stage 6B only after independent audit accepts Stage 6A; do not proceed automatically."
+}
