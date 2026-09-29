@@ -115,6 +115,13 @@ if page == "Home":
         "and comfort constraints."
     )
 
+    home_events = sorted(data.optimization.shifted_events, key=lambda event: abs(event.shift_hours), reverse=True)
+    st.markdown("#### A few changes from the WattWise plan")
+    for event in home_events[:3]:
+        st.markdown(f"- {schedule_change_sentence(event)}")
+    st.caption(f"These are examples from {len(home_events)} rescheduled activities in the modeled 61-day evaluation. Open **WattWise Plan** for the full schedule and day-by-day view.")
+
+    st.markdown("#### What the better schedule changes")
     o1, o2, o3, o4 = st.columns(4)
     o1.metric(
         "Electricity cost",
