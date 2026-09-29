@@ -25,6 +25,27 @@ from hackowatt_stage11.models import Horizon, Provenance, TARIFF_BANDS_EUR_PER_K
 TZ = ZoneInfo("Europe/Madrid")
 st.set_page_config(page_title="WattWise Home", page_icon="⚡", layout="wide")
 
+st.markdown("""
+<style>
+.block-container {padding-top: 2.2rem; padding-bottom: 3rem; max-width: 1240px;}
+[data-testid="stSidebar"] {background: #f7f8f5; border-right: 1px solid #e7e9e3;}
+[data-testid="stMetric"] {background: white; border: 1px solid #e8ebe5; border-radius: 16px; padding: 16px 18px; box-shadow: 0 5px 18px rgba(25,40,30,.045);}
+[data-testid="stMetricLabel"] {font-size: .82rem;}
+[data-testid="stMetricValue"] {font-weight: 720;}
+div[data-testid="stAlert"] {border-radius: 14px;}
+.watt-hero {background: linear-gradient(135deg,#10281f 0%,#174c39 100%); color:white; border-radius:24px; padding:28px 30px; margin:12px 0 22px 0; box-shadow:0 14px 35px rgba(16,40,31,.16);}
+.watt-eyebrow {font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#b9e6d0;margin-bottom:10px;}
+.watt-hero h2 {font-size:2rem;line-height:1.15;margin:0 0 8px;color:white;}
+.watt-hero p {color:#dcebe4;margin:0;font-size:1.02rem;}
+.plan-card {background:#f3f8f5;border:1px solid #d9e8df;border-radius:18px;padding:18px 20px;height:100%;}
+.plan-label {font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:#557264;font-weight:700;}
+.plan-title {font-size:1.02rem;font-weight:700;color:#173a2c;margin:5px 0;}
+.plan-time {font-size:1.35rem;font-weight:750;color:#0f5d3d;}
+.section-kicker {color:#0f6b46;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-top:10px;}
+.small-disclosure {color:#777;font-size:.82rem;margin-top:12px;}
+</style>
+""", unsafe_allow_html=True)
+
 
 def source_badge(provenance: Provenance, label: str, description: str) -> None:
     st.markdown(
@@ -86,78 +107,79 @@ st.sidebar.caption("Europe/Madrid · energy in kWh per hourly interval · curren
 if page == "Home":
     forecast = data.forecasts[Horizon.H24]
     risk_hour = max(forecast.points, key=lambda point: point.peak_probability)
-    stage9 = data.optimization.summary["aug_sep"]
-
-    st.title("Good evening, Anna & Robert")
-    st.caption("Your WattWise energy plan · Barcelona")
-    source_badge(
-        data.history_provenance,
-        "SIMULATED HOUSEHOLD PROFILE",
-        "This household profile is scenario-specific and simulated, not measured. Barcelona weather inputs are used.",
-    )
-
-    st.markdown("## High energy pressure expected tonight")
     risk_time = datetime.fromisoformat(risk_hour.timestamp)
-    st.write(
-        f"**{risk_time.strftime('%H:%M')} is the highest-risk hour in the next 24 hours.** "
-        "WattWise separates expected demand from the probability of a high-demand event so the household can act before large loads overlap."
+    stage9 = data.optimization.summary["aug_sep"]
+    home_events = sorted(data.optimization.shifted_events, key=lambda event: abs(event.shift_hours), reverse=True)
+
+    st.caption("WATTWISE HOME · BARCELONA")
+    st.title("Good evening, Anna & Robert")
+    st.markdown(
+        f"""<div class="watt-hero">
+        <div class="watt-eyebrow">Tonight’s energy outlook</div>
+        <h2>Energy pressure is highest around {risk_time.strftime('%H:%M')}</h2>
+        <p>Several high-power activities may overlap while electricity is in its most expensive evening period. WattWise has already found a lower-pressure schedule.</p>
+        </div>""",
+        unsafe_allow_html=True,
     )
 
     c1, c2, c3 = st.columns(3)
-    c1.metric("Expected energy · next 24h", f"{forecast.total_expected_kwh:.1f} kWh")
-    c2.metric("Highest-risk hour", risk_time.strftime("%H:%M"), f"{risk_hour.peak_probability:.0%} peak risk", delta_color="off")
-    c3.metric("Peak tariff · 17:00–22:00", "€0.40/kWh")
+    c1.metric("NEXT 24 HOURS", f"{forecast.total_expected_kwh:.1f} kWh", "expected energy", delta_color="off")
+    c2.metric("PEAK-RISK SIGNAL", f"{risk_hour.peak_probability:.0%}", f"highest at {risk_time.strftime('%H:%M')}", delta_color="off")
+    c3.metric("EVENING TARIFF", "€0.40/kWh", "17:00–22:00", delta_color="off")
 
-    st.markdown("### WattWise found a better schedule")
-    st.write(
-        "Instead of asking Anna & Robert to simply use less electricity, WattWise identifies which "
-        "activities can move and reschedules them within their modeled energy, timing, dependency "
-        "and comfort constraints."
-    )
+    st.markdown('<div class="section-kicker">Your WattWise plan</div>', unsafe_allow_html=True)
+    st.markdown("## Your plan is ready")
+    st.caption("WattWise moves only eligible activities and keeps modeled energy, timing, dependency and comfort requirements intact.")
 
-    home_events = sorted(data.optimization.shifted_events, key=lambda event: abs(event.shift_hours), reverse=True)
-    st.markdown("#### A few changes from the WattWise plan")
-    for event in home_events[:3]:
-        st.markdown(f"- {schedule_change_sentence(event)}")
-    st.caption(f"These are examples from {len(home_events)} rescheduled activities in the modeled 61-day evaluation. Open **WattWise Plan** for the full schedule and day-by-day view.")
+    examples = home_events[:3]
+    cols = st.columns(3)
+    for col, event in zip(cols, examples):
+        original = datetime.fromisoformat(event.original_start)
+        optimized = datetime.fromisoformat(event.optimized_start)
+        label = theme.COMPONENT_LABELS[event.component]
+        with col:
+            st.markdown(
+                f"""<div class="plan-card">
+                <div class="plan-label">{label}</div>
+                <div class="plan-title">Better time found</div>
+                <div class="plan-time">{original.strftime('%H:%M')} → {optimized.strftime('%H:%M')}</div>
+                <div style="color:#617168;font-size:.85rem;margin-top:6px;">{event.energy_kwh:.1f} kWh service preserved</div>
+                </div>""",
+                unsafe_allow_html=True,
+            )
 
-    st.markdown("#### What the better schedule changes")
+    st.caption(f"3 examples shown · {len(home_events)} activities rescheduled across the 61-day modeled evaluation · full schedule in **WattWise Plan**")
+
+    st.markdown('<div class="section-kicker">Modeled impact</div>', unsafe_allow_html=True)
+    st.markdown("## Same household services. Smarter timing.")
     o1, o2, o3, o4 = st.columns(4)
-    o1.metric(
-        "Electricity cost",
-        f"€{stage9['optimized_net_electricity_cost_eur']:.0f}",
-        f"from €{stage9['current_net_electricity_cost_eur']:.0f}",
-        delta_color="inverse",
-    )
-    o2.metric(
-        "Grid import",
-        f"{stage9['optimized_grid_import_kwh']:,.0f} kWh",
-        f"−{(stage9['current_grid_import_kwh'] - stage9['optimized_grid_import_kwh']) / stage9['current_grid_import_kwh']:.1%}",
-    )
-    o3.metric(
-        "Solar self-use",
-        f"{stage9['optimized_pv_self_consumption_kwh']:,.0f} kWh",
-        f"+{(stage9['optimized_pv_self_consumption_kwh'] - stage9['current_pv_self_consumption_kwh']) / stage9['current_pv_self_consumption_kwh']:.1%}",
-    )
-    o4.metric(
-        "Maximum hourly load",
-        f"{stage9['optimized_maximum_hourly_load_kwh']:.1f} kWh",
-        f"−{stage9['peak_reduction_percent']:.1f}%",
-    )
-    st.caption("61-day modeled evaluation · 5 kWp reference PV · household demand is simulated, not measured.")
+    savings_pct = stage9["savings_eur"] / stage9["current_net_electricity_cost_eur"]
+    grid_pct = (stage9["current_grid_import_kwh"] - stage9["optimized_grid_import_kwh"]) / stage9["current_grid_import_kwh"]
+    solar_pct = (stage9["optimized_pv_self_consumption_kwh"] - stage9["current_pv_self_consumption_kwh"]) / stage9["current_pv_self_consumption_kwh"]
+    o1.metric("ELECTRICITY COST", f"€{stage9['optimized_net_electricity_cost_eur']:.0f}", f"↓ {savings_pct:.0%} from €{stage9['current_net_electricity_cost_eur']:.0f}", delta_color="off")
+    o2.metric("MAX HOURLY LOAD", f"{stage9['optimized_maximum_hourly_load_kwh']:.1f} kWh", f"↓ {stage9['peak_reduction_percent']:.1f}%", delta_color="off")
+    o3.metric("GRID IMPORT", f"{stage9['optimized_grid_import_kwh']:,.0f} kWh", f"↓ {grid_pct:.1%}", delta_color="off")
+    o4.metric("SOLAR SELF-USE", f"{stage9['optimized_pv_self_consumption_kwh']:,.0f} kWh", f"↑ {solar_pct:.1%}", delta_color="off")
+    st.caption("61-day modeled evaluation · 5 kWp reference PV.")
 
-    st.markdown("### What WattWise does")
-    p1, p2, p3 = st.columns(3)
-    p1.markdown("**1 · Anticipate**  \nForecast expected demand and identify hours with elevated peak risk.")
-    p2.markdown("**2 · Decide**  \nSeparate fixed services from activities that have safe scheduling flexibility.")
-    p3.markdown("**3 · Reschedule**  \nBuild a lower-cost, lower-peak schedule while respecting modeled household requirements.")
+    st.markdown('<div class="section-kicker">Why WattWise</div>', unsafe_allow_html=True)
+    st.markdown("## From warning to action")
+    a1, a2, a3 = st.columns(3)
+    a1.markdown("**01 · See it coming**")
+    a1.caption("Forecast expected demand and identify hours where high demand is more likely.")
+    a2.markdown("**02 · Know what can move**")
+    a2.caption("Protect fixed services and everyday behavior; use only genuine household flexibility.")
+    a3.markdown("**03 · Get a better schedule**")
+    a3.caption("Reschedule eligible activities around tariff, solar and modeled household constraints.")
 
-    st.markdown("### What’s coming?")
-    st.caption("Expected demand and uncertainty for the next 24 hours. P10–P90 describes uncertainty; it is not an exact spike prediction.")
-    st.plotly_chart(charts.forecast_energy_chart(forecast), width="stretch")
-    st.info(
-        "WattWise is a scenario demonstration. Household electricity use is simulated; forecasts are retrospective model outputs; "
-        "comfort claims apply only to the modeled constraints."
+    with st.expander("See the next 24-hour forecast"):
+        st.plotly_chart(charts.forecast_energy_chart(forecast), width="stretch")
+        st.caption("Expected demand and uncertainty are shown separately; the range is not an exact spike prediction.")
+
+    st.markdown(
+        '<div class="small-disclosure">Demo disclosure: household electricity use is scenario-specific and simulated, not measured. '
+        'Forecasts are retrospective model outputs; comfort claims apply only to the modeled constraints. Barcelona weather inputs are used.</div>',
+        unsafe_allow_html=True,
     )
 
 elif page == "My Energy":
