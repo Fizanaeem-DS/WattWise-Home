@@ -77,7 +77,7 @@ st.sidebar.title("⚡ WattWise Home")
 st.sidebar.caption(data.household_label)
 st.sidebar.caption("Scenario 3 — “Luxury Under Control”")
 PAGES = [
-    "Overview", "Historical Consumption", "Forecast", "Peak Hours", "Tariff",
+    "Home", "Historical Consumption", "Forecast", "Peak Hours", "Tariff",
     "Flexibility", "PV Simulator", "Optimizer",
 ]
 page = st.sidebar.radio("Section", PAGES, label_visibility="collapsed")
@@ -86,38 +86,75 @@ st.sidebar.success("All pages use the validated WattWise scenario results.")
 st.sidebar.caption("Europe/Madrid · energy in kWh per hourly interval · currency EUR")
 
 
-if page == "Overview":
-    st.title("⚡ WattWise Home")
-    st.caption(data.household_label)
-    source_badge(
-        data.history_provenance,
-        "SIMULATED HOUSEHOLD PROFILE",
-        "Scenario-specific digital twin for Anna & Robert, built with Barcelona weather inputs. Household electricity use is simulated, not measured.",
-    )
-    st.write(
-        "Explore how Anna & Robert’s simulated household profile connects expected demand, "
-        "probabilistic peak risk, flexible energy use, optimized scheduling, tariffs, solar "
-        "generation and investment economics. Expected demand and peak risk are shown separately."
-    )
+if page == "Home":
     forecast = data.forecasts[Horizon.H24]
     risk_hour = max(forecast.points, key=lambda point: point.peak_probability)
     stage9 = data.optimization.summary["aug_sep"]
-    reference = next(row for row in data.pv.rows if row.capacity_kwp == 5.0)
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("61-day household demand", f"{sum(point.total_kwh for point in data.history):,.1f} kWh")
-    c2.metric("24-hour expected demand", f"{forecast.total_expected_kwh:.1f} kWh")
-    c3.metric("Highest 24h peak risk", f"{risk_hour.peak_probability:.0%}", risk_hour.peak_risk_label, delta_color="off")
-    c4.metric(
-        "5 kWp SIMPLE PAYBACK — ANNUALIZED ESTIMATE",
-        f"{reference.optimized['simple_payback_years']:.2f} years",
-        "optimized habits", delta_color="off",
+
+    st.title("Good evening, Anna & Robert")
+    st.caption("Your WattWise energy plan · Barcelona")
+    source_badge(
+        data.history_provenance,
+        "SIMULATED HOUSEHOLD PROFILE",
+        "This household profile is scenario-specific and simulated, not measured. Barcelona weather inputs are used.",
     )
-    st.subheader("Current → optimized, 61-day scenario results")
+
+    st.markdown("## High energy pressure expected tonight")
+    risk_time = datetime.fromisoformat(risk_hour.timestamp)
+    st.write(
+        f"**{risk_time.strftime('%H:%M')} is the highest-risk hour in the next 24 hours.** "
+        "WattWise separates expected demand from the probability of a high-demand event so the household can act before large loads overlap."
+    )
+
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Expected energy · next 24h", f"{forecast.total_expected_kwh:.1f} kWh")
+    c2.metric("Highest-risk hour", risk_time.strftime("%H:%M"), f"{risk_hour.peak_probability:.0%} peak risk", delta_color="off")
+    c3.metric("Peak tariff · 17:00–22:00", "€0.40/kWh")
+
+    st.markdown("### WattWise found a better schedule")
+    st.write(
+        "Instead of asking Anna & Robert to simply use less electricity, WattWise identifies which "
+        "activities can move and reschedules them within their modeled energy, timing, dependency "
+        "and comfort constraints."
+    )
+
     o1, o2, o3, o4 = st.columns(4)
-    o1.metric("Electricity cost", f"€{stage9['optimized_net_electricity_cost_eur']:.2f}", f"−€{stage9['savings_eur']:.2f}")
-    o2.metric("Grid import", f"{stage9['optimized_grid_import_kwh']:,.1f} kWh", f"−{stage9['current_grid_import_kwh'] - stage9['optimized_grid_import_kwh']:,.1f} kWh")
-    o3.metric("PV self-consumption", f"{stage9['optimized_pv_self_consumption_kwh']:,.1f} kWh", f"+{stage9['optimized_pv_self_consumption_kwh'] - stage9['current_pv_self_consumption_kwh']:,.1f} kWh")
-    o4.metric("Maximum hourly load", f"{stage9['optimized_maximum_hourly_load_kwh']:.2f} kWh", f"−{stage9['peak_reduction_percent']:.1f}%")
+    o1.metric(
+        "Electricity cost",
+        f"€{stage9['optimized_net_electricity_cost_eur']:.0f}",
+        f"from €{stage9['current_net_electricity_cost_eur']:.0f}",
+        delta_color="inverse",
+    )
+    o2.metric(
+        "Grid import",
+        f"{stage9['optimized_grid_import_kwh']:,.0f} kWh",
+        f"−{(stage9['current_grid_import_kwh'] - stage9['optimized_grid_import_kwh']) / stage9['current_grid_import_kwh']:.1%}",
+    )
+    o3.metric(
+        "Solar self-use",
+        f"{stage9['optimized_pv_self_consumption_kwh']:,.0f} kWh",
+        f"+{(stage9['optimized_pv_self_consumption_kwh'] - stage9['current_pv_self_consumption_kwh']) / stage9['current_pv_self_consumption_kwh']:.1%}",
+    )
+    o4.metric(
+        "Maximum hourly load",
+        f"{stage9['optimized_maximum_hourly_load_kwh']:.1f} kWh",
+        f"−{stage9['peak_reduction_percent']:.1f}%",
+    )
+    st.caption("61-day modeled evaluation · 5 kWp reference PV · household demand is simulated, not measured.")
+
+    st.markdown("### What WattWise does")
+    p1, p2, p3 = st.columns(3)
+    p1.markdown("**1 · Anticipate**  \nForecast expected demand and identify hours with elevated peak risk.")
+    p2.markdown("**2 · Decide**  \nSeparate fixed services from activities that have safe scheduling flexibility.")
+    p3.markdown("**3 · Reschedule**  \nBuild a lower-cost, lower-peak schedule while respecting modeled household requirements.")
+
+    st.markdown("### What’s coming?")
+    st.caption("Expected demand and uncertainty for the next 24 hours. P10–P90 describes uncertainty; it is not an exact spike prediction.")
+    st.plotly_chart(charts.forecast_energy_chart(forecast), width="stretch")
+    st.info(
+        "WattWise is a scenario demonstration. Household electricity use is simulated; forecasts are retrospective model outputs; "
+        "comfort claims apply only to the modeled constraints."
+    )
 
 elif page == "Historical Consumption":
     st.title("Historical Consumption")
