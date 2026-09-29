@@ -237,63 +237,92 @@ elif page == "My Energy":
         st.markdown('<div class="small-disclosure">P95 is retained as the model’s high-demand uncertainty range; household electricity use is simulated.</div>', unsafe_allow_html=True)
 
 elif page == "WattWise Plan":
-    st.title("Your WattWise Plan")
-    st.caption("Turn the forecast into a household schedule: protect fixed services, respect comfort, and move only activities with usable flexibility.")
-
     summary = data.optimization.summary["aug_sep"]
     comfort = data.optimization.summary["comfort"]
     events = sorted(data.optimization.shifted_events, key=lambda event: abs(event.shift_hours), reverse=True)
 
-    st.markdown("## A better schedule, not less comfort")
-    st.write(
-        "WattWise combines the household’s flexibility rules, electricity tariff and modeled solar generation. "
-        "Fixed and behavior-driven services stay protected; eligible activities move only inside their modeled constraints."
+    st.caption("WATTWISE PLAN · YOUR ACTIONABLE SCHEDULE")
+    st.title("Your WattWise Plan")
+    st.markdown(
+        """<div class="watt-hero">
+        <div class="watt-eyebrow">Your optimized energy plan</div>
+        <h2>Keep the household services. Change the timing.</h2>
+        <p>WattWise finds where flexible activities can move around expensive hours and solar availability, while respecting the modeled household rules.</p>
+        </div>""",
+        unsafe_allow_html=True,
     )
+
     p1, p2, p3, p4 = st.columns(4)
-    p1.metric("Activities rescheduled", str(len(events)))
-    p2.metric("Electricity cost", f"€{summary['optimized_net_electricity_cost_eur']:.0f}", f"from €{summary['current_net_electricity_cost_eur']:.0f}", delta_color="inverse")
-    p3.metric("Maximum hourly load", f"{summary['optimized_maximum_hourly_load_kwh']:.1f} kWh", f"−{summary['peak_reduction_percent']:.1f}%")
-    p4.metric("Grid import", f"{summary['optimized_grid_import_kwh']:,.0f} kWh", f"−{summary['current_grid_import_kwh'] - summary['optimized_grid_import_kwh']:,.0f} kWh")
+    savings_pct = summary["savings_eur"] / summary["current_net_electricity_cost_eur"]
+    grid_pct = (summary["current_grid_import_kwh"] - summary["optimized_grid_import_kwh"]) / summary["current_grid_import_kwh"]
+    p1.metric("ACTIVITIES RESCHEDULED", str(len(events)), "modeled evaluation", delta_color="off")
+    p2.metric("ELECTRICITY COST", f"€{summary['optimized_net_electricity_cost_eur']:.0f}", f"↓ {savings_pct:.0%} from €{summary['current_net_electricity_cost_eur']:.0f}", delta_color="off")
+    p3.metric("MAX HOURLY LOAD", f"{summary['optimized_maximum_hourly_load_kwh']:.1f} kWh", f"↓ {summary['peak_reduction_percent']:.1f}%", delta_color="off")
+    p4.metric("GRID IMPORT", f"{summary['optimized_grid_import_kwh']:,.0f} kWh", f"↓ {grid_pct:.1%}", delta_color="off")
 
-    st.markdown("### What WattWise can and cannot move")
-    flex_cols = st.columns(4)
-    flex_copy = [
-        ("A · Fixed", "Fridge/freezer, smart-home base and security services stay fixed."),
-        ("B · Everyday behavior", "Cooking, entertainment and lighting are forecast but not rescheduled."),
-        ("C · Limited flexibility", "HVAC, sauna and pool heating move only inside strict modeled limits."),
-        ("D · Shiftable", "EV charging, pool circulation, dishwasher and laundry can move inside their windows."),
-    ]
-    for col, (title, body) in zip(flex_cols, flex_copy):
-        col.markdown(f"**{title}**")
-        col.caption(body)
+    st.markdown('<div class="section-kicker">What changed</div>', unsafe_allow_html=True)
+    st.markdown("## A few activities WattWise moved")
+    st.caption("These are real examples from the modeled optimizer output — not generic energy-saving tips.")
+    top_events = events[:3]
+    cols = st.columns(3)
+    for col, event in zip(cols, top_events):
+        original = datetime.fromisoformat(event.original_start)
+        optimized = datetime.fromisoformat(event.optimized_start)
+        label = theme.COMPONENT_LABELS[event.component]
+        with col:
+            st.markdown(
+                f"""<div class="plan-card">
+                <div class="plan-label">{label}</div>
+                <div class="plan-title">WattWise schedule</div>
+                <div class="plan-time">{original.strftime('%H:%M')} → {optimized.strftime('%H:%M')}</div>
+                <div style="color:#617168;font-size:.85rem;margin-top:6px;">{event.energy_kwh:.1f} kWh service preserved</div>
+                </div>""",
+                unsafe_allow_html=True,
+            )
 
-    st.markdown("### See the schedule change")
+    st.markdown('<div class="section-kicker">Explore the schedule</div>', unsafe_allow_html=True)
+    st.markdown("## See current vs WattWise timing")
     days = sorted({point.timestamp[:10] for point in data.optimization.hourly})
-    day = st.selectbox("Explore a day", days, index=0)
+    day = st.selectbox("Choose a day", days, index=0)
     st.plotly_chart(charts.optimizer_day_chart(data.optimization.hourly, day), width="stretch")
+    st.caption("The comparison uses the same tariff and PV accounting for current and optimized schedules.")
 
-    st.markdown("### Examples of rescheduled activities")
-    for event in events[:6]:
-        st.markdown(f"- {schedule_change_sentence(event)}")
-    with st.expander("See all rescheduled activities"):
+    with st.expander(f"See all {len(events)} rescheduled activities"):
         st.dataframe(pd.DataFrame([{
             "Activity": activity_reference(event),
-            "Original start": event.original_start,
-            "WattWise start": event.optimized_start,
+            "Original": event.original_start,
+            "WattWise": event.optimized_start,
             "Energy (kWh)": event.energy_kwh,
             "Shift (h)": event.shift_hours,
-            "Check": scheduling_check(event.constraint_status),
+            "Status": scheduling_check(event.constraint_status),
         } for event in events]), hide_index=True, width="stretch")
 
-    st.markdown("### Why timing matters")
+    st.markdown('<div class="section-kicker">Household rules</div>', unsafe_allow_html=True)
+    st.markdown("## WattWise does not move everything")
+    st.caption("Every household activity is treated according to how much real scheduling freedom it has in the scenario.")
+    flex_cols = st.columns(4)
+    flex_copy = [
+        ("A · Always on", "Fridge/freezer, smart-home base and security services stay fixed."),
+        ("B · Your behavior", "Cooking, entertainment and lighting are forecast but left to the household."),
+        ("C · Comfort-limited", "HVAC, sauna and pool heating move only inside strict modeled limits."),
+        ("D · Flexible", "EV charging, pool circulation, dishwasher and laundry can move inside their allowed windows."),
+    ]
+    for col, (title, body) in zip(flex_cols, flex_copy):
+        with col:
+            st.markdown(f"""<div class="plan-card"><div class="plan-label">{title}</div><div style="color:#41554b;font-size:.9rem;margin-top:8px;">{body}</div></div>""", unsafe_allow_html=True)
+
+    st.markdown('<div class="section-kicker">Why these times</div>', unsafe_allow_html=True)
+    st.markdown("## Electricity costs more in the evening")
     st.plotly_chart(charts.tariff_chart(), width="stretch")
-    st.caption("Tariff used in the modeled comparison: 00:00–06:00 €0.18 · 06:00–17:00 €0.28 · 17:00–22:00 €0.40 · 22:00–00:00 €0.28 per kWh.")
-    st.info(
-        f"Under the modeled constraints, optimization adds no avoidable occupied-hour comfort violation. "
-        f"{comfort['physically_infeasible_occupied_hour_count']} occupied hours were physically outside the reachable comfort band; "
-        "this is a model result, not a universal real-world comfort guarantee."
-    )
-    st.caption("61-day modeled evaluation · 5 kWp reference PV · simulated household profile.")
+    st.caption("Modeled tariff: 00:00–06:00 €0.18 · 06:00–17:00 €0.28 · 17:00–22:00 €0.40 · 22:00–00:00 €0.28 per kWh.")
+
+    with st.expander("Modeled comfort and optimization limits"):
+        st.write(
+            f"Under the modeled constraints, optimization adds no avoidable occupied-hour comfort violation. "
+            f"{comfort['physically_infeasible_occupied_hour_count']} occupied hours were physically outside the reachable comfort band. "
+            "This is a modeled result, not a universal real-world comfort guarantee."
+        )
+        st.caption("The 61-day optimization comparison uses a 5 kWp reference PV system and a simulated household profile.")
 
 elif page == "Solar":
     st.title("Solar")
