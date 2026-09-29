@@ -353,53 +353,85 @@ elif page == "WattWise Plan":
         st.caption("The 61-day optimization comparison uses a 5 kWp reference PV system and a simulated household profile.")
 
 elif page == "Solar":
-    st.title("Solar")
-    st.caption("Explore how different PV capacities interact with Anna & Robert’s simulated household schedule.")
-    source_badge(
-        data.pv.provenance,
-        "MODELED SOLAR + ANNUALIZED ESTIMATE",
-        "PV production is modeled with PVGIS. Household financial results are annualized from the 61-day scenario and are not measured annual performance.",
+    st.caption("SOLAR · MAKE MORE OF YOUR OWN ENERGY")
+    st.title("Make more of your solar")
+    st.markdown(
+        """<div class="watt-hero">
+        <div class="watt-eyebrow">Solar + smart scheduling</div>
+        <h2>Use more of the solar you generate at home.</h2>
+        <p>Compare solar capacities and see how WattWise scheduling changes grid dependence, electricity cost and simple payback in the modeled household.</p>
+        </div>""",
+        unsafe_allow_html=True,
     )
 
     capacity = st.select_slider(
-        "Compare a PV capacity",
+        "Choose a solar capacity to compare",
         options=[3.0, 5.0, 8.0, 10.0],
         value=5.0,
         format_func=lambda value: f"{value:g} kWp",
     )
     row = next(item for item in data.pv.rows if item.capacity_kwp == capacity)
 
-    st.markdown(f"## What would {capacity:g} kWp change?")
-    s1, s2, s3 = st.columns(3)
-    s1.metric("Modeled PV production", f"{row.annual_pv_production_kwh:,.0f} kWh/year")
-    s2.metric("Initial investment", f"€{row.initial_investment_eur:,.0f}")
-    s3.metric("Annual O&M", f"€{row.annual_om_eur:,.0f}")
+    st.markdown('<div class="section-kicker">Current habits vs WattWise</div>', unsafe_allow_html=True)
+    st.markdown(f"## What changes with {capacity:g} kWp?")
+    st.caption("Same solar capacity. The difference is when flexible household energy is used.")
 
     left, right = st.columns(2)
-    left.markdown("### Current habits + solar")
-    right.markdown("### With WattWise scheduling")
-    left.metric("Solar used at home", f"{row.current['pv_self_consumption_rate']:.1%}")
-    right.metric("Solar used at home", f"{row.optimized['pv_self_consumption_rate']:.1%}")
-    left.metric("Grid electricity", f"{row.current['annual_grid_imported_kwh']:,.0f} kWh/year")
-    right.metric("Grid electricity", f"{row.optimized['annual_grid_imported_kwh']:,.0f} kWh/year")
-    left.metric("Annualized net electricity cost", f"€{row.current['annual_net_electricity_cost_eur']:,.0f}/year")
-    right.metric("Annualized net electricity cost", f"€{row.optimized['annual_net_electricity_cost_eur']:,.0f}/year")
-    left.metric("SIMPLE PAYBACK", f"{row.current['simple_payback_years']:.2f} years")
-    right.metric("SIMPLE PAYBACK", f"{row.optimized['simple_payback_years']:.2f} years")
+    with left:
+        st.markdown("### Current habits + solar")
+        st.metric("SOLAR USED AT HOME", f"{row.current['pv_self_consumption_rate']:.1%}")
+        st.metric("ANNUALIZED ELECTRICITY COST", f"€{row.current['annual_net_electricity_cost_eur']:,.0f}/year")
+        st.metric("GRID ELECTRICITY", f"{row.current['annual_grid_imported_kwh']:,.0f} kWh/year")
+        st.metric("SIMPLE PAYBACK", f"{row.current['simple_payback_years']:.2f} years")
+    with right:
+        st.markdown("### With WattWise scheduling")
+        st.metric(
+            "SOLAR USED AT HOME",
+            f"{row.optimized['pv_self_consumption_rate']:.1%}",
+            f"↑ {row.optimized['pv_self_consumption_rate'] - row.current['pv_self_consumption_rate']:.1%}",
+            delta_color="off",
+        )
+        st.metric(
+            "ANNUALIZED ELECTRICITY COST",
+            f"€{row.optimized['annual_net_electricity_cost_eur']:,.0f}/year",
+            f"↓ €{row.current['annual_net_electricity_cost_eur'] - row.optimized['annual_net_electricity_cost_eur']:,.0f}/year",
+            delta_color="off",
+        )
+        st.metric(
+            "GRID ELECTRICITY",
+            f"{row.optimized['annual_grid_imported_kwh']:,.0f} kWh/year",
+            f"↓ {row.current['annual_grid_imported_kwh'] - row.optimized['annual_grid_imported_kwh']:,.0f} kWh/year",
+            delta_color="off",
+        )
+        st.metric(
+            "SIMPLE PAYBACK",
+            f"{row.optimized['simple_payback_years']:.2f} years",
+            f"↓ {row.current['simple_payback_years'] - row.optimized['simple_payback_years']:.2f} years",
+            delta_color="off",
+        )
 
-    st.markdown("### Compare capacities")
+    st.markdown('<div class="section-kicker">About this solar option</div>', unsafe_allow_html=True)
+    a1, a2, a3 = st.columns(3)
+    a1.metric("MODELED PV PRODUCTION", f"{row.annual_pv_production_kwh:,.0f} kWh/year")
+    a2.metric("INITIAL INVESTMENT", f"€{row.initial_investment_eur:,.0f}")
+    a3.metric("ANNUAL O&M", f"€{row.annual_om_eur:,.0f}")
+
+    st.markdown('<div class="section-kicker">Compare options</div>', unsafe_allow_html=True)
+    st.markdown("## See how the solar capacities compare")
+    st.caption("3, 5, 8 and 10 kWp are comparison cases, not sizing recommendations.")
     st.plotly_chart(charts.pv_cost_chart(data.pv.rows), width="stretch")
     st.plotly_chart(charts.pv_payback_chart(data.pv.rows), width="stretch")
 
     decomposition = next(item for item in data.pv.effect_decomposition["by_capacity"] if float(item["capacity_kwp"]) == capacity)
-    st.markdown("### Where the value comes from")
-    d1, d2, d3 = st.columns(3)
-    d1.metric("Scheduling without solar", f"€{decomposition['behavioral_optimization_effect_no_pv_eur']:,.0f}/year")
-    d2.metric("Solar benefit with WattWise", f"€{decomposition['pv_effect_optimized_habits_net_after_om_eur']:,.0f}/year")
-    d3.metric("Combined modeled benefit", f"€{decomposition['combined_current_no_pv_to_optimized_pv_net_after_om_eur']:,.0f}/year")
+    st.markdown('<div class="section-kicker">Where the value comes from</div>', unsafe_allow_html=True)
+    v1, v2, v3 = st.columns(3)
+    v1.metric("SMARTER TIMING · NO SOLAR", f"€{decomposition['behavioral_optimization_effect_no_pv_eur']:,.0f}/year")
+    v2.metric("SOLAR BENEFIT · WITH WATTWISE", f"€{decomposition['pv_effect_optimized_habits_net_after_om_eur']:,.0f}/year")
+    v3.metric("COMBINED MODELED BENEFIT", f"€{decomposition['combined_current_no_pv_to_optimized_pv_net_after_om_eur']:,.0f}/year")
 
-    st.warning("ANNUALIZED ESTIMATE · Capacity options are comparisons, not PV sizing recommendations.")
-    st.caption(
-        "Annualized from the 61-day August–September simulated household profile. PV production is modeled with PVGIS, not measured on this roof. "
-        "SIMPLE PAYBACK excludes financing, discounting, degradation, inflation, subsidies and taxes. No battery is modeled."
+    st.markdown(
+        '<div class="small-disclosure"><strong>ANNUALIZED ESTIMATE.</strong> Household economics are annualized from the 61-day August–September simulated profile. '
+        'PV production is modeled with PVGIS and is not measured on this roof. Capacity options are comparisons, not sizing recommendations. '
+        'SIMPLE PAYBACK excludes financing, discounting, degradation, inflation, subsidies and taxes. No battery is modeled.</div>',
+        unsafe_allow_html=True,
     )
