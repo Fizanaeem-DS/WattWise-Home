@@ -280,14 +280,42 @@ elif page == "WattWise Plan":
                 unsafe_allow_html=True,
             )
 
-    st.markdown('<div class="section-kicker">Explore the schedule</div>', unsafe_allow_html=True)
-    st.markdown("## See current vs WattWise timing")
+    st.markdown('<div class="section-kicker">Your day, before and after</div>', unsafe_allow_html=True)
+    st.markdown("## See what WattWise changed on a specific day")
+    st.caption("Choose a day to see the activities WattWise rescheduled, then compare the whole-home load before and after optimization.")
     days = sorted({point.timestamp[:10] for point in data.optimization.hourly})
     day = st.selectbox("Choose a day", days, index=0)
-    st.plotly_chart(charts.optimizer_day_chart(data.optimization.hourly, day), width="stretch")
-    st.caption("The comparison uses the same tariff and PV accounting for current and optimized schedules.")
 
-    with st.expander(f"See all {len(events)} rescheduled activities"):
+    day_events = [
+        event for event in events
+        if event.original_start[:10] == day or event.optimized_start[:10] == day
+    ]
+    st.markdown(f"### Your plan for {datetime.fromisoformat(day).strftime('%d %B %Y')}")
+    if day_events:
+        for event in sorted(day_events, key=lambda item: item.original_start):
+            original = datetime.fromisoformat(event.original_start)
+            optimized = datetime.fromisoformat(event.optimized_start)
+            label = theme.COMPONENT_LABELS[event.component]
+            original_text = original.strftime("%H:%M")
+            optimized_text = optimized.strftime("%H:%M")
+            if original.date() != optimized.date():
+                optimized_text += f" · {optimized.strftime('%d %b')}"
+            st.markdown(
+                f"""<div class="plan-card" style="margin-bottom:10px;">
+                <div class="plan-label">{label}</div>
+                <div class="plan-time">{original_text} → {optimized_text}</div>
+                <div style="color:#617168;font-size:.85rem;margin-top:6px;">{event.energy_kwh:.1f} kWh service preserved · {abs(event.shift_hours):.1f} h timing change</div>
+                </div>""",
+                unsafe_allow_html=True,
+            )
+    else:
+        st.info("No flexible activities were rescheduled on this day. Choose another day to explore a WattWise schedule change.")
+
+    st.markdown("### How the whole-home load changes")
+    st.plotly_chart(charts.optimizer_day_chart(data.optimization.hourly, day), width="stretch")
+    st.caption("Current household load vs WattWise optimized load for the selected day. The comparison uses the same tariff and PV accounting.")
+
+    with st.expander(f"See all {len(events)} rescheduled activities across the 61-day evaluation"):
         st.dataframe(pd.DataFrame([{
             "Activity": activity_reference(event),
             "Original": event.original_start,
