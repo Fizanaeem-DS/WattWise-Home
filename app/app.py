@@ -100,7 +100,6 @@ st.sidebar.caption("Scenario 3 — “Luxury Under Control”")
 PAGES = ["Home", "My Energy", "WattWise Plan", "Solar"]
 page = st.sidebar.radio("Navigate", PAGES, label_visibility="collapsed")
 st.sidebar.divider()
-st.sidebar.success("Forecast → Decide → Reschedule → Save")
 st.sidebar.caption("Europe/Madrid · energy in kWh per hourly interval · currency EUR")
 
 
@@ -183,52 +182,59 @@ if page == "Home":
     )
 
 elif page == "My Energy":
+    st.caption("MY ENERGY · UNDERSTAND YOUR HOME")
     st.title("My Energy")
-    st.caption("See what the home has been using, what is coming next, and when demand pressure is highest.")
+    st.caption("Your household pattern, what is coming next, and the hours that deserve attention.")
 
     tab_now, tab_forecast, tab_risk = st.tabs(["Energy history", "What’s coming", "Peak risk"])
 
     with tab_now:
-        source_badge(
-            data.history_provenance,
-            "SIMULATED HOUSEHOLD PROFILE",
-            "61-day scenario-specific digital twin for Anna & Robert. Household electricity use is simulated, not measured.",
-        )
+        st.markdown('<div class="section-kicker">Your energy pattern</div>', unsafe_allow_html=True)
+        st.markdown("## See how your home uses energy")
+        st.caption("Explore the simulated household profile across the last 7, 14, 30 or 61 days.")
         days = st.radio("History", [7, 14, 30, 61], index=2, horizontal=True, format_func=lambda value: f"Last {value} days")
         st.plotly_chart(charts.daily_total_chart(data.history, days), width="stretch")
         h1, h2, h3 = st.columns(3)
-        h1.metric("61-day energy", f"{sum(point.total_kwh for point in data.history):,.0f} kWh")
-        h2.metric("Highest hourly demand", f"{max(point.total_kwh for point in data.history):.1f} kWh")
-        h3.metric("Average outdoor temperature", f"{sum(point.outdoor_temp_c for point in data.history) / len(data.history):.1f} °C")
-        st.caption("Use the history to understand the simulated household pattern; WattWise uses forecasting and risk separately for forward-looking decisions.")
+        h1.metric("61-DAY ENERGY", f"{sum(point.total_kwh for point in data.history):,.0f} kWh")
+        h2.metric("HIGHEST HOURLY DEMAND", f"{max(point.total_kwh for point in data.history):.1f} kWh")
+        h3.metric("AVERAGE OUTDOOR TEMP.", f"{sum(point.outdoor_temp_c for point in data.history) / len(data.history):.1f} °C")
+        st.markdown('<div class="small-disclosure">Demo disclosure: this 61-day household electricity profile is scenario-specific and simulated, not measured.</div>', unsafe_allow_html=True)
 
     with tab_forecast:
-        choice = st.radio("Look ahead", ["24h", "72h", "168h"], horizontal=True, key="energy_forecast")
+        st.markdown('<div class="section-kicker">Look ahead</div>', unsafe_allow_html=True)
+        st.markdown("## What your home is likely to need")
+        st.caption("Choose how far ahead you want to look. WattWise shows expected demand separately from uncertainty.")
+        choice = st.radio("Forecast period", ["24h", "72h", "168h"], horizontal=True, key="energy_forecast")
         bundle = data.forecasts[Horizon(choice)]
         highest = max(bundle.points, key=lambda point: point.expected_kwh)
         f1, f2 = st.columns(2)
-        f1.metric("Expected energy", f"{bundle.total_expected_kwh:.1f} kWh")
-        f2.metric("Highest expected-demand hour", datetime.fromisoformat(highest.timestamp).strftime("%d %b · %H:%M"), f"{highest.expected_kwh:.2f} kWh", delta_color="off")
+        f1.metric("EXPECTED ENERGY", f"{bundle.total_expected_kwh:.1f} kWh", f"next {choice}", delta_color="off")
+        f2.metric("BUSIEST EXPECTED HOUR", datetime.fromisoformat(highest.timestamp).strftime("%d %b · %H:%M"), f"{highest.expected_kwh:.2f} kWh expected", delta_color="off")
         st.plotly_chart(charts.forecast_energy_chart(bundle), width="stretch")
-        st.caption("Expected demand is the model’s central forecast. The uncertainty band describes a range of plausible demand, not an exact spike prediction.")
-        with st.expander("Outdoor temperature"):
+        st.caption("The central line is expected demand. The surrounding range shows plausible uncertainty; it is not an exact spike prediction.")
+        with st.expander("See outdoor temperature forecast"):
             st.plotly_chart(charts.forecast_temperature_chart(bundle), width="stretch")
+        st.markdown('<div class="small-disclosure">Forecasts shown here are retrospective model outputs for the scenario demonstration.</div>', unsafe_allow_html=True)
 
     with tab_risk:
-        choice = st.radio("Risk outlook", ["24h", "72h", "168h"], horizontal=True, key="energy_risk")
+        st.markdown('<div class="section-kicker">When to pay attention</div>', unsafe_allow_html=True)
+        st.markdown("## Find the hours with higher demand risk")
+        st.caption("Expected demand and peak risk answer different questions. This view highlights when unusually high household demand is more likely.")
+        choice = st.radio("Risk period", ["24h", "72h", "168h"], horizontal=True, key="energy_risk")
         bundle = data.forecasts[Horizon(choice)]
         ordered = sorted(bundle.points, key=lambda point: (point.peak_probability, point.p95_kwh), reverse=True)
         top = ordered[0]
         r1, r2, r3 = st.columns(3)
-        r1.metric("Highest-risk hour", datetime.fromisoformat(top.timestamp).strftime("%d %b · %H:%M"))
-        r2.metric("Peak probability", f"{top.peak_probability:.0%}", top.peak_risk_label, delta_color="off")
-        r3.metric("P95 high-demand potential", f"{top.p95_kwh:.1f} kWh")
+        r1.metric("HIGHEST-RISK HOUR", datetime.fromisoformat(top.timestamp).strftime("%d %b · %H:%M"))
+        r2.metric("PEAK-RISK SIGNAL", f"{top.peak_probability:.0%}", top.peak_risk_label, delta_color="off")
+        r3.metric("HIGH-DEMAND RANGE", f"{top.p95_kwh:.1f} kWh", "P95 model range", delta_color="off")
         st.plotly_chart(charts.peak_probability_chart(bundle), width="stretch")
-        st.markdown("### Why does this hour matter?")
+        st.markdown("### Why this hour deserves attention")
         st.write(top.primary_explanation)
         if top.secondary_explanation:
             st.caption(top.secondary_explanation)
-        st.info("Peak probability is a risk signal. It does not claim the exact time or size of a future demand spike.")
+        st.info("The peak-risk signal helps prioritize attention. It does not claim the exact time or size of a future demand spike.")
+        st.markdown('<div class="small-disclosure">P95 is retained as the model’s high-demand uncertainty range; household electricity use is simulated.</div>', unsafe_allow_html=True)
 
 elif page == "WattWise Plan":
     st.title("Your WattWise Plan")
